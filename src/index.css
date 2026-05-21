@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────
+   Editorial Scientific — Base
+   ───────────────────────────────────────── */
+
+@layer base {
+  :root {
+    --grain-opacity: 0.06;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+    font-feature-settings: 'ss01', 'ss02', 'cv11';
+    background-image:
+      /* subtle paper grain via SVG noise */
+      url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.08  0 0 0 0 0.05  0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: 220px 220px;
+  }
+
+  /* Display headings get Fraunces with refined optical sizing */
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+    font-optical-sizing: auto;
+    font-variation-settings: "opsz" 96, "SOFT" 30;
+  }
+
+  /* Arabic RTL with proper font */
+  [dir="rtl"] body,
+  [dir="rtl"] {
+    font-family: 'Noto Naskh Arabic', 'Geist', serif;
+  }
+
+  /* Selection */
+  ::selection {
+    background: theme('colors.navy');
+    color: theme('colors.paper');
+  }
+
+  /* Hairline focus */
+  *:focus-visible {
+    outline: 2px solid theme('colors.navy');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   Editorial Components
+   ───────────────────────────────────────── */
+
+@layer components {
+
+  /* Drop cap — for first paragraph of a section */
+  .dropcap::first-letter {
+    @apply font-display text-navy float-left mr-2 leading-[0.85];
+    font-size: 4.2em;
+    font-weight: 500;
+    padding-top: 0.05em;
+    padding-right: 0.05em;
+  }
+
+  [dir="rtl"] .dropcap::first-letter {
+    float: right;
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+
+  /* Roman numeral section header  ── I. Title ───── */
+  .section-marker {
+    @apply flex items-baseline gap-4 mb-6;
+  }
+  .section-marker::after {
+    content: '';
+    @apply flex-1 h-px bg-rule;
+    transform: translateY(-2px);
+  }
+
+  /* Hairline rule */
+  .rule {
+    @apply border-0 border-t border-rule;
+  }
+
+  /* Specimen tag (small academic label)  */
+  .specimen {
+    @apply inline-flex items-center gap-1.5 px-2 py-0.5 text-[10.5px] font-mono tracking-[0.12em] uppercase border border-rule text-ink2 bg-paper/40;
+  }
+
+  /* Marginalia — annotation in the gutter */
+  .marginalia {
+    @apply font-display italic text-muted text-sm leading-snug;
+  }
+
+  /* Primary button — refined, weighty */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-5 py-2.5 bg-ink text-paper font-body text-sm tracking-wide transition-all duration-300 hover:bg-navy;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-5 py-2.5 border border-ink text-ink font-body text-sm tracking-wide transition-all duration-300 hover:bg-ink hover:text-paper;
+  }
+
+  .btn-link {
+    @apply inline-flex items-baseline gap-1 text-navy hover:text-sienna border-b border-navy/40 hover:border-sienna transition-colors;
+  }
+
+  /* Input field — editorial style */
+  .input-editorial {
+    @apply w-full bg-transparent border-0 border-b border-rule text-ink py-2 px-0 font-body placeholder:text-muted focus:border-ink focus:ring-0 transition-colors;
+  }
+
+  /* Card for PI / opportunity */
+  .pi-card {
+    @apply relative bg-paper border border-rule p-6 transition-all duration-500 hover:border-ink;
+  }
+  .pi-card::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-500;
+    box-shadow: 0 12px 40px -16px rgba(26, 24, 20, 0.18);
+  }
+  .pi-card:hover::before { opacity: 1; }
+
+  /* Tag (field of research) */
+  .tag {
+    @apply inline-flex items-center px-2.5 py-1 text-xs font-mono tracking-wide border border-rule text-ink2;
+  }
+  .tag-active {
+    @apply bg-ink text-paper border-ink;
+  }
+
+  /* Status dot */
+  .dot {
+    @apply inline-block w-1.5 h-1.5 rounded-full;
+  }
+}
+
+/* ─────────────────────────────────────────
+   Utilities
+   ───────────────────────────────────────── */
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Italic Fraunces variant */
+  .font-display-italic {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: "opsz" 96, "SOFT" 100;
+  }
+}
+
+/* Scrollbar refinement */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: theme('colors.rule'); border: 2px solid theme('colors.paper'); }
+::-webkit-scrollbar-thumb:hover { background: theme('colors.muted'); }
