@@ -1,0 +1,738 @@
+{
+  "brand": {
+    "name": "PhD Match DE",
+    "tagline": "Promotion in den Lebenswissenschaften — kuratiert.",
+    "subtitle": "Krebsforschung · Immunologie · Neurowissenschaften"
+  },
+  "nav": {
+    "discover": "Entdecken",
+    "compass": "Kompass",
+    "library": "Bibliothek",
+    "labs": "Labs",
+    "match": "CV-Match",
+    "tracker": "Bewerbungen",
+    "letter": "Anschreiben",
+    "outreach": "Direktkontakt",
+    "profile": "Profil"
+  },
+  "home": {
+    "hero_eyebrow": "Kuratierte Promotionsstellen",
+    "hero_title": "Eine Promotion in den deutschen Lebens­wissen­schaften finden — ohne im Rauschen zu verschwinden.",
+    "hero_lead": "Die wichtigsten Forschungs­zentren für Krebs-, Immun- und Neuro­wissenschaften an einem Ort. KI-gestützte Passung deines Lebenslaufs mit konkreten Arbeits­gruppen — und vorbereitete Direkt­anschreiben für Professorinnen und Professoren.",
+    "cta_explore": "Stellen entdecken",
+    "cta_match": "Mein CV abgleichen"
+  },
+  "discover": {
+    "title": "Entdecken",
+    "subtitle": "Kuratierte Programme & Arbeits­gruppen",
+    "filters": {
+      "all": "Alle",
+      "field": "Forschungsfeld",
+      "city": "Stadt",
+      "institution_type": "Art der Institution",
+      "language": "Arbeitssprache",
+      "funding": "Finanzierung",
+      "open": "Bewerbung offen",
+      "search_placeholder": "Suche nach Institution, Stadt, Programm…",
+      "reset": "Zurücksetzen",
+      "results": "{{count}} Ergebnisse"
+    },
+    "fields": {
+      "cancer": "Krebsforschung",
+      "immunology": "Immunologie",
+      "neuroscience": "Neurowissenschaften",
+      "structural_biology": "Strukturbiologie",
+      "genetics": "Genetik",
+      "molecular_biology": "Molekularbiologie"
+    },
+    "language": {
+      "german": "Deutsch",
+      "english": "Englisch",
+      "bilingual": "Zweisprachig"
+    },
+    "card": {
+      "deadline": "Frist",
+      "rolling": "Laufende Bewerbung",
+      "funding": "Förderung",
+      "language": "Sprache",
+      "view": "Details ansehen",
+      "external": "Programm-Website",
+      "save": "Merken",
+      "saved": "Gemerkt",
+      "apply": "Bewerben",
+      "accepting": "Nimmt Doktorand:innen auf",
+      "fields": "Felder"
+    },
+    "empty": "Keine passenden Stellen — Filter anpassen."
+  },
+  "match": {
+    "title": "CV-Match",
+    "subtitle": "Lebenslauf einfügen und KI-gestützt mit Arbeits­gruppen abgleichen.",
+    "hero_eyebrow": "KI-gestützter Abgleich",
+    "hero_title": "Deinen CV mit den passenden Promotions­programmen abgleichen.",
+    "hero_lead": "Füge deinen Lebenslauf ein — Claude analysiert deine Methoden, dein Master-Thema und deine Interessen und ranked alle Programme nach Passung. Mit Begründung pro Programm, Stärken und Lücken — und konkreten Hinweisen, was du in der Bewerbung betonen solltest.",
+    "step1": {
+      "label": "Schritt 01",
+      "title": "Lebenslauf einfügen",
+      "intro": "Kopiere den Text deines CV oder Motivations­schreibens hier hinein. Je mehr Details (Methoden, Thesis-Thema, Software-Skills, Sprachen), desto präziser das Ranking.",
+      "placeholder": "Beispiel:\n\nGian H.\nMaster in Humanbiologie · Universität Greifswald · 2025\nMaster-Thesis: Rolle der Mikroglia bei…\nMethoden: Western Blot, qPCR, Durchfluss­zytometrie, Immun­histochemie, scRNA-seq Auswertung in R\nSprachen: Arabisch (Muttersprache), Deutsch (B2), Englisch (C1)\nPraktika: …\nPublikationen / Poster: …\n\nForschungs­interessen: Tumor-Immunologie, Neuroinflammation",
+      "fields_label": "Forschungs­interessen (optional, hilft beim Ranking)",
+      "analyze": "Analyse starten",
+      "analyzing": "Claude analysiert…",
+      "min_chars": "Mindestens 200 Zeichen für aussagekräftige Analyse"
+    },
+    "step2": {
+      "label": "Schritt 02",
+      "title": "Analyse",
+      "stages": {
+        "parsing": "CV wird gelesen…",
+        "matching": "Programme werden abgeglichen…",
+        "reasoning": "Begründungen werden generiert…",
+        "ranking": "Ranking wird sortiert…"
+      }
+    },
+    "step3": {
+      "label": "Schritt 03",
+      "title": "Ergebnis",
+      "intro": "Programme sortiert nach Passung. Klicke ein Programm an, um die volle Begründung zu sehen.",
+      "summary_title": "Profil­zusammenfassung",
+      "strengths": "Stärken",
+      "gaps": "Lücken",
+      "recommendations": "Empfehlungen für deine Bewerbung",
+      "fit_score": "Passung",
+      "view_details": "Begründung anzeigen",
+      "hide_details": "Begründung verbergen",
+      "save_to_tracker": "In Tracker speichern",
+      "saved": "Gespeichert",
+      "draft_letter": "Anschreiben entwerfen",
+      "open_programme": "Programm öffnen",
+      "match_reasoning": "Warum diese Passung",
+      "match_strengths": "Was passt",
+      "match_gaps": "Wo Lücken sind",
+      "match_tips": "Was du in der Bewerbung betonen solltest",
+      "no_results": "Noch keine Analyse. Beginne mit Schritt 01.",
+      "reset": "Neue Analyse",
+      "showing": "Zeige {{visible}} von {{total}} Programmen"
+    },
+    "errors": {
+      "no_key": "Claude API-Key fehlt. Trage VITE_ANTHROPIC_KEY in .env ein.",
+      "too_short": "CV zu kurz — bitte mindestens 200 Zeichen.",
+      "api_error": "Claude-Fehler:",
+      "parse_error": "Antwort konnte nicht verstanden werden. Versuche es nochmal."
+    }
+  },
+  "tracker": {
+    "title": "Bewerbungen",
+    "subtitle": "Status, Fristen, Follow-ups.",
+    "hero_eyebrow": "Pipeline",
+    "hero_title": "Deine Promotions-Bewerbungen — eine Übersicht über die ganze Pipeline.",
+    "hero_lead": "Verfolge jede Bewerbung von „interessiert\" bis zur Entscheidung. Erfasse Fristen, nächste Schritte und Gespräche. Aus dem Match übernommene Programme erscheinen automatisch.",
+    "columns": {
+      "interested": "Interessiert",
+      "contacted": "Kontaktiert",
+      "applied": "Beworben",
+      "interview": "Gespräch",
+      "decision": "Entscheidung"
+    },
+    "column_hints": {
+      "interested": "Programme, die du näher anschauen willst.",
+      "contacted": "Erste E-Mail oder Anfrage gesendet.",
+      "applied": "Vollständige Bewerbung eingereicht.",
+      "interview": "Gespräch geplant oder durchgeführt.",
+      "decision": "Zusage, Absage oder Rückzug."
+    },
+    "stats": {
+      "total": "Gesamt",
+      "active": "Aktiv",
+      "next_deadline": "Nächste Frist",
+      "no_deadlines": "Keine offene Frist"
+    },
+    "card": {
+      "next_action": "Nächster Schritt",
+      "deadline": "Frist",
+      "fit": "Passung",
+      "notes": "Notizen",
+      "add_note": "Notiz hinzufügen…",
+      "save_note": "Speichern",
+      "move_to": "Verschieben nach",
+      "move_back": "Zurück",
+      "move_forward": "Weiter",
+      "edit": "Bearbeiten",
+      "remove": "Entfernen",
+      "confirm_remove": "Aus Tracker entfernen?",
+      "open_programme": "Programm",
+      "no_next_action": "Kein nächster Schritt geplant",
+      "set_action": "Schritt festlegen",
+      "action_label": "Was steht als Nächstes an?",
+      "action_date": "Datum (optional)",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "added_from_match": "Aus CV-Match übernommen"
+    },
+    "add": {
+      "button": "Programm hinzufügen",
+      "title": "Programm zum Tracker hinzufügen",
+      "search": "Programm suchen…",
+      "empty": "Kein passendes Programm gefunden.",
+      "already_added": "Bereits im Tracker",
+      "add_to": "In welche Spalte?",
+      "cancel": "Abbrechen"
+    },
+    "empty": {
+      "title": "Noch keine Bewerbungen erfasst",
+      "body": "Füge ein Programm hinzu oder starte einen CV-Match — die Top-Treffer landen automatisch hier.",
+      "go_match": "Zum CV-Match",
+      "go_discover": "Programme entdecken"
+    },
+    "column_empty": "Leer"
+  },
+  "letter": {
+    "title": "Anschreiben",
+    "subtitle": "Maßgeschneidertes Bewerbungs­schreiben generieren.",
+    "hero_eyebrow": "Anschreiben-Generator",
+    "hero_title": "Ein Anschreiben, das wirklich nach dir klingt — für jedes Programm.",
+    "hero_lead": "Wähle ein Programm aus deinem Tracker, stelle Ton und Sprache ein — Claude verfasst ein deutsches Anschreiben, das deine Methoden und dein Master-Thema mit den Forschungs­schwerpunkten der Arbeits­gruppe verbindet.",
+    "step1": {
+      "label": "Schritt 01",
+      "title": "Programm wählen",
+      "from_tracker": "Aus deinem Tracker",
+      "all_programmes": "Alle Programme",
+      "no_tracker": "Du hast noch keine Programme im Tracker. Wähle direkt aus der vollständigen Liste oder gehe zuerst zu CV-Match.",
+      "pick_programme": "Programm auswählen…",
+      "selected": "Ausgewählt",
+      "change": "Ändern"
+    },
+    "step2": {
+      "label": "Schritt 02",
+      "title": "Einstellungen",
+      "tone": "Tonalität",
+      "tones": {
+        "formal": "Formal — akademisch",
+        "warm": "Persönlich — warm",
+        "research": "Forschungs­fokussiert — methodenstark"
+      },
+      "language": "Sprache des Anschreibens",
+      "languages": {
+        "de": "Deutsch",
+        "en": "Englisch"
+      },
+      "profile_source": "Profil-Quelle",
+      "profile_from_match": "Aus deinem letzten CV-Match",
+      "profile_paste": "CV neu einfügen",
+      "paste_label": "CV-Text",
+      "extra_notes": "Zusätzliche Hinweise (optional)",
+      "extra_notes_placeholder": "z. B. Lieblings-Paper der Arbeitsgruppe, bestimmte Methode, gemeinsamer Hintergrund …",
+      "no_profile_yet": "Noch kein Profil vorhanden. Lass zuerst einen CV-Match laufen oder füge unten deinen CV ein.",
+      "generate": "Anschreiben generieren",
+      "generating": "Claude verfasst…"
+    },
+    "step3": {
+      "label": "Schritt 03",
+      "title": "Anschreiben",
+      "subject": "Betreff",
+      "edit_inline": "Direkt bearbeiten — wird beim Kopieren übernommen.",
+      "copy": "Kopieren",
+      "copied": "Kopiert ✓",
+      "regenerate": "Neue Version",
+      "save_revision": "Version speichern",
+      "saved_revisions": "Gespeicherte Versionen",
+      "no_revisions": "Noch keine gespeicherten Versionen.",
+      "load_revision": "Laden",
+      "remove_revision": "Löschen",
+      "version": "Version",
+      "for_programme": "Für",
+      "generated_at": "Erstellt"
+    },
+    "errors": {
+      "no_key": "Claude API-Key fehlt. Trage VITE_ANTHROPIC_KEY in .env ein.",
+      "no_programme": "Bitte zuerst ein Programm auswählen.",
+      "no_profile": "Bitte ein Profil aus CV-Match laden oder CV unten einfügen.",
+      "api_error": "Claude-Fehler:"
+    }
+  },
+  "outreach": {
+    "title": "Direktkontakt",
+    "subtitle": "Initiative E-Mail an Professor:innen — der wichtigste Kanal in Deutschland.",
+    "hero_eyebrow": "Direktkontakt-Komponist",
+    "hero_title": "Die Tür öffnen, bevor sie ausgeschrieben wird.",
+    "hero_lead": "Rund 70 % der Promotions­stellen in Deutschland werden über persönlichen Erstkontakt vergeben. Hier verfasst du in zwei Minuten eine kurze, präzise E-Mail an die Professor:innen, die zu deinem Profil passen.",
+    "step1": {
+      "label": "Schritt 01",
+      "title": "Empfänger:in & Programm",
+      "programme": "Programm / Institution",
+      "pi_name": "Name der Professorin / des Professors",
+      "pi_name_placeholder": "z. B. Prof. Dr. Maria Schmidt",
+      "pi_email": "E-Mail-Adresse (optional, für Vorschau)",
+      "lab_focus": "Forschungsschwerpunkt des Labs",
+      "lab_focus_placeholder": "z. B. Tumor-Immunologie, T-Zell-Erschöpfung in soliden Tumoren",
+      "pick_programme": "Programm auswählen…",
+      "from_tracker": "Aus Tracker",
+      "all_programmes": "Alle"
+    },
+    "step2": {
+      "label": "Schritt 02",
+      "title": "Strategie & Sprache",
+      "strategy": "Strategie",
+      "strategies": {
+        "inquiry": {
+          "name": "Anfrage",
+          "desc": "Kurz und höflich: „Nehmen Sie Doktorand:innen auf?\" Standard-Erstkontakt."
+        },
+        "paper": {
+          "name": "Konkretes Paper",
+          "desc": "Bezugnahme auf eine spezifische Veröffentlichung. Stärkste Wirkung — verlangt aber Recherche."
+        },
+        "methods": {
+          "name": "Methoden-Brücke",
+          "desc": "Verbindet deine Methoden mit denen des Labs. Gut für Bewerber:innen mit klarem technischen Profil."
+        }
+      },
+      "language": "Sprache",
+      "languages": { "de": "Deutsch", "en": "Englisch" },
+      "paper_reference": "Konkrete Paper-Referenz",
+      "paper_reference_placeholder": "z. B. „Ihr 2024er Cell-Paper zu T-Zell-Erschöpfung in Melanom hat mich besonders fasziniert\"",
+      "profile_source": "Profil-Quelle",
+      "profile_from_match": "Aus letztem CV-Match",
+      "profile_paste": "CV einfügen",
+      "paste_label": "CV-Text",
+      "no_profile_yet": "Noch kein Profil. Lass CV-Match laufen oder füge unten CV ein.",
+      "variants": "Anzahl Varianten",
+      "variants_hint": "Drei Varianten erleichtern den Vergleich.",
+      "generate": "E-Mail entwerfen",
+      "generating": "Claude verfasst…"
+    },
+    "step3": {
+      "label": "Schritt 03",
+      "title": "Entwürfe",
+      "variant": "Variante",
+      "subject": "Betreff",
+      "copy": "Kopieren",
+      "copied": "Kopiert ✓",
+      "save": "Speichern",
+      "saved": "Gespeichert ✓",
+      "regenerate": "Neue Varianten",
+      "open_mail": "Im E-Mail-Programm öffnen",
+      "log_title": "Outreach-Verlauf",
+      "log_empty": "Noch keine gespeicherten Outreach-E-Mails.",
+      "log_to": "An",
+      "log_via": "Strategie",
+      "log_load": "Laden",
+      "log_remove": "Entfernen",
+      "log_mark_replied": "Antwort erhalten",
+      "log_marked_replied": "Antwort erhalten ✓",
+      "log_unmark": "Markierung entfernen"
+    },
+    "tips": {
+      "title": "Tipps für effektiven Direktkontakt",
+      "items": [
+        "Halte die E-Mail kurz: 120–180 Wörter, maximal drei Absätze.",
+        "Personalisiere den Betreff — kein „PhD application\".",
+        "Erwähne ein konkretes Detail der Forschung, nicht nur die Themenfläche.",
+        "Stelle eine konkrete Frage am Ende — sie verlangt eine Antwort.",
+        "Hänge eine PDF-Version deines CV an (in der echten E-Mail, nicht hier)."
+      ]
+    },
+    "errors": {
+      "no_key": "Claude API-Key fehlt. Trage VITE_ANTHROPIC_KEY in .env ein.",
+      "no_programme": "Bitte zuerst ein Programm auswählen.",
+      "no_profile": "Bitte Profil laden oder CV einfügen.",
+      "no_paper": "Bitte das Paper kurz benennen (Strategie: Konkretes Paper).",
+      "api_error": "Claude-Fehler:"
+    }
+  },
+  "labs": {
+    "title": "Labs & Arbeitsgruppen",
+    "subtitle": "Konkrete Professor:innen — die Menschen, an die du wirklich schreibst.",
+    "hero_eyebrow": "Arbeitsgruppen-Verzeichnis",
+    "hero_title": "Die Personen hinter den Programmen — kuratiert nach Mensch, nicht nur nach Institution.",
+    "hero_lead": "Programme einzureichen ist eine Sache — aber in Deutschland landet jede gute Promotion bei einer konkreten Person. Hier findest du 45 namentlich aufgeführte Arbeitsgruppen­leiter:innen mit aktueller Forschung, Lab-URL und Direkt-Kontakt.",
+    "filters": {
+      "institution": "Institution",
+      "field": "Forschungsfeld",
+      "city": "Stadt",
+      "accepting_only": "Nur aufnehmende Labs",
+      "search_placeholder": "Name, Institution, Forschungsthema suchen…",
+      "results": "{{count}} Labs"
+    },
+    "card": {
+      "research_focus": "Forschungsschwerpunkt",
+      "recent_papers": "Aktuelle Publikationen",
+      "view_lab": "Lab-Webseite",
+      "send_email": "E-Mail senden",
+      "no_email": "E-Mail nicht öffentlich gelistet",
+      "save_to_tracker": "In Tracker speichern",
+      "saved": "Gespeichert",
+      "accepting": "Nimmt Doktorand:innen auf",
+      "not_accepting": "Aktuell keine offenen Stellen",
+      "notes": "Notiz",
+      "draft_outreach": "Anfrage entwerfen"
+    },
+    "empty": "Keine passenden Labs — Filter anpassen."
+  },
+  "profile": {
+    "title": "Profil",
+    "subtitle": "Persönliche Daten und CV-Material.",
+    "hero_eyebrow": "Dein Profil",
+    "hero_title": "Deine Daten an einem Ort — von hier aus arbeitet das ganze Werkzeug.",
+    "hero_lead": "Speichere Lebenslauf, Methoden und Sprachen einmal. CV-Match, Anschreiben und Direktkontakt greifen automatisch darauf zu. Funktioniert lokal ohne Konto — oder synchronisiert über Supabase, wenn ein Konto verbunden ist.",
+    "tabs": {
+      "identity": "Identität",
+      "academic": "Akademisch",
+      "cv": "Lebenslauf & Skills",
+      "account": "Konto"
+    },
+    "identity": {
+      "title": "Persönliche Identität",
+      "full_name": "Vollständiger Name",
+      "full_name_placeholder": "z. B. Gian Hawary",
+      "email": "E-Mail",
+      "email_placeholder": "deine@email.de",
+      "phone": "Telefon",
+      "phone_placeholder": "+49 …",
+      "city": "Stadt",
+      "city_placeholder": "z. B. Greifswald",
+      "linkedin": "LinkedIn-URL",
+      "linkedin_placeholder": "linkedin.com/in/…",
+      "orcid": "ORCID",
+      "orcid_placeholder": "0000-0000-0000-0000",
+      "github": "GitHub (optional)"
+    },
+    "academic": {
+      "title": "Akademischer Werdegang",
+      "degree": "Höchster Abschluss",
+      "degree_placeholder": "z. B. M.Sc. Humanbiologie",
+      "university": "Universität",
+      "university_placeholder": "z. B. Universität Greifswald",
+      "graduation_year": "Abschlussjahr",
+      "thesis_title": "Titel der Masterarbeit",
+      "thesis_placeholder": "z. B. Rolle der Mikroglia bei Neuroinflammation",
+      "thesis_supervisor": "Betreuer:in",
+      "thesis_grade": "Note (optional)",
+      "publications": "Publikationen & Poster (eine pro Zeile)",
+      "publications_placeholder": "z. B.\nPoster — DGfI 2024, Berlin\nMustermann et al. — preprint bioRxiv 2025"
+    },
+    "cv": {
+      "title": "Lebenslauf & Fähigkeiten",
+      "raw_text": "CV-Volltext",
+      "raw_text_help": "Der volle Lebenslauf-Text. Wird von CV-Match, Anschreiben und Direktkontakt als Quelle genutzt.",
+      "methods": "Methoden (Komma-getrennt)",
+      "methods_placeholder": "qPCR, Western Blot, Durchflusszytometrie, scRNA-seq",
+      "software": "Software & Tools (Komma-getrennt)",
+      "software_placeholder": "R, Python, GraphPad, ImageJ, Seurat",
+      "languages": "Sprachen",
+      "add_language": "+ Sprache hinzufügen",
+      "lang_code": "Code",
+      "lang_level": "Niveau",
+      "remove_lang": "Entfernen",
+      "fields_interest": "Forschungs­interessen (Komma-getrennt)",
+      "fields_interest_placeholder": "Tumor-Immunologie, Neuroinflammation, single-cell methods"
+    },
+    "account": {
+      "title": "Konto",
+      "no_supabase": "Supabase ist nicht konfiguriert. Das Profil wird ausschließlich lokal (Browser) gespeichert. Um aus mehreren Geräten zu nutzen, trage VITE_SUPABASE_URL und VITE_SUPABASE_ANON_KEY in .env ein.",
+      "signed_in_as": "Angemeldet als",
+      "signed_out": "Du bist nicht angemeldet.",
+      "sign_in": "Anmelden",
+      "sign_up": "Registrieren",
+      "sign_out": "Abmelden",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "submit_signin": "Anmelden",
+      "submit_signup": "Konto erstellen",
+      "to_signin": "Schon ein Konto? Anmelden",
+      "to_signup": "Neu hier? Konto erstellen",
+      "sync_now": "Jetzt synchronisieren",
+      "syncing": "Synchronisiere…",
+      "synced_at": "Zuletzt synchronisiert",
+      "pull_from_cloud": "Aus Cloud laden",
+      "push_to_cloud": "In Cloud speichern",
+      "sync_help": "Lokale Änderungen werden in dein Cloud-Profil geschrieben. Andere Geräte können dieselben Daten mit „Aus Cloud laden\" empfangen."
+    },
+    "save": "Speichern",
+    "saved": "Gespeichert ✓",
+    "auto_save": "Wird beim Tippen automatisch gespeichert (lokal)",
+    "danger": {
+      "title": "Daten löschen",
+      "body": "Alle gespeicherten Profil-Daten werden aus diesem Browser entfernt. Tracker, Anschreiben-Versionen und Outreach-Verlauf bleiben separat.",
+      "button": "Profil-Daten löschen",
+      "confirm": "Wirklich alle Profil-Daten löschen?"
+    },
+    "errors": {
+      "sign_in_failed": "Anmeldung fehlgeschlagen:",
+      "sign_up_failed": "Registrierung fehlgeschlagen:",
+      "sync_failed": "Synchronisierung fehlgeschlagen:"
+    }
+  },
+  "library": {
+    "title": "Bibliothek",
+    "subtitle": "Kuratierte Literatur, Lehrbücher, Kurse, Förderungen und Datenbanken.",
+    "hero_eyebrow": "Wissensquellen",
+    "hero_title": "Die wichtigsten Lese-, Lern- und Förderquellen — vorausgewählt.",
+    "hero_lead": "Eine durchdachte Sammlung von Schlüssel-Papern, Lehrbüchern, Online-Kursen, Stipendien, Konferenzen und Daten­banken. Jeder Eintrag ist real, verifiziert und für Promotion in Krebs-, Immun- und Neurowissen­schaften ausgewählt.",
+    "tabs": {
+      "papers": "Schlüssel-Paper",
+      "starter": "Lese-Pfad",
+      "textbooks": "Lehrbücher",
+      "courses": "Kurse",
+      "funding": "Förderung",
+      "conferences": "Konferenzen",
+      "databases": "Datenbanken",
+      "podcasts": "Podcasts & Newsletter"
+    },
+    "filters": {
+      "all": "Alle",
+      "cancer": "Krebs",
+      "immunology": "Immunologie",
+      "neuroscience": "Neurowissen­schaft",
+      "molecular_biology": "Molekular­biologie",
+      "career": "Karriere & Schreiben",
+      "essential": "Nur essenziell",
+      "results": "{{count}} Einträge"
+    },
+    "labels": {
+      "essential": "Essenziell",
+      "why": "Warum lesen / nutzen",
+      "doi": "DOI",
+      "citation": "Zitation",
+      "open": "Öffnen",
+      "edition": "Auflage",
+      "isbn": "ISBN",
+      "publisher": "Verlag",
+      "cost": "Kosten",
+      "free": "Kostenlos",
+      "free_audit": "Kostenlos auditieren",
+      "paid": "Bezahlt",
+      "amount": "Höhe",
+      "duration": "Dauer",
+      "eligible": "Voraussetzung",
+      "deadline": "Frist",
+      "when": "Wann",
+      "organiser": "Veranstalter",
+      "provider": "Anbieter",
+      "host": "Moderation",
+      "fields": "Felder"
+    },
+    "starter_path": {
+      "title": "5-Wochen-Lesepfad",
+      "intro": "Ein strukturierter Einstieg in dein Feld. Pro Woche ein Paper — mit Notizen, warum genau diese Reihenfolge sinnvoll ist.",
+      "select_field": "Feld wählen",
+      "week": "Woche",
+      "note": "Notiz"
+    }
+  },
+  "compass": {
+    "title": "Kompass",
+    "subtitle": "Wie eine Promotion in Deutschland wirklich funktioniert — Wegweiser, Methoden, Forschung.",
+    "hero_eyebrow": "Promotions-Begleiter",
+    "hero_title": "Den Weg zur Doktorarbeit verstehen — bevor du dich verzettelst.",
+    "hero_lead": "Strukturierte Anleitung zur Promotion in den deutschen Lebens­wissenschaften: vom Master­abschluss bis zur Disputation. Recherche-Werkzeuge, Literatur-Strategien und ein KI-gestützter Forschungs­assistent für dein Spezial­gebiet.",
+    "modules": {
+      "basics": "Grundlagen",
+      "research": "Forschung & Literatur",
+      "fields": "Forschungsfelder",
+      "writing": "Schreiben & Exposé",
+      "timeline": "Zeitplan & Meilensteine",
+      "assistant": "Forschungs-Assistent"
+    },
+    "basics": {
+      "title": "Wie funktioniert eine Promotion in Deutschland?",
+      "intro": "Es gibt nicht „die\" deutsche Promotion. Es gibt zwei sehr unterschiedliche Modelle — die Wahl beeinflusst Förderung, Struktur und Erfolg.",
+      "paths": {
+        "structured": {
+          "label": "Strukturiertes Programm",
+          "title": "Graduate School / Promotions­programm",
+          "duration": "3 Jahre",
+          "funding": "TV-L E13 65% oder Stipendium",
+          "language": "meist Englisch",
+          "description": "Organisiertes Programm mit jährlichen Aus­schreibungen, Pflicht­seminaren, Thesis Committee aus 2–3 Professor:innen, klaren Meilen­steinen und einer Gruppe von Mit-Doktorand:innen. Ideal für internationale Bewerber:innen.",
+          "pros": ["Klare Struktur und Meilen­steine", "Internationale Gemein­schaft", "Englisch als Arbeits­sprache", "Voll­finanziert", "Begleitung durch ein Thesis Committee"],
+          "cons": ["Kompetitive jährliche Aus­schreibungen", "Festes Curriculum", "Weniger Flexibilität bei Thema"],
+          "examples": "HIGS DKFZ · IMPRS · HBIGS Heidelberg · EIPP EMBL"
+        },
+        "individual": {
+          "label": "Individual­promotion",
+          "title": "Klassische Doktorarbeit",
+          "duration": "3–5 Jahre",
+          "funding": "TV-L E13 (50–100%) oder Drittmittel",
+          "language": "Deutsch oder Englisch",
+          "description": "Direkte Anstellung in der Arbeits­gruppe einer Professorin / eines Professors. Kein zentraler Bewerbungs­prozess — du schreibst Direkt­anschreiben (initiative Bewerbung). Über 60% der deutschen Promotionen verlaufen so.",
+          "pros": ["Mehr inhaltliche Freiheit", "Direkte Beziehung zum/zur Betreuer:in", "Rolling positions — kein Termin­druck", "Möglich auch ohne Englisch als Hauptsprache"],
+          "cons": ["Weniger Struktur — Selbst­disziplin nötig", "Risiko schlechter Betreuung", "Vereinzelung möglich", "Direkte Kontakt­aufnahme notwendig"],
+          "examples": "Uni Bonn · Uni Heidelberg · Charité · Goethe · TU Dortmund · Uni Bielefeld"
+        }
+      },
+      "phases": {
+        "title": "Die 5 Phasen einer Promotion",
+        "items": [
+          {
+            "n": "1",
+            "title": "Vorbereitung & Bewerbung",
+            "duration": "3–9 Monate vor Beginn",
+            "what": "Forschungs­interessen klären, Arbeits­gruppen identifizieren, Direkt­anschreiben oder strukturierte Bewerbung, Vorstellungs­gespräch (oft 1–3 Stunden)."
+          },
+          {
+            "n": "2",
+            "title": "Einarbeitung & Themen­findung",
+            "duration": "Monat 1–6",
+            "what": "Methoden lernen, Pilot-Experimente, Literatur intensiv lesen, finale Themen­wahl mit dem/der Betreuer:in. Exposé erstellen."
+          },
+          {
+            "n": "3",
+            "title": "Haupt­forschungs­phase",
+            "duration": "Monat 6–30",
+            "what": "Experimente, Daten­erhebung, regel­mäßige Lab-Meetings, Konferenz­beiträge, erste Manuskripte. Hier entstehen die Publikationen."
+          },
+          {
+            "n": "4",
+            "title": "Publikationen & Schreiben",
+            "duration": "Monat 24–36",
+            "what": "Eigene Erst­autoren-Paper einreichen, Doktor­arbeit (kumulativ oder Mono­grafie) schreiben. Typischer­weise 3 Publikationen für kumulative Promotion."
+          },
+          {
+            "n": "5",
+            "title": "Einreichung & Disputation",
+            "duration": "Monat 33–42",
+            "what": "Disser­tation einreichen, Gutachten (typ. 2–3 Monate), münd­liche Verteidigung (Disputation oder Rigorosum, 60–90 Min)."
+          }
+        ]
+      },
+      "tip_title": "Praktischer Tipp",
+      "tip_body": "In Deutschland werden rund 70% der Promotions­stellen über persönlichen Direkt­kontakt mit Professor:innen besetzt — bevor sie überhaupt aus­geschrieben werden. Das `Direktkontakt`-Modul dieses Tools hilft dir, genau diese Tür zu öffnen."
+    },
+    "research": {
+      "title": "Forschung & Literatur — die Werkzeuge",
+      "intro": "Ein Doktor­vater oder eine Doktor­mutter erwartet keine Vorab-Expertin — aber sehr wohl jemanden, der weiß, wie man wissen­schaft­lich recher­chiert. Diese Werkzeuge sind Pflicht­ausstattung.",
+      "categories": {
+        "search": "Such­maschinen",
+        "literature": "Literatur-Management",
+        "graph": "Citation-Graphen",
+        "writing": "Schreiben",
+        "data": "Daten & Methoden"
+      },
+      "tools": {
+        "pubmed": "Bio­medizinische Literatur — kuratiert von der US National Library of Medicine. Erste Anlauf­stelle für Krebs/Immun/Neuro.",
+        "scholar": "Breitere Abdeckung als PubMed, inkl. Pre­prints und graue Literatur. Citation-Tracking.",
+        "europe_pmc": "Europäisches Pendant zu PubMed mit Volltext-Zugang und ORCID-Integration.",
+        "biorxiv": "Pre­prints in Biologie — neueste, noch nicht peer-reviewte Forschung. Wichtig für aktuelle Trends.",
+        "medrxiv": "Pre­prints in Medizin und klinischer Forschung.",
+        "zotero": "Kostenloser Open-Source Literatur­manager. Browser-Connector, BibTeX-Export, Word/LibreOffice-Integration.",
+        "mendeley": "Literatur­manager von Elsevier mit PDF-Annotation und Social-Features.",
+        "connected_papers": "Visualisiert ein Paper und seine wissen­schaftliche Nachbar­schaft als Graph — perfekt um ein neues Feld zu erschließen.",
+        "research_rabbit": "KI-gestützter Literatur-Explorer. Findet ähnliche Paper, Autor:innen, neue Veröffent­lichungen.",
+        "scite": "Zeigt, ob Paper unter­stützend, neutral oder wider­sprechend zitiert werden — Qualitäts­kontrolle.",
+        "overleaf": "Online-LaTeX-Editor für die Disser­tation. Echtzeit-Kollaboration mit Betreuer:innen.",
+        "obsidian": "Wissens­management mit Markdown und Backlinks — viele Promovierende nutzen es als Zweit­gehirn.",
+        "geneontology": "GO — funktionale Annotation von Genen und Genprodukten. Pflicht für Molekular­biologie.",
+        "uniprot": "Protein-Datenbank mit Sequenzen, Strukturen und Funktionen.",
+        "gtex": "Tissue-spezifische Genexpression beim Menschen.",
+        "tcga": "The Cancer Genome Atlas — größter öffent­licher Krebs-Datensatz."
+      },
+      "workflow": {
+        "title": "Empfohlener Workflow",
+        "steps": [
+          "Beginne mit einem Review-Artikel zu deinem Thema (PubMed, Filter: \"Review\", letzte 5 Jahre).",
+          "Trage das Paper in Connected Papers ein — du siehst sofort den Forschungs-Cluster.",
+          "Speichere Schlüssel-Paper in Zotero, mit Tags pro Sub-Thema.",
+          "Wöchent­licher Alert in Google Scholar / Europe PMC für deine Suchbegriffe.",
+          "Folge auf bioRxiv den führenden Labs in deinem Feld.",
+          "Notizen pro Paper: Frage, Methode, Ergebnis, Kritik — in Obsidian oder einem Markdown-Vault."
+        ]
+      },
+      "open_link": "Tool öffnen"
+    },
+    "fields": {
+      "title": "Forschungs­felder — wo sucht man eigentlich?",
+      "intro": "Krebs, Immunologie und Neurowissenschaft sind groß. Diese Über­blicke helfen dir, ein Sub-Thema zu wählen und die richtigen Labs zu finden.",
+      "cancer": {
+        "title": "Krebsforschung",
+        "areas": ["Tumor-Immunologie", "Krebs-Genomik", "Onkogenese & Signal­wege", "Resistenz­mechanismen", "Liquid Biopsy & Früh­erkennung", "Krebs-Metabolismus", "CAR-T und Immun­therapie"],
+        "key_journals": ["Nature Cancer", "Cancer Cell", "Cell", "Cancer Discovery", "Nature Reviews Cancer", "JCO"],
+        "key_institutions": ["DKFZ Heidelberg", "Frankfurt Cancer Institute", "BSIO Charité Berlin", "EMBL"],
+        "search_terms": "tumor microenvironment · CAR-T · cancer immunology · oncogene · MYC · p53 · liquid biopsy · single-cell tumor"
+      },
+      "immunology": {
+        "title": "Immunologie",
+        "areas": ["Angeborene Immunität", "Adaptive Immunität & T-Zellen", "Auto­immunität", "Immun­seneszenz", "Mukosale Immunologie", "Tumor­immunologie", "Vakzin-Entwicklung", "Infektions­immunologie"],
+        "key_journals": ["Nature Immunology", "Immunity", "Science Immunology", "Cell", "Annual Reviews of Immunology"],
+        "key_institutions": ["MPI-IE Freiburg", "BIGS Immunosciences Bonn", "DKFZ (Tumor­immunologie)", "Charité"],
+        "search_terms": "T cell exhaustion · innate immunity · inflammasome · autoimmunity · single-cell immunology · NK cells · regulatory T cells"
+      },
+      "neuroscience": {
+        "title": "Neurowissenschaften",
+        "areas": ["Neurodegeneration (Alzheimer, Parkinson)", "Synapse & Plastizität", "Konnektomik", "Computational Neuroscience", "Neuro­immunologie", "Verhaltens­neuro­wissenschaft", "Stamm­zellen & Neuro­entwicklung", "Optogenetik"],
+        "key_journals": ["Neuron", "Nature Neuroscience", "Cell", "eLife", "Journal of Neuroscience", "Brain"],
+        "key_institutions": ["DZNE (alle Standorte)", "MPI für Hirnforschung Frankfurt", "NeuroCure Berlin", "IGSN Bochum", "BIGS Neuroscience Bonn"],
+        "search_terms": "alpha-synuclein · tau · neuroinflammation · synaptic plasticity · connectome · optogenetics · iPSC neurons · microglia"
+      },
+      "view_papers": "Aktuelle Paper anzeigen",
+      "view_labs": "Passende Labs"
+    },
+    "writing": {
+      "title": "Schreiben — Exposé, Motivations­schreiben, Disser­tation",
+      "intro": "Wissen­schaft­liches Schreiben in Deutschland folgt klaren Konven­tionen. Diese Bausteine sparen Wochen Lern­kurve.",
+      "expose": {
+        "title": "Das Exposé / Research Proposal",
+        "what": "Ein 3–8-seitiges Dokument, das oft mit der Bewerbung verlangt wird (vor allem bei Individual­promotion und Stipendien). Es zeigt: du verstehst das Feld, hast eine konkrete Frage, kennst die Methoden.",
+        "sections": [
+          { "name": "Titel & Hintergrund", "purpose": "1 Seite. Aktueller Wissens­stand mit 5–10 Schlüssel-Referenzen." },
+          { "name": "Forschungs­frage & Hypothese", "purpose": "0,5–1 Seite. 1–3 spezifische Fragen mit theore­tisch begründeter Hypothese." },
+          { "name": "Methoden", "purpose": "2–3 Seiten. Methoden­design, statis­tische Power, Pilot­daten falls vorhanden." },
+          { "name": "Zeitplan", "purpose": "0,5 Seite. Gantt-artige Über­sicht 36 Monate." },
+          { "name": "Erwartete Ergebnisse & Relevanz", "purpose": "0,5–1 Seite. Was lernen wir Neues? Klini­scher Bezug?" },
+          { "name": "Literatur­verzeichnis", "purpose": "Numerisches Format (Vancouver/IEEE) oder Autor-Jahr (Harvard) — Programm-abhängig." }
+        ]
+      },
+      "motivation": {
+        "title": "Motivations­schreiben (Bewerbung)",
+        "what": "1 Seite. Drei Absätze:",
+        "structure": [
+          "Wer du bist (akademischer Werdegang + Masterthema in 3 Sätzen).",
+          "Warum dieses Programm/dieses Lab (konkret! Name der PI, spezifische Publika­tionen, Methoden).",
+          "Was du beitragen kannst (Methoden­erfahrung, Sprachen, Soft Skills)."
+        ]
+      },
+      "dissertation": {
+        "title": "Disser­tation: Mono­grafie vs. kumulativ",
+        "mono": "Klassische zusammen­hängende Schrift (150–250 Seiten). Häufig in Geistes­wissen­schaften, seltener in Lebens­wissen­schaften.",
+        "cumulative": "Sammlung von 2–4 peer-reviewten Erst­autoren-Papern + Rahmen­text (40–80 Seiten Einleitung + Diskussion). Standard in Lebens­wissen­schaften."
+      },
+      "tip": "Wichtig: Sprache, Stil und Aufbau hängen stark vom Programm und der/dem Betreuer:in ab. Frag immer nach erfolgreichen Beispiel-Exposés ehemaliger Promovierender."
+    },
+    "timeline": {
+      "title": "36-Monats-Zeitplan — realistisch",
+      "intro": "Eine ideale strukturierte Promotion in den Lebens­wissenschaften. Bei Individual­promotion verlängern sich die Phasen typisch um 6–12 Monate.",
+      "items": [
+        { "month": "0", "title": "Onboarding", "items": ["Lab-Sicherheits­training", "Methoden­einführung", "erste Literatur­recherche"] },
+        { "month": "1–3", "title": "Pilot-Phase", "items": ["Erste Experimente", "Exposé schreiben", "Thesis Committee bilden"] },
+        { "month": "3–6", "title": "Themen-Finalisierung", "items": ["Pilot-Ergebnisse evaluieren", "Forschungs­frage schärfen", "erstes Committee-Meeting"] },
+        { "month": "6–12", "title": "Methoden-Etablierung", "items": ["Haupt-Methoden vali­dieren", "erste Konferenz (Poster)", "Lab-Rotation evtl. abschließen"] },
+        { "month": "12–18", "title": "Daten­produktion 1", "items": ["Erstes Projekt voran­treiben", "zweites Committee-Meeting", "Manuskript­plan"] },
+        { "month": "18–24", "title": "Erste Publikation", "items": ["Erstes Erst­autoren-Paper einreichen", "Konferenz mit Talk", "Side-Project starten"] },
+        { "month": "24–30", "title": "Daten­produktion 2", "items": ["Zweites/drittes Paper­projekt", "drittes Committee-Meeting", "internationaler Konferenz­beitrag"] },
+        { "month": "30–36", "title": "Schreibphase", "items": ["Disser­tation schreiben", "verbleibende Paper sub­mitten", "Disputation vorbereiten"] }
+      ]
+    },
+    "assistant": {
+      "title": "Forschungs-Assistent",
+      "intro": "Stell hier eine konkrete Frage zu deinem Forschungs­gebiet — von Methoden über Literatur­strategie bis Sub-Themen-Auswahl. Der Assistent ist auf Lebens­wissenschaft­liche Promotion in Deutschland trainiert.",
+      "placeholder": "Beispiel: Ich interessiere mich für Neurodegeneration, kenne aber Alzheimer und Parkinson nicht im Detail. Wo sollte ich anfangen?",
+      "ask": "Frage stellen",
+      "thinking": "Denkt nach…",
+      "examples_title": "Beispielfragen",
+      "examples": [
+        "Was sind die wichtigsten 5 Paper, die ich gelesen haben sollte, bevor ich mich auf eine Tumor-Immunologie-Stelle bewerbe?",
+        "Wie wähle ich zwischen einer strukturierten und einer Individual­promotion?",
+        "Welche Methoden sollte ich vor Beginn einer Neurowissenschafts-Promotion beherrschen?",
+        "Wie schreibe ich ein Exposé für eine Promotion in Krebs­genomik?"
+      ],
+      "no_key": "Hinweis: Ein Anthropic API-Key in der .env ist nötig, damit der Assistent antwortet."
+    }
+  },
+  "common": {
+    "language": "Sprache",
+    "loading": "Lädt…",
+    "error": "Fehler",
+    "open": "Offen",
+    "by": "von"
+  }
+}

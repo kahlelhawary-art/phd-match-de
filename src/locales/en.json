@@ -1,0 +1,713 @@
+{
+  "brand": {
+    "name": "PhD Match DE",
+    "tagline": "Doctoral research in German life sciences — curated.",
+    "subtitle": "Cancer · Immunology · Neuroscience"
+  },
+  "nav": {
+    "discover": "Discover",
+    "compass": "Compass",
+    "library": "Library",
+    "labs": "Labs",
+    "match": "CV Match",
+    "tracker": "Applications",
+    "letter": "Cover Letter",
+    "outreach": "Outreach",
+    "profile": "Profile"
+  },
+  "home": {
+    "hero_eyebrow": "Curated PhD positions",
+    "hero_title": "Find your German life-sciences PhD — without disappearing into the noise.",
+    "hero_lead": "The leading research centres for cancer, immunology and neuroscience in one place. AI-assisted matching of your CV to specific labs — and ready-to-send outreach emails to principal investigators.",
+    "cta_explore": "Discover positions",
+    "cta_match": "Match my CV"
+  },
+  "discover": {
+    "title": "Discover",
+    "subtitle": "Curated programmes & laboratories",
+    "filters": {
+      "all": "All",
+      "field": "Research field",
+      "city": "City",
+      "institution_type": "Institution type",
+      "language": "Working language",
+      "funding": "Funding",
+      "open": "Open for applications",
+      "search_placeholder": "Search institution, city, programme…",
+      "reset": "Reset",
+      "results": "{{count}} results"
+    },
+    "fields": {
+      "cancer": "Cancer research",
+      "immunology": "Immunology",
+      "neuroscience": "Neuroscience",
+      "structural_biology": "Structural biology",
+      "genetics": "Genetics",
+      "molecular_biology": "Molecular biology"
+    },
+    "language": {
+      "german": "German",
+      "english": "English",
+      "bilingual": "Bilingual"
+    },
+    "card": {
+      "deadline": "Deadline",
+      "rolling": "Rolling applications",
+      "funding": "Funding",
+      "language": "Language",
+      "view": "View details",
+      "external": "Programme website",
+      "save": "Save",
+      "saved": "Saved",
+      "apply": "Apply",
+      "accepting": "Accepting doctoral students",
+      "fields": "Fields"
+    },
+    "empty": "No matching positions — adjust filters."
+  },
+  "match": {
+    "title": "CV Match",
+    "subtitle": "Paste your CV and let AI rank labs by fit.",
+    "hero_eyebrow": "AI-assisted matching",
+    "hero_title": "Match your CV against every PhD programme.",
+    "hero_lead": "Paste your CV — Claude analyses your methods, master's topic, and interests, then ranks every programme by fit. Each match comes with reasoning, strengths and gaps, and concrete advice on what to emphasise in your application.",
+    "step1": {
+      "label": "Step 01",
+      "title": "Paste CV",
+      "intro": "Copy your CV or motivation letter into the box. The more detail (methods, thesis topic, software skills, languages), the more precise the ranking.",
+      "placeholder": "Example:\n\nGian H.\nMSc Humanbiologie · University of Greifswald · 2025\nMaster thesis: Role of microglia in…\nMethods: Western blot, qPCR, flow cytometry, immunohistochemistry, scRNA-seq analysis in R\nLanguages: Arabic (native), German (B2), English (C1)\nInternships: …\nPublications / posters: …\n\nResearch interests: tumour immunology, neuroinflammation",
+      "fields_label": "Research interests (optional, helps ranking)",
+      "analyze": "Run analysis",
+      "analyzing": "Claude is analysing…",
+      "min_chars": "At least 200 characters needed for meaningful analysis"
+    },
+    "step2": {
+      "label": "Step 02",
+      "title": "Analysis",
+      "stages": {
+        "parsing": "Reading CV…",
+        "matching": "Matching programmes…",
+        "reasoning": "Generating reasoning…",
+        "ranking": "Sorting ranking…"
+      }
+    },
+    "step3": {
+      "label": "Step 03",
+      "title": "Results",
+      "intro": "Programmes ranked by fit. Click any programme to see full reasoning.",
+      "summary_title": "Profile summary",
+      "strengths": "Strengths",
+      "gaps": "Gaps",
+      "recommendations": "Recommendations for your application",
+      "fit_score": "Fit",
+      "view_details": "Show reasoning",
+      "hide_details": "Hide reasoning",
+      "save_to_tracker": "Save to tracker",
+      "saved": "Saved",
+      "draft_letter": "Draft cover letter",
+      "open_programme": "Open programme",
+      "match_reasoning": "Why this fit",
+      "match_strengths": "What aligns",
+      "match_gaps": "Where the gaps are",
+      "match_tips": "What to emphasise in your application",
+      "no_results": "No analysis yet. Start with Step 01.",
+      "reset": "New analysis",
+      "showing": "Showing {{visible}} of {{total}} programmes"
+    },
+    "errors": {
+      "no_key": "Claude API key missing. Add VITE_ANTHROPIC_KEY to .env.",
+      "too_short": "CV too short — please paste at least 200 characters.",
+      "api_error": "Claude error:",
+      "parse_error": "Couldn't parse response. Try again."
+    }
+  },
+  "tracker": {
+    "title": "Applications",
+    "subtitle": "Status, deadlines, follow-ups.",
+    "hero_eyebrow": "Pipeline",
+    "hero_title": "Your PhD applications — your full pipeline at a glance.",
+    "hero_lead": "Track every application from interest to decision. Capture deadlines, next steps, and interviews. Programmes you save from Match arrive here automatically.",
+    "columns": {
+      "interested": "Interested",
+      "contacted": "Contacted",
+      "applied": "Applied",
+      "interview": "Interview",
+      "decision": "Decision"
+    },
+    "column_hints": {
+      "interested": "Programmes you want to investigate further.",
+      "contacted": "First outreach email or enquiry sent.",
+      "applied": "Full application submitted.",
+      "interview": "Interview scheduled or completed.",
+      "decision": "Offered, rejected, or withdrawn."
+    },
+    "stats": {
+      "total": "Total",
+      "active": "Active",
+      "next_deadline": "Next deadline",
+      "no_deadlines": "No open deadlines"
+    },
+    "card": {
+      "next_action": "Next step",
+      "deadline": "Deadline",
+      "fit": "Fit",
+      "notes": "Notes",
+      "add_note": "Add a note…",
+      "save_note": "Save",
+      "move_to": "Move to",
+      "move_back": "Back",
+      "move_forward": "Forward",
+      "edit": "Edit",
+      "remove": "Remove",
+      "confirm_remove": "Remove from tracker?",
+      "open_programme": "Programme",
+      "no_next_action": "No next step planned",
+      "set_action": "Set next step",
+      "action_label": "What's the next step?",
+      "action_date": "Date (optional)",
+      "save": "Save",
+      "cancel": "Cancel",
+      "added_from_match": "From CV-Match"
+    },
+    "add": {
+      "button": "Add programme",
+      "title": "Add a programme to the tracker",
+      "search": "Search programmes…",
+      "empty": "No matching programme found.",
+      "already_added": "Already in tracker",
+      "add_to": "Which column?",
+      "cancel": "Cancel"
+    },
+    "empty": {
+      "title": "No applications tracked yet",
+      "body": "Add a programme, or run a CV-Match — your top hits land here automatically.",
+      "go_match": "Go to CV-Match",
+      "go_discover": "Discover programmes"
+    },
+    "column_empty": "Empty"
+  },
+  "letter": {
+    "title": "Cover Letter",
+    "subtitle": "Generate a tailored Anschreiben.",
+    "hero_eyebrow": "Cover letter generator",
+    "hero_title": "A cover letter that actually sounds like you — for every programme.",
+    "hero_lead": "Pick a programme from your tracker, set the tone and language — Claude drafts a German Anschreiben (or English cover letter) that connects your methods and master's topic to the lab's research focus.",
+    "step1": {
+      "label": "Step 01",
+      "title": "Pick a programme",
+      "from_tracker": "From your tracker",
+      "all_programmes": "All programmes",
+      "no_tracker": "Your tracker is empty. Pick from the full list, or run a CV-Match first.",
+      "pick_programme": "Choose a programme…",
+      "selected": "Selected",
+      "change": "Change"
+    },
+    "step2": {
+      "label": "Step 02",
+      "title": "Settings",
+      "tone": "Tone",
+      "tones": {
+        "formal": "Formal — academic",
+        "warm": "Warm — personal",
+        "research": "Research-focused — methods-led"
+      },
+      "language": "Letter language",
+      "languages": {
+        "de": "German",
+        "en": "English"
+      },
+      "profile_source": "Profile source",
+      "profile_from_match": "From your last CV-Match",
+      "profile_paste": "Paste new CV",
+      "paste_label": "CV text",
+      "extra_notes": "Extra notes (optional)",
+      "extra_notes_placeholder": "e.g. favourite paper by the group, specific method, shared background…",
+      "no_profile_yet": "No profile yet. Run a CV-Match first, or paste your CV below.",
+      "generate": "Generate letter",
+      "generating": "Claude is drafting…"
+    },
+    "step3": {
+      "label": "Step 03",
+      "title": "Letter",
+      "subject": "Subject",
+      "edit_inline": "Edit directly — changes carry into the copy.",
+      "copy": "Copy",
+      "copied": "Copied ✓",
+      "regenerate": "New version",
+      "save_revision": "Save revision",
+      "saved_revisions": "Saved revisions",
+      "no_revisions": "No saved revisions yet.",
+      "load_revision": "Load",
+      "remove_revision": "Remove",
+      "version": "Version",
+      "for_programme": "For",
+      "generated_at": "Created"
+    },
+    "errors": {
+      "no_key": "Claude API key missing. Add VITE_ANTHROPIC_KEY to .env.",
+      "no_programme": "Pick a programme first.",
+      "no_profile": "Load a profile from CV-Match or paste a CV below.",
+      "api_error": "Claude error:"
+    }
+  },
+  "outreach": {
+    "title": "Outreach",
+    "subtitle": "Initiative email to professors — the most important channel in Germany.",
+    "hero_eyebrow": "Outreach composer",
+    "hero_title": "Open the door before the position is even advertised.",
+    "hero_lead": "Roughly 70% of German PhD positions are filled via direct personal contact. Use this to draft a short, precise email — in two minutes — to the professors whose work fits your profile.",
+    "step1": {
+      "label": "Step 01",
+      "title": "Recipient & programme",
+      "programme": "Programme / institution",
+      "pi_name": "Professor's name",
+      "pi_name_placeholder": "e.g. Prof. Dr. Maria Schmidt",
+      "pi_email": "Email address (optional, for preview)",
+      "lab_focus": "Lab's research focus",
+      "lab_focus_placeholder": "e.g. tumour immunology, T cell exhaustion in solid tumours",
+      "pick_programme": "Choose a programme…",
+      "from_tracker": "From tracker",
+      "all_programmes": "All"
+    },
+    "step2": {
+      "label": "Step 02",
+      "title": "Strategy & language",
+      "strategy": "Strategy",
+      "strategies": {
+        "inquiry": {
+          "name": "Inquiry",
+          "desc": "Brief and polite: 'Are you accepting doctoral students?' The standard first contact."
+        },
+        "paper": {
+          "name": "Specific paper",
+          "desc": "Reference a specific publication. Strongest impact — but demands homework."
+        },
+        "methods": {
+          "name": "Methods bridge",
+          "desc": "Links your methods to the lab's. Best when you have a clear technical profile."
+        }
+      },
+      "language": "Language",
+      "languages": { "de": "German", "en": "English" },
+      "paper_reference": "Concrete paper reference",
+      "paper_reference_placeholder": "e.g. 'Your 2024 Cell paper on T cell exhaustion in melanoma especially caught my attention'",
+      "profile_source": "Profile source",
+      "profile_from_match": "From last CV-Match",
+      "profile_paste": "Paste CV",
+      "paste_label": "CV text",
+      "no_profile_yet": "No profile yet. Run a CV-Match or paste a CV below.",
+      "variants": "Number of variants",
+      "variants_hint": "Three variants make comparison easier.",
+      "generate": "Draft email",
+      "generating": "Claude is drafting…"
+    },
+    "step3": {
+      "label": "Step 03",
+      "title": "Drafts",
+      "variant": "Variant",
+      "subject": "Subject",
+      "copy": "Copy",
+      "copied": "Copied ✓",
+      "save": "Save",
+      "saved": "Saved ✓",
+      "regenerate": "Generate again",
+      "open_mail": "Open in mail client",
+      "log_title": "Outreach log",
+      "log_empty": "No saved outreach emails yet.",
+      "log_to": "To",
+      "log_via": "Strategy",
+      "log_load": "Load",
+      "log_remove": "Remove",
+      "log_mark_replied": "Got a reply",
+      "log_marked_replied": "Replied ✓",
+      "log_unmark": "Unmark"
+    },
+    "tips": {
+      "title": "Tips for effective outreach",
+      "items": [
+        "Keep it short: 120–180 words, max three paragraphs.",
+        "Personalise the subject line — never 'PhD application'.",
+        "Mention a concrete research detail, not just the topic area.",
+        "Ask a specific question at the end — it invites a reply.",
+        "Attach a PDF version of your CV (in the actual email, not here)."
+      ]
+    },
+    "errors": {
+      "no_key": "Claude API key missing. Add VITE_ANTHROPIC_KEY to .env.",
+      "no_programme": "Pick a programme first.",
+      "no_profile": "Load a profile or paste a CV.",
+      "no_paper": "Name the paper briefly (strategy: Specific paper).",
+      "api_error": "Claude error:"
+    }
+  },
+  "labs": {
+    "title": "Labs & PIs",
+    "subtitle": "Specific professors — the people you'll actually write to.",
+    "hero_eyebrow": "Labs directory",
+    "hero_title": "The people behind the programmes — curated by person, not just institution.",
+    "hero_lead": "Submitting to a programme is one thing — but in Germany, every successful PhD ends up at a specific person's bench. Here are 45 named research-group leaders with their current focus, lab URL, and direct contact path.",
+    "filters": {
+      "institution": "Institution",
+      "field": "Research field",
+      "city": "City",
+      "accepting_only": "Accepting students only",
+      "search_placeholder": "Search name, institution, research topic…",
+      "results": "{{count}} labs"
+    },
+    "card": {
+      "research_focus": "Research focus",
+      "recent_papers": "Recent papers",
+      "view_lab": "Lab website",
+      "send_email": "Send email",
+      "no_email": "Email not publicly listed",
+      "save_to_tracker": "Save to tracker",
+      "saved": "Saved",
+      "accepting": "Accepting doctoral students",
+      "not_accepting": "No openings currently",
+      "notes": "Note",
+      "draft_outreach": "Draft outreach"
+    },
+    "empty": "No matching labs — adjust filters."
+  },
+  "profile": {
+    "title": "Profile",
+    "subtitle": "Personal data and CV material.",
+    "hero_eyebrow": "Your profile",
+    "hero_title": "Your data in one place — the whole toolkit runs from here.",
+    "hero_lead": "Save your CV, methods, and languages once. CV-Match, Cover Letter, and Outreach pick it up automatically. Works locally without an account — or syncs via Supabase when connected.",
+    "tabs": {
+      "identity": "Identity",
+      "academic": "Academic",
+      "cv": "CV & skills",
+      "account": "Account"
+    },
+    "identity": {
+      "title": "Personal identity",
+      "full_name": "Full name",
+      "full_name_placeholder": "e.g. Gian Hawary",
+      "email": "Email",
+      "email_placeholder": "you@email.com",
+      "phone": "Phone",
+      "phone_placeholder": "+49 …",
+      "city": "City",
+      "city_placeholder": "e.g. Greifswald",
+      "linkedin": "LinkedIn URL",
+      "linkedin_placeholder": "linkedin.com/in/…",
+      "orcid": "ORCID",
+      "orcid_placeholder": "0000-0000-0000-0000",
+      "github": "GitHub (optional)"
+    },
+    "academic": {
+      "title": "Academic background",
+      "degree": "Highest degree",
+      "degree_placeholder": "e.g. M.Sc. Human Biology",
+      "university": "University",
+      "university_placeholder": "e.g. University of Greifswald",
+      "graduation_year": "Graduation year",
+      "thesis_title": "Master thesis title",
+      "thesis_placeholder": "e.g. Role of microglia in neuroinflammation",
+      "thesis_supervisor": "Supervisor",
+      "thesis_grade": "Grade (optional)",
+      "publications": "Publications & posters (one per line)",
+      "publications_placeholder": "e.g.\nPoster — DGfI 2024, Berlin\nMustermann et al. — preprint bioRxiv 2025"
+    },
+    "cv": {
+      "title": "CV & skills",
+      "raw_text": "Full CV text",
+      "raw_text_help": "Full CV text. Used as the source for CV-Match, Cover Letter, and Outreach.",
+      "methods": "Methods (comma-separated)",
+      "methods_placeholder": "qPCR, Western blot, flow cytometry, scRNA-seq",
+      "software": "Software & tools (comma-separated)",
+      "software_placeholder": "R, Python, GraphPad, ImageJ, Seurat",
+      "languages": "Languages",
+      "add_language": "+ Add language",
+      "lang_code": "Code",
+      "lang_level": "Level",
+      "remove_lang": "Remove",
+      "fields_interest": "Research interests (comma-separated)",
+      "fields_interest_placeholder": "tumour immunology, neuroinflammation, single-cell methods"
+    },
+    "account": {
+      "title": "Account",
+      "no_supabase": "Supabase is not configured. The profile is stored locally (in your browser) only. To use across devices, set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in .env.",
+      "signed_in_as": "Signed in as",
+      "signed_out": "You are not signed in.",
+      "sign_in": "Sign in",
+      "sign_up": "Sign up",
+      "sign_out": "Sign out",
+      "email": "Email",
+      "password": "Password",
+      "submit_signin": "Sign in",
+      "submit_signup": "Create account",
+      "to_signin": "Have an account? Sign in",
+      "to_signup": "New here? Create an account",
+      "sync_now": "Sync now",
+      "syncing": "Syncing…",
+      "synced_at": "Last synced",
+      "pull_from_cloud": "Pull from cloud",
+      "push_to_cloud": "Push to cloud",
+      "sync_help": "Local changes are written to your cloud profile. Other devices can pull the same data via 'Pull from cloud'."
+    },
+    "save": "Save",
+    "saved": "Saved ✓",
+    "auto_save": "Saved automatically as you type (locally)",
+    "danger": {
+      "title": "Clear data",
+      "body": "Removes all stored profile data from this browser. Your Tracker, saved cover letters, and outreach log are kept separately.",
+      "button": "Clear profile data",
+      "confirm": "Really delete all profile data?"
+    },
+    "errors": {
+      "sign_in_failed": "Sign-in failed:",
+      "sign_up_failed": "Sign-up failed:",
+      "sync_failed": "Sync failed:"
+    }
+  },
+  "library": {
+    "title": "Library",
+    "subtitle": "Curated literature, textbooks, courses, funding, and databases.",
+    "hero_eyebrow": "Knowledge sources",
+    "hero_title": "The most important things to read, learn, and apply to — pre-selected.",
+    "hero_lead": "A carefully chosen collection of landmark papers, textbooks, online courses, scholarships, conferences, and databases. Every entry is real, verified, and curated for PhDs in cancer, immunology, and neuroscience.",
+    "tabs": {
+      "papers": "Key papers",
+      "starter": "Reading path",
+      "textbooks": "Textbooks",
+      "courses": "Courses",
+      "funding": "Funding",
+      "conferences": "Conferences",
+      "databases": "Databases",
+      "podcasts": "Podcasts & newsletters"
+    },
+    "filters": {
+      "all": "All",
+      "cancer": "Cancer",
+      "immunology": "Immunology",
+      "neuroscience": "Neuroscience",
+      "molecular_biology": "Molecular biology",
+      "career": "Career & writing",
+      "essential": "Essential only",
+      "results": "{{count}} entries"
+    },
+    "labels": {
+      "essential": "Essential",
+      "why": "Why read / use",
+      "doi": "DOI",
+      "citation": "Citation",
+      "open": "Open",
+      "edition": "Edition",
+      "isbn": "ISBN",
+      "publisher": "Publisher",
+      "cost": "Cost",
+      "free": "Free",
+      "free_audit": "Free to audit",
+      "paid": "Paid",
+      "amount": "Amount",
+      "duration": "Duration",
+      "eligible": "Eligibility",
+      "deadline": "Deadline",
+      "when": "When",
+      "organiser": "Organiser",
+      "provider": "Provider",
+      "host": "Host",
+      "fields": "Fields"
+    },
+    "starter_path": {
+      "title": "5-week reading path",
+      "intro": "A structured entry into your field. One paper per week, with notes on why this order makes sense.",
+      "select_field": "Choose field",
+      "week": "Week",
+      "note": "Note"
+    }
+  },
+  "compass": {
+    "title": "Compass",
+    "subtitle": "How a PhD in Germany actually works — pathways, methods, research literacy.",
+    "hero_eyebrow": "PhD companion",
+    "hero_title": "Understand the road to a doctorate — before you get lost looking.",
+    "hero_lead": "A structured guide to the German life-sciences PhD: from master's graduation to viva. Research tools, literature strategies, and an AI assistant trained on your specific field.",
+    "modules": {
+      "basics": "Basics",
+      "research": "Research & Literature",
+      "fields": "Research Fields",
+      "writing": "Writing & Proposal",
+      "timeline": "Timeline & Milestones",
+      "assistant": "Research Assistant"
+    },
+    "basics": {
+      "title": "How does a German PhD actually work?",
+      "intro": "There is no single \"German PhD\". There are two very different models — and the choice shapes funding, structure, and success.",
+      "paths": {
+        "structured": {
+          "label": "Structured programme",
+          "title": "Graduate School / Doctoral programme",
+          "duration": "3 years",
+          "funding": "TV-L E13 65% or stipend",
+          "language": "Mostly English",
+          "description": "Organised programme with annual calls, mandatory seminars, a thesis committee of 2–3 professors, clear milestones, and a cohort of fellow PhD students. Ideal for international applicants.",
+          "pros": ["Clear structure and milestones", "International cohort", "English as working language", "Fully funded", "Thesis committee oversight"],
+          "cons": ["Competitive annual calls", "Fixed curriculum", "Less topic flexibility"],
+          "examples": "HIGS DKFZ · IMPRS · HBIGS Heidelberg · EIPP EMBL"
+        },
+        "individual": {
+          "label": "Individual PhD",
+          "title": "Classical doctoral path",
+          "duration": "3–5 years",
+          "funding": "TV-L E13 (50–100%) or third-party grants",
+          "language": "German or English",
+          "description": "Direct employment in a professor's lab. No central application process — you write initiative cover letters. Over 60% of German PhDs follow this path.",
+          "pros": ["More topic freedom", "Direct mentor relationship", "Rolling positions — no deadline pressure", "Possible without English as main language"],
+          "cons": ["Less structure — self-discipline required", "Risk of poor supervision", "Possible isolation", "Direct outreach is mandatory"],
+          "examples": "Uni Bonn · Uni Heidelberg · Charité · Goethe · TU Dortmund · Uni Bielefeld"
+        }
+      },
+      "phases": {
+        "title": "The 5 phases of a PhD",
+        "items": [
+          { "n": "1", "title": "Preparation & application", "duration": "3–9 months before start", "what": "Clarify research interests, identify labs, write outreach or structured application, interview (often 1–3 hours)." },
+          { "n": "2", "title": "Onboarding & topic-finding", "duration": "Month 1–6", "what": "Learn methods, pilot experiments, deep reading, finalise topic with supervisor. Draft research proposal." },
+          { "n": "3", "title": "Main research phase", "duration": "Month 6–30", "what": "Experiments, data collection, regular lab meetings, conference contributions, first manuscripts. This is where publications emerge." },
+          { "n": "4", "title": "Publications & writing", "duration": "Month 24–36", "what": "Submit first-author papers, write thesis (cumulative or monograph). Typically 3 publications for a cumulative thesis." },
+          { "n": "5", "title": "Submission & viva", "duration": "Month 33–42", "what": "Submit dissertation, await reviews (typ. 2–3 months), oral defence (Disputation or Rigorosum, 60–90 min)." }
+        ]
+      },
+      "tip_title": "Practical tip",
+      "tip_body": "In Germany, around 70% of PhD positions are filled via direct personal contact with professors — before they are even advertised. The `Outreach` module of this tool helps you open exactly that door."
+    },
+    "research": {
+      "title": "Research & literature — the toolkit",
+      "intro": "A supervisor does not expect you to be an expert in advance — but they do expect you to know how to research. These tools are essential equipment.",
+      "categories": {
+        "search": "Search engines",
+        "literature": "Literature management",
+        "graph": "Citation graphs",
+        "writing": "Writing",
+        "data": "Data & methods"
+      },
+      "tools": {
+        "pubmed": "Biomedical literature — curated by the US National Library of Medicine. First stop for cancer/immuno/neuro.",
+        "scholar": "Broader coverage than PubMed, including preprints and grey literature. Citation tracking.",
+        "europe_pmc": "European counterpart of PubMed with full-text access and ORCID integration.",
+        "biorxiv": "Biology preprints — newest, not-yet peer-reviewed research. Essential for current trends.",
+        "medrxiv": "Preprints in medicine and clinical research.",
+        "zotero": "Free open-source reference manager. Browser connector, BibTeX export, Word/LibreOffice integration.",
+        "mendeley": "Elsevier reference manager with PDF annotation and social features.",
+        "connected_papers": "Visualises a paper and its scientific neighbourhood as a graph — perfect for exploring a new field.",
+        "research_rabbit": "AI-powered literature explorer. Finds similar papers, authors, new publications.",
+        "scite": "Shows whether papers cite supporting, neutral or contrasting — quality control.",
+        "overleaf": "Online LaTeX editor for the dissertation. Real-time collaboration with supervisors.",
+        "obsidian": "Knowledge management with Markdown and backlinks — many PhDs use it as a second brain.",
+        "geneontology": "GO — functional annotation of genes and gene products. Essential for molecular biology.",
+        "uniprot": "Protein database with sequences, structures, and functions.",
+        "gtex": "Tissue-specific gene expression in humans.",
+        "tcga": "The Cancer Genome Atlas — largest public cancer dataset."
+      },
+      "workflow": {
+        "title": "Recommended workflow",
+        "steps": [
+          "Start with a review article on your topic (PubMed, filter \"Review\", last 5 years).",
+          "Drop the paper into Connected Papers — you immediately see the research cluster.",
+          "Save key papers in Zotero, with tags per sub-topic.",
+          "Weekly alert in Google Scholar / Europe PMC for your search terms.",
+          "Follow leading labs on bioRxiv in your field.",
+          "Notes per paper: question, method, result, critique — in Obsidian or a markdown vault."
+        ]
+      },
+      "open_link": "Open tool"
+    },
+    "fields": {
+      "title": "Research fields — where to look",
+      "intro": "Cancer, immunology and neuroscience are huge. These overviews help you pick a sub-topic and find the right labs.",
+      "cancer": {
+        "title": "Cancer research",
+        "areas": ["Tumour immunology", "Cancer genomics", "Oncogenesis & signalling", "Resistance mechanisms", "Liquid biopsy & early detection", "Cancer metabolism", "CAR-T and immunotherapy"],
+        "key_journals": ["Nature Cancer", "Cancer Cell", "Cell", "Cancer Discovery", "Nature Reviews Cancer", "JCO"],
+        "key_institutions": ["DKFZ Heidelberg", "Frankfurt Cancer Institute", "BSIO Charité Berlin", "EMBL"],
+        "search_terms": "tumor microenvironment · CAR-T · cancer immunology · oncogene · MYC · p53 · liquid biopsy · single-cell tumor"
+      },
+      "immunology": {
+        "title": "Immunology",
+        "areas": ["Innate immunity", "Adaptive immunity & T cells", "Autoimmunity", "Immunosenescence", "Mucosal immunology", "Tumour immunology", "Vaccine development", "Infection immunology"],
+        "key_journals": ["Nature Immunology", "Immunity", "Science Immunology", "Cell", "Annual Reviews of Immunology"],
+        "key_institutions": ["MPI-IE Freiburg", "BIGS Immunosciences Bonn", "DKFZ (tumour immunology)", "Charité"],
+        "search_terms": "T cell exhaustion · innate immunity · inflammasome · autoimmunity · single-cell immunology · NK cells · regulatory T cells"
+      },
+      "neuroscience": {
+        "title": "Neuroscience",
+        "areas": ["Neurodegeneration (Alzheimer, Parkinson)", "Synapse & plasticity", "Connectomics", "Computational neuroscience", "Neuroimmunology", "Behavioural neuroscience", "Stem cells & neurodevelopment", "Optogenetics"],
+        "key_journals": ["Neuron", "Nature Neuroscience", "Cell", "eLife", "Journal of Neuroscience", "Brain"],
+        "key_institutions": ["DZNE (all sites)", "MPI for Brain Research Frankfurt", "NeuroCure Berlin", "IGSN Bochum", "BIGS Neuroscience Bonn"],
+        "search_terms": "alpha-synuclein · tau · neuroinflammation · synaptic plasticity · connectome · optogenetics · iPSC neurons · microglia"
+      },
+      "view_papers": "View recent papers",
+      "view_labs": "Matching labs"
+    },
+    "writing": {
+      "title": "Writing — proposal, motivation letter, dissertation",
+      "intro": "Academic writing in Germany follows clear conventions. These building blocks save weeks of learning curve.",
+      "expose": {
+        "title": "The Exposé / Research Proposal",
+        "what": "A 3–8 page document often required with applications (especially for individual PhDs and scholarships). It shows: you understand the field, have a concrete question, and know the methods.",
+        "sections": [
+          { "name": "Title & background", "purpose": "1 page. Current state of knowledge with 5–10 key references." },
+          { "name": "Research question & hypothesis", "purpose": "0.5–1 page. 1–3 specific questions with theoretically grounded hypothesis." },
+          { "name": "Methods", "purpose": "2–3 pages. Methods design, statistical power, pilot data if available." },
+          { "name": "Timeline", "purpose": "0.5 page. Gantt-style 36-month overview." },
+          { "name": "Expected results & relevance", "purpose": "0.5–1 page. What do we learn that's new? Clinical relevance?" },
+          { "name": "References", "purpose": "Numerical (Vancouver/IEEE) or author-year (Harvard) — programme dependent." }
+        ]
+      },
+      "motivation": {
+        "title": "Motivation letter (application)",
+        "what": "1 page. Three paragraphs:",
+        "structure": [
+          "Who you are (academic background + master's topic in 3 sentences).",
+          "Why this programme/this lab (specific! PI name, specific publications, methods).",
+          "What you can contribute (methods experience, languages, soft skills)."
+        ]
+      },
+      "dissertation": {
+        "title": "Dissertation: monograph vs cumulative",
+        "mono": "Classical coherent work (150–250 pages). Common in humanities, rarer in life sciences.",
+        "cumulative": "Collection of 2–4 peer-reviewed first-author papers + framing text (40–80 pages of introduction and discussion). Standard in life sciences."
+      },
+      "tip": "Important: language, style and structure depend strongly on the programme and supervisor. Always ask for successful example proposals from past PhDs."
+    },
+    "timeline": {
+      "title": "36-month timeline — realistic",
+      "intro": "An ideal structured life-sciences PhD. For individual PhDs, phases typically extend by 6–12 months.",
+      "items": [
+        { "month": "0", "title": "Onboarding", "items": ["Lab safety training", "Methods introduction", "Initial literature scan"] },
+        { "month": "1–3", "title": "Pilot phase", "items": ["First experiments", "Write research proposal", "Form thesis committee"] },
+        { "month": "3–6", "title": "Topic finalisation", "items": ["Evaluate pilot results", "Sharpen research question", "First committee meeting"] },
+        { "month": "6–12", "title": "Methods establishment", "items": ["Validate main methods", "First conference (poster)", "Complete lab rotations if any"] },
+        { "month": "12–18", "title": "Data production 1", "items": ["Drive first project", "Second committee meeting", "Manuscript plan"] },
+        { "month": "18–24", "title": "First publication", "items": ["Submit first first-author paper", "Conference with talk", "Start side project"] },
+        { "month": "24–30", "title": "Data production 2", "items": ["Second/third paper project", "Third committee meeting", "International conference"] },
+        { "month": "30–36", "title": "Writing phase", "items": ["Write dissertation", "Submit remaining papers", "Prepare defence"] }
+      ]
+    },
+    "assistant": {
+      "title": "Research assistant",
+      "intro": "Ask a concrete question about your research area — from methods to literature strategy to sub-topic choice. The assistant is tuned for German life-sciences PhDs.",
+      "placeholder": "Example: I'm interested in neurodegeneration, but don't know Alzheimer's and Parkinson's in detail. Where should I start?",
+      "ask": "Ask",
+      "thinking": "Thinking…",
+      "examples_title": "Example questions",
+      "examples": [
+        "What are the 5 essential papers to read before applying for a tumour immunology position?",
+        "How do I choose between a structured and an individual PhD?",
+        "Which methods should I master before starting a neuroscience PhD?",
+        "How do I write a research proposal for a cancer genomics PhD?"
+      ],
+      "no_key": "Note: An Anthropic API key in .env is required for the assistant to respond."
+    }
+  },
+  "common": {
+    "language": "Language",
+    "loading": "Loading…",
+    "error": "Error",
+    "open": "Open",
+    "by": "by"
+  }
+}
