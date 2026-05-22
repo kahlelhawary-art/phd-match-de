@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+﻿import { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { programmesWithInstitutions } from '../data/seed.js';
 import { supabase, hasSupabase } from '../lib/supabase.js';
@@ -92,7 +92,7 @@ export default function Outreach() {
   useEffect(() => { localStorage.setItem(LOG_KEY, JSON.stringify(log)); }, [log]);
 
   // ─── Actions ───────────────────────────────────
-  const hasKey = Boolean(import.meta.env.VITE_ANTHROPIC_KEY);
+
   const selectedProgramme = selectedProgrammeId ? programmeMap[selectedProgrammeId] : null;
 
   const trackerProgrammes = useMemo(
@@ -103,7 +103,7 @@ export default function Outreach() {
   const onGenerate = async () => {
     setError(null);
 
-    if (!hasKey) { setError(t('outreach.errors.no_key')); return; }
+
     if (!selectedProgramme) { setError(t('outreach.errors.no_programme')); return; }
 
     const usingProfile = profileSource === 'match' && matchProfile;
@@ -271,7 +271,7 @@ export default function Outreach() {
                 onChange={(e) => setLabFocus(e.target.value)}
                 rows={2}
                 placeholder={t('outreach.step1.lab_focus_placeholder')}
-                className="w-full bg-transparent border border-rule p-3 text-sm focus:outline-none focus:border-ink resize-y"
+                className="textarea-editorial text-sm"
               />
             </SettingGroup>
           </div>
@@ -316,7 +316,7 @@ export default function Outreach() {
                     onChange={(e) => setPaperRef(e.target.value)}
                     rows={3}
                     placeholder={t('outreach.step2.paper_reference_placeholder')}
-                    className="w-full bg-paper2/30 border border-rule p-3 text-sm focus:outline-none focus:border-ink resize-y"
+                    className="textarea-editorial text-sm"
                   />
                 </SettingGroup>
               )}
@@ -384,7 +384,7 @@ export default function Outreach() {
                     onChange={(e) => { setPastedCv(e.target.value); localStorage.setItem(CV_DRAFT_KEY, e.target.value); }}
                     rows={5}
                     placeholder={t('outreach.step2.paste_label')}
-                    className="w-full bg-paper2/30 border border-rule p-3 font-mono text-[13px] text-ink2 focus:outline-none focus:border-ink resize-y"
+                    className="textarea-editorial font-mono text-[13px]"
                   />
                 )}
               </SettingGroup>
@@ -398,12 +398,6 @@ export default function Outreach() {
             </div>
           )}
 
-          {!hasKey && (
-            <div className="mt-6 border border-ochre/40 bg-ochre/5 p-3 text-xs text-ink2 leading-relaxed max-w-md">
-              <div className="font-mono text-[10px] tracking-wider uppercase text-ochre mb-1">⚠ Setup</div>
-              {t('outreach.errors.no_key')}
-            </div>
-          )}
 
           <button
             onClick={onGenerate}
@@ -707,3 +701,4 @@ function ArrowIcon() {
     </svg>
   );
 }
+

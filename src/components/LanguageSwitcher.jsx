@@ -1,4 +1,4 @@
-import { useI18n } from '../lib/i18n.jsx';
+﻿import { useI18n } from '../lib/i18n.jsx';
 
 const LABEL = { de: 'DE', en: 'EN', ar: 'AR' };
 
@@ -24,3 +24,4 @@ export default function LanguageSwitcher() {
     </div>
   );
 }
+

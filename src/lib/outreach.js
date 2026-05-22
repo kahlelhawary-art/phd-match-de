@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Outreach email composer.
  *
  * Drafts short initiative emails to German PIs. Different from the Anschreiben
@@ -178,3 +178,4 @@ function parseJson(text) {
     throw error;
   }
 }
+

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { researchTools } from '../data/researchTools.js';
 import ResearchAssistant from '../components/ResearchAssistant.jsx';
@@ -578,3 +578,4 @@ function TimelineSection() {
     </div>
   );
 }
+

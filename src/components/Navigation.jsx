@@ -1,8 +1,9 @@
-import { NavLink } from 'react-router-dom';
+﻿import { NavLink } from 'react-router-dom';
 import { useI18n } from '../lib/i18n.jsx';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
+import Logo from './Logo.jsx';
 
-const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
+const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
 
 export default function Navigation() {
   const { t, isRtl } = useI18n();
@@ -17,6 +18,7 @@ export default function Navigation() {
     { to: '/letter', key: 'nav.letter' },
     { to: '/outreach', key: 'nav.outreach' },
     { to: '/profile', key: 'nav.profile' },
+    { to: '/interview', key: 'nav.interview' },
   ];
 
   return (
@@ -25,13 +27,16 @@ export default function Navigation() {
         {/* Top row — brand + lang */}
         <div className="flex items-center justify-between py-4 border-b border-rule/60">
           <NavLink to="/" className="group">
-            <div className="flex items-baseline gap-3">
-              <span className="font-display text-xl tracking-tightest text-ink leading-none">
-                PhD<span className="text-sienna">·</span>Match
-              </span>
-              <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-muted border-l border-rule pl-3">
-                DE
-              </span>
+            <div className="flex items-center gap-3">
+              <Logo size={34} tone="light" className="shrink-0 transition-transform duration-500 group-hover:rotate-[8deg]" />
+              <div className="flex items-baseline gap-3">
+                <span className="font-display text-xl tracking-tightest text-ink leading-none">
+                  PhD<span className="text-sienna">·</span>Match
+                </span>
+                <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-muted border-l border-rule pl-3">
+                  DE
+                </span>
+              </div>
             </div>
           </NavLink>
 
@@ -64,3 +69,4 @@ export default function Navigation() {
     </header>
   );
 }
+

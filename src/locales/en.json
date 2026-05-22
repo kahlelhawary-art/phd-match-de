@@ -1,4 +1,4 @@
-{
+﻿{
   "brand": {
     "name": "PhD Match DE",
     "tagline": "Doctoral research in German life sciences — curated.",
@@ -13,7 +13,8 @@
     "tracker": "Applications",
     "letter": "Cover Letter",
     "outreach": "Outreach",
-    "profile": "Profile"
+    "profile": "Profile",
+    "interview": "Interview Prep"
   },
   "home": {
     "hero_eyebrow": "Curated PhD positions",
@@ -70,7 +71,7 @@
     "subtitle": "Paste your CV and let AI rank labs by fit.",
     "hero_eyebrow": "AI-assisted matching",
     "hero_title": "Match your CV against every PhD programme.",
-    "hero_lead": "Paste your CV — Claude analyses your methods, master's topic, and interests, then ranks every programme by fit. Each match comes with reasoning, strengths and gaps, and concrete advice on what to emphasise in your application.",
+    "hero_lead": "Paste your CV — KI analyses your methods, master's topic, and interests, then ranks every programme by fit. Each match comes with reasoning, strengths and gaps, and concrete advice on what to emphasise in your application.",
     "step1": {
       "label": "Step 01",
       "title": "Paste CV",
@@ -78,7 +79,7 @@
       "placeholder": "Example:\n\nGian H.\nMSc Humanbiologie · University of Greifswald · 2025\nMaster thesis: Role of microglia in…\nMethods: Western blot, qPCR, flow cytometry, immunohistochemistry, scRNA-seq analysis in R\nLanguages: Arabic (native), German (B2), English (C1)\nInternships: …\nPublications / posters: …\n\nResearch interests: tumour immunology, neuroinflammation",
       "fields_label": "Research interests (optional, helps ranking)",
       "analyze": "Run analysis",
-      "analyzing": "Claude is analysing…",
+      "analyzing": "KI is analysing…",
       "min_chars": "At least 200 characters needed for meaningful analysis"
     },
     "step2": {
@@ -115,9 +116,9 @@
       "showing": "Showing {{visible}} of {{total}} programmes"
     },
     "errors": {
-      "no_key": "Claude API key missing. Add VITE_ANTHROPIC_KEY to .env.",
+      "no_key": "KI API key missing. Add VITE_OPENAI_KEY to .env.",
       "too_short": "CV too short — please paste at least 200 characters.",
-      "api_error": "Claude error:",
+      "api_error": "KI error:",
       "parse_error": "Couldn't parse response. Try again."
     }
   },
@@ -191,7 +192,7 @@
     "subtitle": "Generate a tailored Anschreiben.",
     "hero_eyebrow": "Cover letter generator",
     "hero_title": "A cover letter that actually sounds like you — for every programme.",
-    "hero_lead": "Pick a programme from your tracker, set the tone and language — Claude drafts a German Anschreiben (or English cover letter) that connects your methods and master's topic to the lab's research focus.",
+    "hero_lead": "Pick a programme from your tracker, set the tone and language — KI drafts a German Anschreiben (or English cover letter) that connects your methods and master's topic to the lab's research focus.",
     "step1": {
       "label": "Step 01",
       "title": "Pick a programme",
@@ -224,7 +225,7 @@
       "extra_notes_placeholder": "e.g. favourite paper by the group, specific method, shared background…",
       "no_profile_yet": "No profile yet. Run a CV-Match first, or paste your CV below.",
       "generate": "Generate letter",
-      "generating": "Claude is drafting…"
+      "generating": "KI is drafting…"
     },
     "step3": {
       "label": "Step 03",
@@ -244,10 +245,10 @@
       "generated_at": "Created"
     },
     "errors": {
-      "no_key": "Claude API key missing. Add VITE_ANTHROPIC_KEY to .env.",
+      "no_key": "KI API key missing. Add VITE_OPENAI_KEY to .env.",
       "no_programme": "Pick a programme first.",
       "no_profile": "Load a profile from CV-Match or paste a CV below.",
-      "api_error": "Claude error:"
+      "api_error": "KI error:"
     }
   },
   "outreach": {
@@ -299,7 +300,7 @@
       "variants": "Number of variants",
       "variants_hint": "Three variants make comparison easier.",
       "generate": "Draft email",
-      "generating": "Claude is drafting…"
+      "generating": "KI is drafting…"
     },
     "step3": {
       "label": "Step 03",
@@ -333,11 +334,11 @@
       ]
     },
     "errors": {
-      "no_key": "Claude API key missing. Add VITE_ANTHROPIC_KEY to .env.",
+      "no_key": "KI API key missing. Add VITE_OPENAI_KEY to .env.",
       "no_programme": "Pick a programme first.",
       "no_profile": "Load a profile or paste a CV.",
       "no_paper": "Name the paper briefly (strategy: Specific paper).",
-      "api_error": "Claude error:"
+      "api_error": "KI error:"
     }
   },
   "labs": {
@@ -384,7 +385,7 @@
     "identity": {
       "title": "Personal identity",
       "full_name": "Full name",
-      "full_name_placeholder": "e.g. Gian Hawary",
+      "full_name_placeholder": "e.g. Gian",
       "email": "Email",
       "email_placeholder": "you@email.com",
       "phone": "Phone",
@@ -703,6 +704,98 @@
       "no_key": "Note: An Anthropic API key in .env is required for the assistant to respond."
     }
   },
+  "interview": {
+    "title": "Interview Prep",
+    "subtitle": "Simulate PhD interviews and learn Germany-specific tips.",
+    "hero_eyebrow": "PhD Interview preparation",
+    "hero_title": "Practice your PhD interview — before the real one.",
+    "hero_lead": "Conduct a mock interview tailored to your research field. The AI asks 5–7 progressive questions one at a time, then gives you a detailed evaluation with score, strengths, and concrete tips for German academic culture.",
+    "tabs": {
+      "simulator": "Interview Simulator",
+      "tips": "Tips Guide"
+    },
+    "simulator": {
+      "title": "Mock PhD Interview",
+      "field_label": "Research field",
+      "field_placeholder": "Type or select a field…",
+      "field_hint": "Select from the dropdown or type your own field.",
+      "start": "Start interview",
+      "restart": "New interview",
+      "new_questions": "Try different questions",
+      "your_answer": "Your answer…",
+      "send": "Send",
+      "thinking": "Thinking…",
+      "question_of": "Question {{n}} of {{total}}",
+      "evaluation_title": "Interview Evaluation",
+      "score_label": "Overall score",
+      "strengths_label": "Strengths",
+      "improve_label": "Areas to improve",
+      "tips_label": "Personalised tips",
+      "retry": "Retry",
+      "intro_message": "Welcome to your mock PhD interview. I will ask you {{total}} questions about your background, research experience, and motivation — one at a time. Take your time with each answer. Let's begin.",
+      "fields": {
+        "cancer": "Cancer research",
+        "immunology": "Immunology",
+        "neuroscience": "Neuroscience",
+        "structural_biology": "Structural biology",
+        "genetics": "Genetics",
+        "molecular_biology": "Molecular biology",
+        "bioinformatics": "Bioinformatics",
+        "biochemistry": "Biochemistry",
+        "cell_biology": "Cell biology",
+        "pharmacology": "Pharmacology"
+      },
+      "error": "Something went wrong. Please try again."
+    },
+    "tips": {
+      "title": "PhD Interview Tips — Germany",
+      "intro": "The German academic interview has its own culture. These tips are drawn from real experiences at DKFZ, EMBL, Charité, and major graduate schools.",
+      "sections": {
+        "before": {
+          "title": "Before the Interview",
+          "items": [
+            "Research the PI's last 3–5 publications thoroughly — you will likely be asked about them.",
+            "Prepare a 5-minute talk on your master's thesis or most significant project.",
+            "Know your methods inside out: be ready to explain the principle, not just 'I used it'.",
+            "Prepare a concrete research question you would pursue in this lab.",
+            "Study the programme structure: thesis committee requirements, seminar obligations, funding.",
+            "Practice saying the professor's name and title correctly. In Germany: 'Herr/Frau Professor Doktor [Name]' at first contact.",
+            "Prepare questions for the professor — not about salary, but about lab culture, supervision style, and open questions in their research."
+          ]
+        },
+        "during": {
+          "title": "During the Interview",
+          "items": [
+            "Address the professor as 'Professor [Name]' or 'Prof. Dr. [Name]' unless invited to use first names — formality matters in Germany.",
+            "Speak slowly and clearly. If you are unsure of something, it's better to say 'I don't know yet, but here is how I would approach finding out'.",
+            "Show genuine intellectual curiosity — ask follow-up questions about their research.",
+            "If presenting your thesis: focus on the scientific question, not the techniques. What did you learn? What would you do differently?",
+            "Don't exaggerate your skills. German academic culture values precise, honest self-assessment.",
+            "If asked 'Why Germany?' or 'Why this programme?' — be specific. Name the institute, the group's work, a paper. Generic answers are a red flag.",
+            "For structured programmes (DKFZ HIGS, EMBL, IMPRS): expect a formal panel with 3–5 professors. Keep answers concise and structured."
+          ]
+        },
+        "after": {
+          "title": "After the Interview",
+          "items": [
+            "Send a short thank-you email within 24 hours — this is not standard in Germany but is remembered positively.",
+            "If you interviewed at a structured programme: decisions usually take 1–3 weeks. A follow-up email after 2 weeks is appropriate.",
+            "For direct PI contact: follow up in 1–2 weeks if no response. PIs are busy — one polite follow-up is expected.",
+            "If rejected: ask for brief feedback if you have a direct contact. Many German PIs will give honest, useful feedback.",
+            "Keep a log of what questions you were asked — this helps for the next interview."
+          ]
+        }
+      },
+      "culture_note_title": "German academic culture — key points",
+      "culture_notes": [
+        "Titles matter: always use 'Prof. Dr.' until told otherwise.",
+        "Punctuality is a signal of professionalism — arrive 5 minutes early, not 15.",
+        "Research proposals (Exposé) are expected even for structured programmes. Have a draft ready.",
+        "Being direct about your weaknesses is respected — saying 'I haven't done X yet, but I am learning' is better than vague answers.",
+        "German PIs value independence: show that you can think about problems, not just execute protocols."
+      ]
+    }
+  },
   "common": {
     "language": "Language",
     "loading": "Loading…",
@@ -711,3 +804,4 @@
     "by": "by"
   }
 }
+

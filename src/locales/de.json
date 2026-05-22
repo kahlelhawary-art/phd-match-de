@@ -1,4 +1,4 @@
-{
+﻿{
   "brand": {
     "name": "PhD Match DE",
     "tagline": "Promotion in den Lebenswissenschaften — kuratiert.",
@@ -13,7 +13,8 @@
     "tracker": "Bewerbungen",
     "letter": "Anschreiben",
     "outreach": "Direktkontakt",
-    "profile": "Profil"
+    "profile": "Profil",
+    "interview": "Interview-Prep"
   },
   "home": {
     "hero_eyebrow": "Kuratierte Promotionsstellen",
@@ -70,7 +71,7 @@
     "subtitle": "Lebenslauf einfügen und KI-gestützt mit Arbeits­gruppen abgleichen.",
     "hero_eyebrow": "KI-gestützter Abgleich",
     "hero_title": "Deinen CV mit den passenden Promotions­programmen abgleichen.",
-    "hero_lead": "Füge deinen Lebenslauf ein — Claude analysiert deine Methoden, dein Master-Thema und deine Interessen und ranked alle Programme nach Passung. Mit Begründung pro Programm, Stärken und Lücken — und konkreten Hinweisen, was du in der Bewerbung betonen solltest.",
+    "hero_lead": "Füge deinen Lebenslauf ein — KI analysiert deine Methoden, dein Master-Thema und deine Interessen und ranked alle Programme nach Passung. Mit Begründung pro Programm, Stärken und Lücken — und konkreten Hinweisen, was du in der Bewerbung betonen solltest.",
     "step1": {
       "label": "Schritt 01",
       "title": "Lebenslauf einfügen",
@@ -78,7 +79,7 @@
       "placeholder": "Beispiel:\n\nGian H.\nMaster in Humanbiologie · Universität Greifswald · 2025\nMaster-Thesis: Rolle der Mikroglia bei…\nMethoden: Western Blot, qPCR, Durchfluss­zytometrie, Immun­histochemie, scRNA-seq Auswertung in R\nSprachen: Arabisch (Muttersprache), Deutsch (B2), Englisch (C1)\nPraktika: …\nPublikationen / Poster: …\n\nForschungs­interessen: Tumor-Immunologie, Neuroinflammation",
       "fields_label": "Forschungs­interessen (optional, hilft beim Ranking)",
       "analyze": "Analyse starten",
-      "analyzing": "Claude analysiert…",
+      "analyzing": "KI analysiert…",
       "min_chars": "Mindestens 200 Zeichen für aussagekräftige Analyse"
     },
     "step2": {
@@ -115,9 +116,9 @@
       "showing": "Zeige {{visible}} von {{total}} Programmen"
     },
     "errors": {
-      "no_key": "Claude API-Key fehlt. Trage VITE_ANTHROPIC_KEY in .env ein.",
+      "no_key": "KI API-Key fehlt. Trage VITE_OPENAI_KEY in .env ein.",
       "too_short": "CV zu kurz — bitte mindestens 200 Zeichen.",
-      "api_error": "Claude-Fehler:",
+      "api_error": "KI-Fehler:",
       "parse_error": "Antwort konnte nicht verstanden werden. Versuche es nochmal."
     }
   },
@@ -191,7 +192,7 @@
     "subtitle": "Maßgeschneidertes Bewerbungs­schreiben generieren.",
     "hero_eyebrow": "Anschreiben-Generator",
     "hero_title": "Ein Anschreiben, das wirklich nach dir klingt — für jedes Programm.",
-    "hero_lead": "Wähle ein Programm aus deinem Tracker, stelle Ton und Sprache ein — Claude verfasst ein deutsches Anschreiben, das deine Methoden und dein Master-Thema mit den Forschungs­schwerpunkten der Arbeits­gruppe verbindet.",
+    "hero_lead": "Wähle ein Programm aus deinem Tracker, stelle Ton und Sprache ein — KI verfasst ein deutsches Anschreiben, das deine Methoden und dein Master-Thema mit den Forschungs­schwerpunkten der Arbeits­gruppe verbindet.",
     "step1": {
       "label": "Schritt 01",
       "title": "Programm wählen",
@@ -224,7 +225,7 @@
       "extra_notes_placeholder": "z. B. Lieblings-Paper der Arbeitsgruppe, bestimmte Methode, gemeinsamer Hintergrund …",
       "no_profile_yet": "Noch kein Profil vorhanden. Lass zuerst einen CV-Match laufen oder füge unten deinen CV ein.",
       "generate": "Anschreiben generieren",
-      "generating": "Claude verfasst…"
+      "generating": "KI verfasst…"
     },
     "step3": {
       "label": "Schritt 03",
@@ -244,10 +245,10 @@
       "generated_at": "Erstellt"
     },
     "errors": {
-      "no_key": "Claude API-Key fehlt. Trage VITE_ANTHROPIC_KEY in .env ein.",
+      "no_key": "KI API-Key fehlt. Trage VITE_OPENAI_KEY in .env ein.",
       "no_programme": "Bitte zuerst ein Programm auswählen.",
       "no_profile": "Bitte ein Profil aus CV-Match laden oder CV unten einfügen.",
-      "api_error": "Claude-Fehler:"
+      "api_error": "KI-Fehler:"
     }
   },
   "outreach": {
@@ -299,7 +300,7 @@
       "variants": "Anzahl Varianten",
       "variants_hint": "Drei Varianten erleichtern den Vergleich.",
       "generate": "E-Mail entwerfen",
-      "generating": "Claude verfasst…"
+      "generating": "KI verfasst…"
     },
     "step3": {
       "label": "Schritt 03",
@@ -333,11 +334,11 @@
       ]
     },
     "errors": {
-      "no_key": "Claude API-Key fehlt. Trage VITE_ANTHROPIC_KEY in .env ein.",
+      "no_key": "KI API-Key fehlt. Trage VITE_OPENAI_KEY in .env ein.",
       "no_programme": "Bitte zuerst ein Programm auswählen.",
       "no_profile": "Bitte Profil laden oder CV einfügen.",
       "no_paper": "Bitte das Paper kurz benennen (Strategie: Konkretes Paper).",
-      "api_error": "Claude-Fehler:"
+      "api_error": "KI-Fehler:"
     }
   },
   "labs": {
@@ -384,7 +385,7 @@
     "identity": {
       "title": "Persönliche Identität",
       "full_name": "Vollständiger Name",
-      "full_name_placeholder": "z. B. Gian Hawary",
+      "full_name_placeholder": "z. B. Gian",
       "email": "E-Mail",
       "email_placeholder": "deine@email.de",
       "phone": "Telefon",
@@ -728,6 +729,98 @@
       "no_key": "Hinweis: Ein Anthropic API-Key in der .env ist nötig, damit der Assistent antwortet."
     }
   },
+  "interview": {
+    "title": "Interview-Vorbereitung",
+    "subtitle": "Promotionsgespräche simulieren und Deutschland-spezifische Tipps lernen.",
+    "hero_eyebrow": "Vorbereitung auf das Promotionsgespräch",
+    "hero_title": "Übe dein Promotionsgespräch — bevor es ernst wird.",
+    "hero_lead": "Führe ein simuliertes Gespräch zugeschnitten auf dein Forschungsfeld. Die KI stellt dir 5–7 progressive Fragen einzeln, und gibt dir anschließend eine detaillierte Auswertung mit Punktzahl, Stärken und konkreten Tipps zur deutschen akademischen Kultur.",
+    "tabs": {
+      "simulator": "Interview-Simulator",
+      "tips": "Tipps-Leitfaden"
+    },
+    "simulator": {
+      "title": "Simuliertes Promotionsgespräch",
+      "field_label": "Forschungsfeld",
+      "field_placeholder": "Feld eingeben oder auswählen…",
+      "field_hint": "Wähle aus der Liste oder tippe ein eigenes Feld.",
+      "start": "Gespräch starten",
+      "restart": "Neues Gespräch",
+      "new_questions": "Andere Fragen probieren",
+      "your_answer": "Deine Antwort…",
+      "send": "Senden",
+      "thinking": "Denkt nach…",
+      "question_of": "Frage {{n}} von {{total}}",
+      "evaluation_title": "Gesprächsauswertung",
+      "score_label": "Gesamtpunktzahl",
+      "strengths_label": "Stärken",
+      "improve_label": "Verbesserungspotenzial",
+      "tips_label": "Persönliche Tipps",
+      "retry": "Nochmal versuchen",
+      "intro_message": "Willkommen zu deinem simulierten Promotionsgespräch. Ich stelle dir {{total}} Fragen zu deinem Hintergrund, deiner Forschungserfahrung und Motivation — eine nach der anderen. Nimm dir Zeit für jede Antwort. Lass uns beginnen.",
+      "fields": {
+        "cancer": "Krebsforschung",
+        "immunology": "Immunologie",
+        "neuroscience": "Neurowissenschaften",
+        "structural_biology": "Strukturbiologie",
+        "genetics": "Genetik",
+        "molecular_biology": "Molekularbiologie",
+        "bioinformatics": "Bioinformatik",
+        "biochemistry": "Biochemie",
+        "cell_biology": "Zellbiologie",
+        "pharmacology": "Pharmakologie"
+      },
+      "error": "Ein Fehler ist aufgetreten. Bitte erneut versuchen."
+    },
+    "tips": {
+      "title": "Tipps für das Promotionsgespräch in Deutschland",
+      "intro": "Das akademische Gespräch in Deutschland hat seine eigene Kultur. Diese Tipps basieren auf realen Erfahrungen bei DKFZ, EMBL, Charité und großen Graduiertenkollegs.",
+      "sections": {
+        "before": {
+          "title": "Vor dem Gespräch",
+          "items": [
+            "Lies die letzten 3–5 Publikationen des PIs gründlich — du wirst wahrscheinlich danach gefragt.",
+            "Bereite einen 5-Minuten-Vortrag über deine Masterarbeit oder dein wichtigstes Projekt vor.",
+            "Kenne deine Methoden in- und auswendig: sei bereit, das Prinzip zu erklären, nicht nur 'ich habe es benutzt'.",
+            "Formuliere eine konkrete Forschungsfrage, der du in diesem Labor nachgehen würdest.",
+            "Informiere dich über die Programmstruktur: Anforderungen des Thesis-Komitees, Seminarpflichten, Finanzierung.",
+            "Übe, den Namen und Titel des Professors korrekt zu sagen. In Deutschland: 'Herr/Frau Professor Doktor [Name]' beim Erstkontakt.",
+            "Bereite Fragen für den Professor vor — nicht zum Gehalt, sondern zur Laborkultur, Betreuungsstil und offenen Fragen in seiner Forschung."
+          ]
+        },
+        "during": {
+          "title": "Während des Gesprächs",
+          "items": [
+            "Spreche den Professor als 'Professor [Name]' oder 'Prof. Dr. [Name]' an, bis du zur Vornamenanrede eingeladen wirst — Formalität ist wichtig in Deutschland.",
+            "Sprich langsam und deutlich. Wenn du dir bei etwas unsicher bist, ist es besser zu sagen: 'Das weiß ich noch nicht, aber so würde ich es herausfinden'.",
+            "Zeige echte intellektuelle Neugier — stelle Rückfragen zu ihrer Forschung.",
+            "Bei der Präsentation deiner Thesis: Fokussiere auf die wissenschaftliche Frage, nicht auf die Techniken. Was hast du gelernt? Was würdest du anders machen?",
+            "Übertreibe deine Fähigkeiten nicht. Die deutsche Akademia schätzt präzise, ehrliche Selbsteinschätzung.",
+            "Wenn du gefragt wirst 'Warum Deutschland?' oder 'Warum dieses Programm?' — sei spezifisch. Nenne das Institut, die Arbeit der Gruppe, ein Paper. Generische Antworten sind ein Warnsignal.",
+            "Bei strukturierten Programmen (DKFZ HIGS, EMBL, IMPRS): Erwarte ein formelles Gremium mit 3–5 Professoren. Halte Antworten präzise und strukturiert."
+          ]
+        },
+        "after": {
+          "title": "Nach dem Gespräch",
+          "items": [
+            "Sende innerhalb von 24 Stunden eine kurze Dankesmail — in Deutschland nicht Standard, wird aber positiv in Erinnerung behalten.",
+            "Bei strukturierten Programmen: Entscheidungen dauern in der Regel 1–3 Wochen. Eine Nachfrage-Email nach 2 Wochen ist angemessen.",
+            "Beim direkten PI-Kontakt: Nach 1–2 Wochen nachfragen, wenn keine Antwort. PIs sind beschäftigt — eine höfliche Nachfrage wird erwartet.",
+            "Bei Absage: Frage nach kurzem Feedback, wenn du einen direkten Kontakt hast. Viele deutsche PIs geben ehrliches, nützliches Feedback.",
+            "Führe ein Protokoll der gestellten Fragen — das hilft beim nächsten Gespräch."
+          ]
+        }
+      },
+      "culture_note_title": "Deutsche akademische Kultur — Kernpunkte",
+      "culture_notes": [
+        "Titel sind wichtig: verwende immer 'Prof. Dr.' bis du anders gebeten wirst.",
+        "Pünktlichkeit ist ein Signal für Professionalität — komme 5 Minuten früher, nicht 15.",
+        "Forschungsexposés werden auch bei strukturierten Programmen erwartet. Habe einen Entwurf bereit.",
+        "Direkte Aussagen über deine Schwächen werden respektiert — 'X habe ich noch nicht gemacht, aber ich lerne es' ist besser als vage Antworten.",
+        "Deutsche PIs schätzen Selbstständigkeit: zeige, dass du über Probleme nachdenken kannst, nicht nur Protokolle ausführen."
+      ]
+    }
+  },
   "common": {
     "language": "Sprache",
     "loading": "Lädt…",
@@ -736,3 +829,4 @@
     "by": "von"
   }
 }
+
