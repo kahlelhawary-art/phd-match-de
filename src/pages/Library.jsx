@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+﻿import { useMemo, useState } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import {
   landmarkPapers,
@@ -756,3 +756,4 @@ function Meta({ label, value, mono }) {
     </div>
   );
 }
+

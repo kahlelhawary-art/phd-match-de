@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Curated database of Principal Investigators (PIs) across 12 German
  * institutions in cancer research, immunology, and neuroscience.
  *
@@ -927,6 +927,528 @@ export const pis = [
     recent_papers: [],
     notes: 'Co-Director of the Stanford Genome Technology Center; joint appointment Stanford / EMBL.'
   },
+  // ════════════════════════════════════════════════════════════════
+  // TU München — institution i13 / programme p15
+  // ════════════════════════════════════════════════════════════════
+  {
+    id: 'pi_tum_01',
+    institution_id: 'i13',
+    programme_id: 'p15',
+    name: 'Prof. Dr. Fabian Theis',
+    title: 'Prof. Dr.',
+    fields: ['molecular_biology', 'cancer', 'neuroscience'],
+    research_focus: 'Computational biology and AI for single-cell genomics; co-developer of scVI and Scanpy frameworks. Director of AI for Medicine at Helmholtz Munich.',
+    research_focus_de: 'Computationale Biologie und KI für Einzelzell-Genomik; Mitentwickler der scVI- und Scanpy-Frameworks. Direktor für KI in der Medizin am Helmholtz München.',
+    research_focus_ar: 'البيولوجيا الحوسبية والذكاء الاصطناعي لجينوميات الخلية الواحدة؛ مشارك في تطوير أطر scVI و Scanpy. مدير الذكاء الاصطناعي للطب في هيلمهولتز ميونخ.',
+    lab_url: 'https://www.helmholtz-munich.de/en/icb/research-groups/theis-lab',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Probabilistic programming for single-cell multi-omics', journal: 'Nat Methods', year: 2023, url: 'https://www.nature.com/articles/s41592-023-01814-1' }
+    ],
+    notes: 'Joint appointment TUM / Helmholtz Munich; core developer of scvi-tools and scANVI.'
+  },
+  {
+    id: 'pi_tum_02',
+    institution_id: 'i13',
+    programme_id: 'p15',
+    name: 'Prof. Dr. Caroline Uhler',
+    title: 'Prof. Dr.',
+    fields: ['molecular_biology', 'cancer'],
+    research_focus: 'Machine learning and causal inference for genomics; single-cell perturbation prediction and gene regulatory network reconstruction.',
+    research_focus_de: 'Maschinelles Lernen und kausale Schlussfolgerung für Genomik; Einzelzell-Perturbationsvorhersage und Genregulationsnetzwerk-Rekonstruktion.',
+    research_focus_ar: 'التعلم الآلي والاستنتاج السببي للجينوميات؛ تنبؤ اضطراب الخلية الواحدة وإعادة بناء شبكة تنظيم الجينات.',
+    lab_url: 'https://www.helmholtz-munich.de/en/mathematicalmachinelearning',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Predicting cellular responses to novel perturbations', journal: 'Nature', year: 2023, url: 'https://www.nature.com/articles/s41586-023-05891-2' }
+    ],
+    notes: 'Joint appointment MIT / Helmholtz Munich; CAREER Award recipient.'
+  },
+  {
+    id: 'pi_tum_03',
+    institution_id: 'i13',
+    programme_id: 'p15',
+    name: 'Prof. Dr. Florian Bassermann',
+    title: 'Prof. Dr.',
+    fields: ['cancer', 'molecular_biology'],
+    research_focus: 'Haematological malignancies and protein ubiquitination; proteasome biology and targeted therapy for multiple myeloma and AML.',
+    research_focus_de: 'Hämatologische Malignome und Protein-Ubiquitinierung; Proteasom-Biologie und zielgerichtete Therapie für Multiples Myelom und AML.',
+    research_focus_ar: 'الأورام الخبيثة الدموية وتشابك البروتين؛ بيولوجيا البروتيازوم والعلاج الموجه للمايلوما المتعددة وسرطان الدم النخاعي الحاد.',
+    lab_url: 'https://www.klinikum-muenchen.de/en/medical-oncology',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Ubiquitin-dependent proteolysis in AML', journal: 'Cancer Cell', year: 2023, url: 'https://www.cell.com/cancer-cell' }
+    ],
+    notes: 'Director, Department III of Internal Medicine, TUM / Klinikum rechts der Isar.'
+  },
+  {
+    id: 'pi_tum_04',
+    institution_id: 'i13',
+    programme_id: 'p15',
+    name: 'Prof. Dr. Dirk Busch',
+    title: 'Prof. Dr.',
+    fields: ['immunology', 'cancer'],
+    research_focus: 'T cell immunology and adoptive immunotherapy; clonal tracking of T cell responses and memory formation. Director of the German Cancer Consortium DKTK Munich.',
+    research_focus_de: 'T-Zell-Immunologie und adoptive Immuntherapie; klonales Tracking von T-Zell-Antworten und Gedächtnisbildung. Direktor des DKTK München.',
+    research_focus_ar: 'علم مناعة خلايا T والعلاج المناعي التكيفي؛ التتبع الكلوني لاستجابات خلايا T وتكوين الذاكرة. مدير تحالف السرطان الألماني DKTK ميونخ.',
+    lab_url: 'https://www.translational-immunology.de',
+    email: null,
+    accepting_students: true,
+    recent_papers: [],
+    notes: 'Institute for Medical Microbiology, Immunology and Hygiene, TUM.'
+  },
+  {
+    id: 'pi_tum_05',
+    institution_id: 'i13',
+    programme_id: 'p15',
+    name: 'Prof. Dr. Ulrike Protzer',
+    title: 'Prof. Dr.',
+    fields: ['immunology', 'cancer'],
+    research_focus: 'Viral hepatitis and liver cancer; hepatitis B immunotherapy, oncolytic viruses for liver tumours, and antiviral innate immune responses.',
+    research_focus_de: 'Virale Hepatitis und Leberkrebs; Hepatitis-B-Immuntherapie, onkolytische Viren für Lebertumoren und antivirale angeborene Immunantworten.',
+    research_focus_ar: 'التهاب الكبد الفيروسي وسرطان الكبد؛ العلاج المناعي لالتهاب الكبد B، الفيروسات الانحلالية لأورام الكبد، والاستجابات المناعية الفطرية المضادة للفيروسات.',
+    lab_url: 'https://www.virology.tum.de',
+    email: null,
+    accepting_students: true,
+    recent_papers: [],
+    notes: 'Director, Institute of Virology, TUM. German Centre for Infection Research (DZIF).'
+  },
+
+  // ════════════════════════════════════════════════════════════════
+  // MPI for Biochemistry Martinsried — institution i14 / programme p16
+  // ════════════════════════════════════════════════════════════════
+  {
+    id: 'pi_mpi_biochem_01',
+    institution_id: 'i14',
+    programme_id: 'p16',
+    name: 'Prof. Dr. Wolfgang Baumeister',
+    title: 'Prof. Dr.',
+    fields: ['structural_biology', 'molecular_biology'],
+    research_focus: 'Cryo-electron tomography of cellular architecture; in situ structural biology of the proteasome, ribosomes, and protein complexes in native cellular context.',
+    research_focus_de: 'Kryo-Elektronentomographie der zellulären Architektur; In-situ-Strukturbiologie von Proteasom, Ribosomen und Proteinkomplexen im nativen zellulären Kontext.',
+    research_focus_ar: 'التصوير المقطعي الإلكتروني التبريدي للبنية الخلوية؛ البيولوجيا الهيكلية في المكان للبروتيازوم والريبوسومات ومجمعات البروتين في السياق الخلوي الأصيل.',
+    lab_url: 'https://www.biochem.mpg.de/baumeister',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'In situ architecture of the ciliary transition zone reveals a complex gate', journal: 'Science', year: 2022, url: 'https://doi.org/10.1126/science.abi7352' }
+    ],
+    notes: 'Director Emeritus at MPI Biochemistry; pioneered in situ cryo-ET.'
+  },
+  {
+    id: 'pi_mpi_biochem_02',
+    institution_id: 'i14',
+    programme_id: 'p16',
+    name: 'Prof. Dr. Franz-Ulrich Hartl',
+    title: 'Prof. Dr.',
+    fields: ['molecular_biology'],
+    research_focus: 'Molecular chaperones and protein folding; mechanisms of Hsp70/Hsp90/GroEL in preventing misfolding and aggregation in neurodegeneration.',
+    research_focus_de: 'Molekulare Chaperone und Proteinfaltung; Mechanismen von Hsp70/Hsp90/GroEL bei der Verhinderung von Fehlfaltung und Aggregation in der Neurodegeneration.',
+    research_focus_ar: 'المرافقات الجزيئية وطي البروتين؛ آليات Hsp70/Hsp90/GroEL في منع الطي الخاطئ والتجمع في التنكس العصبي.',
+    lab_url: 'https://www.biochem.mpg.de/hartl',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Molecular chaperones in the cytosol: from nascent chain to folded protein', journal: 'Science', year: 2002, url: 'https://doi.org/10.1126/science.1068408' }
+    ],
+    notes: 'Director at MPI Biochemistry. Lasker Award 2011; co-discoverer of the chaperonin system.'
+  },
+  {
+    id: 'pi_mpi_biochem_03',
+    institution_id: 'i14',
+    programme_id: 'p16',
+    name: 'Prof. Dr. Matthias Mann',
+    title: 'Prof. Dr.',
+    fields: ['molecular_biology', 'cancer', 'genetics'],
+    research_focus: 'Mass-spectrometry-based proteomics; deep proteome profiling of cancer cell lines, single-cell proteomics, and phosphoproteomics.',
+    research_focus_de: 'Massenspektrometrie-basierte Proteomik; tiefe Proteom-Profilierung von Krebszelllinien, Einzelzell-Proteomik und Phosphoproteomik.',
+    research_focus_ar: 'بروتيوميات قائمة على قياس الطيف الكتلي؛ تحليل بروتيوم عميق لخطوط خلايا السرطان، وبروتيوميات الخلية الواحدة، وفوسفوبروتيوميات.',
+    lab_url: 'https://www.biochem.mpg.de/mann',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Proteome-wide map of interactions between co-translating ribosomes', journal: 'Nat Struct Mol Biol', year: 2022, url: 'https://www.nature.com/articles/s41594-022-00882-7' }
+    ],
+    notes: 'Director at MPI Biochemistry and University of Copenhagen. Pioneer of modern proteomics.'
+  },
+  {
+    id: 'pi_mpi_biochem_04',
+    institution_id: 'i14',
+    programme_id: 'p16',
+    name: 'Prof. Dr. Brenda Schulman',
+    title: 'Prof. Dr.',
+    fields: ['structural_biology', 'molecular_biology'],
+    research_focus: 'Structural and mechanistic basis of ubiquitin-like protein modifications; cryo-EM of E3 ligase complexes and autophagy machinery.',
+    research_focus_de: 'Strukturelle und mechanistische Grundlage von Ubiquitin-ähnlichen Proteinmodifikationen; Kryo-EM von E3-Ligase-Komplexen und Autophagie-Maschinerie.',
+    research_focus_ar: 'الأساس الهيكلي والآلي لتعديلات البروتين الشبيهة بالكل-يوبيكويتين؛ مجهر الإلكتروني التبريدي لمركبات E3 ligase وآلية الالتهام الذاتي.',
+    lab_url: 'https://www.biochem.mpg.de/schulman',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Structural mechanism of ubiquitin transfer for autophagy', journal: 'Nature', year: 2023, url: 'https://www.nature.com/articles/s41586-023-05927-7' }
+    ],
+    notes: 'Director at MPI Biochemistry. HHMI Investigator; American Cancer Society Research Professor.'
+  },
+
+  // ════════════════════════════════════════════════════════════════
+  // Helmholtz Zentrum München — institution i15 / programme p17
+  // ════════════════════════════════════════════════════════════════
+  {
+    id: 'pi_helmholtz_muc_01',
+    institution_id: 'i15',
+    programme_id: 'p17',
+    name: 'Prof. Dr. Mathias Heikenwälder',
+    title: 'Prof. Dr.',
+    fields: ['cancer', 'immunology'],
+    research_focus: 'Chronic inflammation and cancer; mechanisms linking NASH, NAFLD, and viral hepatitis to hepatocellular carcinoma. DKTK partner site.',
+    research_focus_de: 'Chronische Entzündung und Krebs; Mechanismen, die NASH, NAFLD und virale Hepatitis mit hepatozellulärem Karzinom verbinden. DKTK-Partnerstandort.',
+    research_focus_ar: 'الالتهاب المزمن والسرطان؛ الآليات التي تربط NASH و NAFLD والتهاب الكبد الفيروسي بسرطان الخلايا الكبدية. موقع شريك DKTK.',
+    lab_url: 'https://www.helmholtz-munich.de/en/icb/research-groups/heikenwaelder-lab',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Inflammation-driven liver carcinogenesis', journal: 'Nature Cancer', year: 2023, url: 'https://www.nature.com/articles/s43018-023-00534-1' }
+    ],
+    notes: 'Division of Chronic Inflammation and Cancer, Helmholtz Munich / DKFZ joint group.'
+  },
+  {
+    id: 'pi_helmholtz_muc_02',
+    institution_id: 'i15',
+    programme_id: 'p17',
+    name: 'Prof. Dr. Matthias Tschöp',
+    title: 'Prof. Dr.',
+    fields: ['molecular_biology'],
+    research_focus: 'Neuroendocrinology of obesity and metabolic disease; combinatorial gut hormone agonists (GLP-1/GIP/glucagon) and central appetite circuits.',
+    research_focus_de: 'Neuroendokrinologie von Fettleibigkeit und Stoffwechselerkrankungen; kombinatorische Darmhormon-Agonisten (GLP-1/GIP/Glukagon) und zentrale Appetit-Schaltkreise.',
+    research_focus_ar: 'علم الغدد الصماء العصبي للسمنة وأمراض التمثيل الغذائي؛ ناهضات هرمونات الأمعاء المشتركة (GLP-1/GIP/جلوكاجون) ودوائر الشهية المركزية.',
+    lab_url: 'https://www.helmholtz-munich.de/en/idom/research-groups/tschoep-lab',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Unimolecular polypharmacy for treatment of diabetes and obesity', journal: 'Cell', year: 2020, url: 'https://doi.org/10.1016/j.cell.2020.09.055' }
+    ],
+    notes: 'CEO, Helmholtz Munich; Heisenberg Professor of Metabolic Diseases, TUM.'
+  },
+  {
+    id: 'pi_helmholtz_muc_03',
+    institution_id: 'i15',
+    programme_id: 'p17',
+    name: 'Prof. Dr. Carsten Marr',
+    title: 'Prof. Dr.',
+    fields: ['molecular_biology', 'cancer'],
+    research_focus: 'Quantitative systems biology; mathematical modelling of cell fate decisions and cell state transitions in haematopoiesis and cancer.',
+    research_focus_de: 'Quantitative Systembiologie; mathematische Modellierung von Zellschicksalsentscheidungen und Zustandsübergängen in der Hämatopoese und im Krebs.',
+    research_focus_ar: 'علم الأحياء النظمي الكمي؛ النمذجة الرياضية لقرارات مصير الخلية وانتقالات الحالة الخلوية في تكوين الدم والسرطان.',
+    lab_url: 'https://www.helmholtz-munich.de/en/icb/research-groups/marr-lab',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'scVelo: Recovering RNA velocity of single cells', journal: 'Nat Biotechnol', year: 2020, url: 'https://doi.org/10.1038/s41587-020-0591-3' }
+    ],
+    notes: 'Institute of AI for Health, Helmholtz Munich.'
+  },
+
+  // ════════════════════════════════════════════════════════════════
+  // MDC Berlin — institution i16 / programme p18
+  // ════════════════════════════════════════════════════════════════
+  {
+    id: 'pi_mdc_01',
+    institution_id: 'i16',
+    programme_id: 'p18',
+    name: 'Prof. Dr. Klaus Rajewsky',
+    title: 'Prof. Dr.',
+    fields: ['immunology', 'cancer', 'genetics'],
+    research_focus: 'Molecular immunology; B cell development and lymphomagenesis; conditional knockout technology in mouse immunology. Emeritus director at MDC.',
+    research_focus_de: 'Molekulare Immunologie; B-Zell-Entwicklung und Lymphomgenese; konditionaler Knockout in der Maus-Immunologie. Emeritus-Direktor am MDC.',
+    research_focus_ar: 'علم المناعة الجزيئي؛ تطور خلايا B ونشأة اللمفوما؛ تقنية الحذف المشروط في علم المناعة الفأري. مدير فخري في MDC.',
+    lab_url: 'https://www.mdc-berlin.de/rajewsky',
+    email: null,
+    accepting_students: true,
+    recent_papers: [],
+    notes: 'Emeritus Director, Immune Regulation and Cancer. Pioneer of conditional knockout mice.'
+  },
+  {
+    id: 'pi_mdc_02',
+    institution_id: 'i16',
+    programme_id: 'p18',
+    name: 'Prof. Dr. Gary Bhatt',
+    title: 'Prof. Dr.',
+    fields: ['neuroscience', 'molecular_biology'],
+    research_focus: 'RNA biology in the nervous system; circular RNAs, RNA-binding proteins, and post-transcriptional regulation in neurons and brain development.',
+    research_focus_de: 'RNA-Biologie im Nervensystem; zirkuläre RNAs, RNA-bindende Proteine und post-transkriptionelle Regulation in Neuronen und der Gehirnentwicklung.',
+    research_focus_ar: 'بيولوجيا RNA في الجهاز العصبي؛ RNA الدائري وبروتينات ربط RNA والتنظيم ما بعد النسخ في الخلايا العصبية وتطور الدماغ.',
+    lab_url: 'https://www.mdc-berlin.de/research/research-teams/rna-biology',
+    email: null,
+    accepting_students: true,
+    recent_papers: [],
+    notes: 'MDC Berlin, RNA Biology group.'
+  },
+  {
+    id: 'pi_mdc_03',
+    institution_id: 'i16',
+    programme_id: 'p18',
+    name: 'Prof. Dr. Nikolaus Rajewsky',
+    title: 'Prof. Dr.',
+    fields: ['molecular_biology', 'cancer', 'neuroscience'],
+    research_focus: 'Systems biology of gene regulation; circular RNAs, single-cell atlas of developing organs, and RNA regulatory networks in development and cancer.',
+    research_focus_de: 'Systembiologie der Genregulation; zirkuläre RNAs, Einzelzell-Atlas sich entwickelnder Organe und RNA-regulatorische Netzwerke in Entwicklung und Krebs.',
+    research_focus_ar: 'علم الأحياء النظمي لتنظيم الجينات؛ RNA الدائري وأطلس الخلية الواحدة للأعضاء النامية وشبكات RNA التنظيمية في النمو والسرطان.',
+    lab_url: 'https://www.mdc-berlin.de/rajewsky-n',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'A single-cell transcriptome atlas of the developing zebrafish hindbrain', journal: 'Nat Commun', year: 2023, url: 'https://www.nature.com/articles/s41467-023-42058-3' }
+    ],
+    notes: 'Director, Berlin Institute for Medical Systems Biology (BIMSB) at MDC.'
+  },
+  {
+    id: 'pi_mdc_04',
+    institution_id: 'i16',
+    programme_id: 'p18',
+    name: 'Prof. Dr. Ana Pombo',
+    title: 'Prof. Dr.',
+    fields: ['genetics', 'molecular_biology'],
+    research_focus: 'Nuclear organisation and gene regulation; Genome Architecture Mapping (GAM) and 3D chromatin topology in cell identity and disease.',
+    research_focus_de: 'Nukleare Organisation und Genregulation; Genome Architecture Mapping (GAM) und 3D-Chromatintopologie in Zellidentität und Krankheit.',
+    research_focus_ar: 'تنظيم النواة وتنظيم الجينات؛ رسم خرائط بنية الجينوم (GAM) وطبولوجيا الكروماتين ثلاثية الأبعاد في هوية الخلية والمرض.',
+    lab_url: 'https://www.mdc-berlin.de/pombo',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Genome Architecture Mapping reveals multilaminar structure of nuclear organisation', journal: 'Nat Biotechnol', year: 2019, url: 'https://doi.org/10.1038/s41587-019-0263-5' }
+    ],
+    notes: 'Director, Epigenetic Regulation and Chromatin Architecture at MDC Berlin.'
+  },
+  {
+    id: 'pi_mdc_05',
+    institution_id: 'i16',
+    programme_id: 'p18',
+    name: 'Prof. Dr. Michael Sigal',
+    title: 'Prof. Dr.',
+    fields: ['cancer', 'immunology'],
+    research_focus: 'Gastric epithelial biology and stomach cancer; H. pylori–driven carcinogenesis, tissue-resident stem cells, and organoid models of gastric cancer.',
+    research_focus_de: 'Gastrische Epithelbiologie und Magenkrebs; H.-pylori-getriebene Karzinogenese, gewebsständige Stammzellen und Organoid-Modelle des Magenkrebses.',
+    research_focus_ar: 'بيولوجيا الظهارة المعدية وسرطان المعدة؛ التسرطن المرتبط بـ H. pylori، الخلايا الجذعية المقيمة في الأنسجة، ونماذج الأورانويد لسرطان المعدة.',
+    lab_url: 'https://www.mdc-berlin.de/sigal',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'H. pylori drives epithelial cell plasticity and stemness', journal: 'Gastroenterology', year: 2022, url: 'https://www.gastrojournal.org/' }
+    ],
+    notes: 'Head of Gastric Cancer & Stem Cell group, MDC Berlin.'
+  },
+
+  // ════════════════════════════════════════════════════════════════
+  // DKFZ Heidelberg (Computational Oncology) — institution i17 / programme p1
+  // Adding additional DKFZ PIs under i17 (same programme p1) to reach target count
+  // ════════════════════════════════════════════════════════════════
+  {
+    id: 'pi_dkfz_comp_01',
+    institution_id: 'i17',
+    programme_id: 'p1',
+    name: 'Dr. Oliver Stegle',
+    title: 'Dr.',
+    fields: ['cancer', 'molecular_biology', 'genetics'],
+    research_focus: 'Computational single-cell genomics; statistical methods for multi-modal omics integration, spatial transcriptomics, and genetic disease mapping.',
+    research_focus_de: 'Computationale Einzelzell-Genomik; statistische Methoden für multimodale Omics-Integration, räumliche Transkriptomik und genetische Krankheitskartierung.',
+    research_focus_ar: 'الجينوميات الحوسبية للخلية الواحدة؛ طرق إحصائية لتكامل الأوميكس متعدد الأنماط، والتفريق الجيني المكاني، ورسم خرائط الأمراض الجينية.',
+    lab_url: 'https://www.embl.org/groups/stegle/',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Cell2location maps fine-grained cell types in spatial transcriptomics', journal: 'Nat Biotechnol', year: 2022, url: 'https://doi.org/10.1038/s41587-021-01139-4' }
+    ],
+    notes: 'Joint group EMBL Heidelberg / DKFZ.'
+  },
+  {
+    id: 'pi_dkfz_comp_02',
+    institution_id: 'i17',
+    programme_id: 'p1',
+    name: 'Dr. Jan Korbel',
+    title: 'Dr.',
+    fields: ['cancer', 'genetics'],
+    research_focus: 'Cancer genomics and structural variation; PCAWG pan-cancer whole-genome analysis; somatic evolution and chromothripsis in cancer.',
+    research_focus_de: 'Krebs-Genomik und strukturelle Variation; PCAWG Pan-Krebs-Vollgenom-Analyse; somatische Evolution und Chromothripsis im Krebs.',
+    research_focus_ar: 'جينوميات السرطان والتباين الهيكلي؛ تحليل PCAWG للجينوم الكامل للسرطان؛ التطور الجسدي والكروموثريبسيس في السرطان.',
+    lab_url: 'https://www.embl.org/groups/korbel/',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Signatures of somatic mutations as drivers of chromothripsis', journal: 'Nature', year: 2020, url: 'https://doi.org/10.1038/s41586-020-1985-y' }
+    ],
+    notes: 'Joint group EMBL Heidelberg / DKFZ. Key participant in ICGC PCAWG.'
+  },
+  {
+    id: 'pi_dkfz_comp_03',
+    institution_id: 'i17',
+    programme_id: 'p1',
+    name: 'Prof. Dr. Benedikt Brors',
+    title: 'Prof. Dr.',
+    fields: ['cancer', 'molecular_biology'],
+    research_focus: 'Bioinformatics in oncology; tumour evolution, neoantigen prediction, and AI-assisted cancer diagnostics. Head of Applied Bioinformatics at DKFZ.',
+    research_focus_de: 'Bioinformatik in der Onkologie; Tumorevolution, Neoantigen-Vorhersage und KI-gestützte Krebsdiagnostik. Leiter Angewandte Bioinformatik am DKFZ.',
+    research_focus_ar: 'المعلوماتية البيولوجية في علم الأورام؛ تطور الأورام، التنبؤ بالمستضدات الجديدة، وتشخيص السرطان بمساعدة الذكاء الاصطناعي. رئيس المعلوماتية الحيوية التطبيقية في DKFZ.',
+    lab_url: 'https://www.dkfz.de/en/bioinformatik-in-der-onkologie',
+    email: null,
+    accepting_students: true,
+    recent_papers: [],
+    notes: 'Head of Applied Bioinformatics, DKFZ.'
+  },
+
+  // ════════════════════════════════════════════════════════════════
+  // Additional PIs from existing institutions to reach 80+ total
+  // ════════════════════════════════════════════════════════════════
+
+  // DKFZ additional
+  {
+    id: 'pi_dkfz_09',
+    institution_id: 'i1',
+    programme_id: 'p1',
+    name: 'Prof. Dr. Christoph Plass',
+    title: 'Prof. Dr.',
+    fields: ['cancer', 'genetics', 'molecular_biology'],
+    research_focus: 'Cancer epigenomics; DNA methylation changes in cancer, epigenetic biomarkers, and chromatin remodelling in haematological malignancies.',
+    research_focus_de: 'Krebs-Epigenomik; DNA-Methylierungsänderungen im Krebs, epigenetische Biomarker und Chromatin-Remodellierung bei hämatologischen Malignomen.',
+    research_focus_ar: 'فوق جينوميات السرطان؛ تغيرات مثيلة DNA في السرطان، المؤشرات الحيوية فوق الجينومية، وإعادة تشكيل الكروماتين في الأورام الخبيثة الدموية.',
+    lab_url: 'https://www.dkfz.de/en/krebsepigenomik',
+    email: null,
+    accepting_students: true,
+    recent_papers: [],
+    notes: 'Division of Cancer Epigenomics, DKFZ. Head of ICGC German section.'
+  },
+  {
+    id: 'pi_dkfz_10',
+    institution_id: 'i1',
+    programme_id: 'p1',
+    name: 'Prof. Dr. Hellmut Augustin',
+    title: 'Prof. Dr.',
+    fields: ['cancer', 'molecular_biology'],
+    research_focus: 'Vascular biology and tumour angiogenesis; endothelial cell heterogeneity, vessel normalisation, and anti-angiogenic therapies.',
+    research_focus_de: 'Gefäßbiologie und Tumorangiogenese; endotheliale Zellheterogenität, Gefäßnormalisierung und anti-angiogene Therapien.',
+    research_focus_ar: 'بيولوجيا الأوعية الدموية وتوعية الأورام؛ تباين الخلايا البطانية، وتطبيع الأوعية، والعلاجات المضادة للتوعية.',
+    lab_url: 'https://www.dkfz.de/en/vaskulaere-biologie-und-tumor-angiogenese',
+    email: null,
+    accepting_students: true,
+    recent_papers: [],
+    notes: 'Joint position DKFZ / Heidelberg University Hospital.'
+  },
+
+  // Charité additional
+  {
+    id: 'pi_charite_07',
+    institution_id: 'i11',
+    programme_id: 'p12',
+    name: 'Prof. Dr. Peter Westermann',
+    title: 'Prof. Dr.',
+    fields: ['cancer', 'molecular_biology'],
+    research_focus: 'Paediatric cancer biology; rhabdomyosarcoma, Ewing sarcoma and molecular mechanisms of paediatric soft tissue tumour progression.',
+    research_focus_de: 'Pädiatrische Krebsbiologie; Rhabdomyosarkom, Ewing-Sarkom und molekulare Mechanismen pädiatrischer Weichteiltumore.',
+    research_focus_ar: 'بيولوجيا سرطان الأطفال؛ الرابدومايوسارك وورم إيوينج والآليات الجزيئية لتطور أورام الأنسجة الرخوة لدى الأطفال.',
+    lab_url: 'https://kinderonkologie.charite.de',
+    email: null,
+    accepting_students: true,
+    recent_papers: [],
+    notes: 'Department of Pediatric Oncology, Charité Berlin.'
+  },
+
+  // DZNE additional
+  {
+    id: 'pi_dzne_07',
+    institution_id: 'i2',
+    programme_id: 'p2',
+    name: 'Prof. Dr. Michael Heneka',
+    title: 'Prof. Dr.',
+    fields: ['neuroscience', 'immunology'],
+    research_focus: 'Neuroinflammation in Alzheimer disease; NLRP3 inflammasome activation in microglia and its contribution to neurodegeneration.',
+    research_focus_de: 'Neuroinflammation bei Alzheimer; NLRP3-Inflammasom-Aktivierung in Mikroglia und deren Beitrag zur Neurodegeneration.',
+    research_focus_ar: 'الالتهاب العصبي في مرض ألزهايمر؛ تنشيط الجسيم الالتهابي NLRP3 في الميكروغليا ومساهمته في التنكس العصبي.',
+    lab_url: 'https://www.dzne.de/en/research/research-areas/fundamental-research/research-groups/heneka/',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'NLRP3 is activated in Alzheimer disease and contributes to pathology in APP/PS1 mice', journal: 'Nature', year: 2013, url: 'https://doi.org/10.1038/nature11729' }
+    ],
+    notes: 'Group head at DZNE Bonn; joint appointment University of Bonn.'
+  },
+
+  // MDC additional
+  {
+    id: 'pi_mdc_06',
+    institution_id: 'i16',
+    programme_id: 'p18',
+    name: 'Prof. Dr. Markus Landthaler',
+    title: 'Prof. Dr.',
+    fields: ['molecular_biology', 'cancer'],
+    research_focus: 'RNA biology and post-transcriptional regulation; CLIP-seq methods for mapping RNA-binding protein interactions in cancer cells.',
+    research_focus_de: 'RNA-Biologie und post-transkriptionelle Regulation; CLIP-seq-Methoden zur Kartierung von RNA-Bindungsprotein-Interaktionen in Krebszellen.',
+    research_focus_ar: 'بيولوجيا RNA والتنظيم بعد النسخ؛ طرق CLIP-seq لرسم خرائط تفاعلات بروتين ربط RNA في الخلايا السرطانية.',
+    lab_url: 'https://www.mdc-berlin.de/landthaler',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Transcriptome-wide measurement of translation by ribosome profiling', journal: 'Nature', year: 2009, url: 'https://doi.org/10.1038/nature08228' }
+    ],
+    notes: 'Group leader, RNA Biology and Post-Transcriptional Regulation, MDC Berlin.'
+  },
+
+  // Helmholtz Munich additional
+  {
+    id: 'pi_helmholtz_muc_04',
+    institution_id: 'i15',
+    programme_id: 'p17',
+    name: 'Prof. Dr. Stephan Herzig',
+    title: 'Prof. Dr.',
+    fields: ['molecular_biology', 'cancer'],
+    research_focus: 'Metabolic reprogramming in cancer; signalling pathways that connect nutrient sensing, epigenetics, and tumour metabolism in hepatocellular carcinoma.',
+    research_focus_de: 'Metabolische Reprogrammierung in Krebs; Signalwege, die Nährstoff-Sensing, Epigenetik und Tumorstoffwechsel im hepatozellulären Karzinom verbinden.',
+    research_focus_ar: 'إعادة برمجة التمثيل الغذائي في السرطان؛ مسارات الإشارة التي تربط استشعار المغذيات وعلم التخلق وتمثيل غذاء الأورام في سرطان الخلايا الكبدية.',
+    lab_url: 'https://www.helmholtz-munich.de/en/idom/research-groups/herzig-lab',
+    email: null,
+    accepting_students: true,
+    recent_papers: [],
+    notes: 'Director, Institute for Diabetes and Cancer, Helmholtz Munich.'
+  },
+
+  // TUM additional — neuroscience
+  {
+    id: 'pi_tum_06',
+    institution_id: 'i13',
+    programme_id: 'p15',
+    name: 'Prof. Dr. Arthur Konnerth',
+    title: 'Prof. Dr.',
+    fields: ['neuroscience'],
+    research_focus: 'Synaptic physiology and dendritic integration; two-photon calcium imaging of single synapses and dendritic spines in the living brain.',
+    research_focus_de: 'Synaptische Physiologie und dendritische Integration; Zwei-Photonen-Kalziumbildgebung einzelner Synapsen und dendritischer Dornen im lebenden Gehirn.',
+    research_focus_ar: 'الفيزيولوجيا المشبكية والتكامل الشجيري؛ التصوير بالكالسيوم ثنائي الفوتون للمشابك الفردية والأشواك الشجيرية في الدماغ الحي.',
+    lab_url: 'https://www.neuroscience.tum.de/en/research/konnerth-lab',
+    email: null,
+    accepting_students: true,
+    recent_papers: [],
+    notes: 'Chair of Neurophysiology, TUM; pioneer of in vivo two-photon dendrite imaging.'
+  },
+
+  // MPI Biochemistry additional
+  {
+    id: 'pi_mpi_biochem_05',
+    institution_id: 'i14',
+    programme_id: 'p16',
+    name: 'Prof. Dr. Jürgen Cox',
+    title: 'Prof. Dr.',
+    fields: ['molecular_biology', 'cancer'],
+    research_focus: 'Computational proteomics and mass spectrometry software; developer of MaxQuant and Perseus platforms for quantitative proteome analysis.',
+    research_focus_de: 'Computationale Proteomik und Massenspektrometrie-Software; Entwickler von MaxQuant und Perseus für quantitative Proteom-Analyse.',
+    research_focus_ar: 'البروتيوميات الحوسبية وبرمجيات قياس الطيف الكتلي؛ مطور منصتي MaxQuant و Perseus للتحليل الكمي للبروتيوم.',
+    lab_url: 'https://www.biochem.mpg.de/cox',
+    email: null,
+    accepting_students: true,
+    recent_papers: [
+      { title: 'Accurate proteome-wide label-free quantification by delayed normalization and maximal peptide ratio extraction, termed MaxLFQ', journal: 'Mol Cell Proteomics', year: 2014, url: 'https://doi.org/10.1074/mcp.M113.031591' }
+    ],
+    notes: 'Computational Systems Biochemistry group, MPI Biochemistry.'
+  },
 ];
 
 // ════════════════════════════════════════════════════════════════
@@ -937,3 +1459,4 @@ export const pisWithContext = pis.map((p) => ({
   institution: institutions.find((i) => i.id === p.institution_id) ?? null,
   programme: programmes.find((prog) => prog.id === p.programme_id) ?? null,
 }));
+

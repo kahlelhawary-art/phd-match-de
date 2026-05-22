@@ -1,4 +1,4 @@
-import { useI18n } from '../lib/i18n.jsx';
+﻿import { useI18n } from '../lib/i18n.jsx';
 
 /**
  * Editorial-style card for a single PI / research group.
@@ -190,3 +190,4 @@ function ArrowIcon({ rtl }) {
     </svg>
   );
 }
+

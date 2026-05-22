@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+﻿import { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { programmesWithInstitutions } from '../data/seed.js';
 import { supabase, hasSupabase } from '../lib/supabase.js';
@@ -83,13 +83,13 @@ export default function Letter() {
   }, [copied]);
 
   // ─── Actions ────────────────────────────────────
-  const hasKey = Boolean(import.meta.env.VITE_ANTHROPIC_KEY);
+
   const selectedProgramme = selectedProgrammeId ? programmeMap[selectedProgrammeId] : null;
 
   const onGenerate = async () => {
     setError(null);
 
-    if (!hasKey) { setError(t('letter.errors.no_key')); return; }
+
     if (!selectedProgramme) { setError(t('letter.errors.no_programme')); return; }
 
     const usingProfile = profileSource === 'match' && matchProfile;
@@ -276,7 +276,7 @@ export default function Letter() {
                     onChange={(e) => { setPastedCv(e.target.value); localStorage.setItem(CV_DRAFT_KEY, e.target.value); }}
                     rows={6}
                     placeholder={t('letter.step2.paste_label')}
-                    className="w-full bg-paper2/30 border border-rule p-3 font-mono text-[13px] text-ink2 focus:outline-none focus:border-ink resize-y"
+                    className="textarea-editorial font-mono text-[13px]"
                   />
                 )}
               </SettingGroup>
@@ -287,7 +287,7 @@ export default function Letter() {
                   onChange={(e) => setExtraNotes(e.target.value)}
                   rows={3}
                   placeholder={t('letter.step2.extra_notes_placeholder')}
-                  className="w-full bg-transparent border border-rule p-3 text-sm text-ink2 focus:outline-none focus:border-ink resize-y placeholder:text-muted/60"
+                  className="textarea-editorial text-sm"
                 />
               </SettingGroup>
             </div>
@@ -300,14 +300,6 @@ export default function Letter() {
             </div>
           )}
 
-          {!hasKey && (
-            <div className="mt-6 border border-ochre/40 bg-ochre/5 p-3 text-xs text-ink2 leading-relaxed max-w-md">
-              <div className="font-mono text-[10px] tracking-wider uppercase text-ochre mb-1">
-                ⚠ Setup
-              </div>
-              {t('letter.errors.no_key')}
-            </div>
-          )}
 
           <button
             onClick={onGenerate}
@@ -562,3 +554,4 @@ function ArrowIcon() {
     </svg>
   );
 }
+

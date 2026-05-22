@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Editorial Scientific Palette
-        paper: '#F4EFE6',       // cream paper background
-        paper2: '#EBE4D6',      // slightly deeper for cards
-        ink: '#1A1814',         // deep almost-black
-        ink2: '#3D362C',        // softer text
-        muted: '#7A6E5B',       // metadata color
-        rule: '#C9BFA8',        // hairline borders
+        // Editorial Scientific Palette — high contrast
+        paper: '#FAFAF7',       // near-white background
+        paper2: '#F0EDE6',      // slightly deeper for cards
+        ink: '#111111',         // true dark text
+        ink2: '#2D2D2D',        // softer text (still very readable)
+        muted: '#5C5C5C',       // metadata color
+        rule: '#D4CFC5',        // hairline borders
 
         navy: '#1B2A4E',        // primary accent (links, headings emphasis)
         sienna: '#9C4A2C',      // secondary accent (CTA, important deadlines)
@@ -23,7 +23,7 @@ export default {
         display: ['Fraunces', 'Georgia', 'serif'],
         body: ['Geist', 'system-ui', 'sans-serif'],
         mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
-        arabic: ['"Noto Naskh Arabic"', 'serif']
+        arabic: ['Tajawal', '"Noto Naskh Arabic"', 'serif']
       },
       fontSize: {
         'display-xl': ['clamp(3rem, 8vw, 6rem)', { lineHeight: '0.95', letterSpacing: '-0.03em' }],

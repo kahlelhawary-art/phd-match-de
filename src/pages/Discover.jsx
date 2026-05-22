@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from 'react';
+﻿import { useMemo, useState, useEffect } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { programmesWithInstitutions } from '../data/seed.js';
 import { supabase, hasSupabase } from '../lib/supabase.js';
@@ -155,3 +155,4 @@ export default function Discover() {
     </div>
   );
 }
+

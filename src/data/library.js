@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Curated library of resources for PhD candidates in cancer research,
  * immunology, and neuroscience.
  *
@@ -817,3 +817,4 @@ export const starterPath = {
     { ref: 'iadecola-2017', week: 5, note: 'The neurovascular unit.' },
   ],
 };
+

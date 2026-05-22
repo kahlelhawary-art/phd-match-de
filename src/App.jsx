@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+﻿import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation.jsx';
 import Footer from './components/Footer.jsx';
 import Discover from './pages/Discover.jsx';
@@ -10,6 +10,7 @@ import Tracker from './pages/Tracker.jsx';
 import Letter from './pages/Letter.jsx';
 import Outreach from './pages/Outreach.jsx';
 import Profile from './pages/Profile.jsx';
+import InterviewPrep from './pages/InterviewPrep.jsx';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/letter" element={<Letter />} />
           <Route path="/outreach" element={<Outreach />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/interview" element={<InterviewPrep />} />
         </Routes>
       </main>
 
@@ -34,3 +36,4 @@ export default function App() {
     </div>
   );
 }
+

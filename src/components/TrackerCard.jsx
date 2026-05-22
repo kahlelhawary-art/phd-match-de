@@ -1,7 +1,8 @@
-import { useState, useMemo } from 'react';
+﻿import { useState, useMemo } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { COLUMNS } from '../lib/tracker.js';
 import { pis as allPis } from '../data/pis.js';
+import { buildIcs, downloadIcs } from '../lib/ics.js';
 
 /**
  * One application card inside a Kanban column.
@@ -37,6 +38,20 @@ export default function TrackerCard({ app, programme, onUpdate, onRemove, onMove
   const handleSaveNotes = () => {
     onUpdate(app.id, { notes: notesDraft });
     setNotesDirty(false);
+  };
+
+  const handleAddToCalendar = () => {
+    const title = pi
+      ? `${pi.name} — ${programme.short_name ?? programme.name}`
+      : programme.short_name ?? programme.name;
+    const ics = buildIcs([{
+      summary: title,
+      dateStr: app.nextActionDate,
+      description: app.nextAction ?? '',
+      url: programme.website ?? '',
+    }]);
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 30);
+    downloadIcs(ics, `${slug}-deadline.ics`);
   };
 
   const handleRemove = () => {
@@ -126,13 +141,13 @@ export default function TrackerCard({ app, programme, onUpdate, onRemove, onMove
                   value={actionText}
                   onChange={(e) => setActionText(e.target.value)}
                   placeholder={t('tracker.card.action_label')}
-                  className="w-full bg-transparent border border-rule px-2 py-1.5 text-sm focus:outline-none focus:border-ink"
+                  className="input-editorial text-sm py-1.5"
                 />
                 <input
                   type="date"
                   value={actionDate}
                   onChange={(e) => setActionDate(e.target.value)}
-                  className="w-full bg-transparent border border-rule px-2 py-1.5 text-sm focus:outline-none focus:border-ink"
+                  className="input-editorial text-sm py-1.5"
                 />
                 <div className="flex gap-2">
                   <button
@@ -184,7 +199,7 @@ export default function TrackerCard({ app, programme, onUpdate, onRemove, onMove
               onChange={(e) => { setNotesDraft(e.target.value); setNotesDirty(true); }}
               placeholder={t('tracker.card.add_note')}
               rows={3}
-              className="w-full bg-transparent border border-rule p-2 text-sm leading-relaxed focus:outline-none focus:border-ink resize-y placeholder:text-muted/60"
+              className="textarea-editorial text-sm"
             />
             {notesDirty && (
               <button
@@ -229,6 +244,15 @@ export default function TrackerCard({ app, programme, onUpdate, onRemove, onMove
                   {t('tracker.card.open_programme')} ↗
                 </a>
               )}
+              {app.nextActionDate && (
+                <button
+                  onClick={handleAddToCalendar}
+                  title="Add deadline to calendar"
+                  className="text-xs text-navy hover:text-sienna underline underline-offset-2"
+                >
+                  ⊕ Cal
+                </button>
+              )}
               <button
                 onClick={handleRemove}
                 className="text-xs text-muted hover:text-danger transition-colors"
@@ -254,3 +278,4 @@ function formatDate(iso) {
     return iso;
   }
 }
+

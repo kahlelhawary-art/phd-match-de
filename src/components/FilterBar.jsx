@@ -1,4 +1,4 @@
-import { useI18n } from '../lib/i18n.jsx';
+﻿import { useI18n } from '../lib/i18n.jsx';
 
 const FIELDS = ['cancer', 'immunology', 'neuroscience', 'molecular_biology', 'genetics', 'structural_biology'];
 const LANGS = ['english', 'german', 'bilingual'];
@@ -128,3 +128,4 @@ function FilterGroup({ label, children }) {
     </div>
   );
 }
+
