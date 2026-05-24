@@ -1,4 +1,4 @@
-import { useI18n } from '../lib/i18n.jsx';
+﻿import { useI18n } from '../lib/i18n.jsx';
 
 /**
  * Editorial-style citation card. Renders a single landmark paper with
@@ -82,3 +82,4 @@ function ArrowIcon({ rtl }) {
     </svg>
   );
 }
+

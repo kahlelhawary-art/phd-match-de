@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+﻿import { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { programmesWithInstitutions } from '../data/seed.js';
 import { supabase, hasSupabase } from '../lib/supabase.js';
@@ -69,14 +69,11 @@ export default function Match() {
   }, [result]);
 
   // ─── Actions ────────────────────────────────────
-  const hasKey = Boolean(import.meta.env.VITE_ANTHROPIC_KEY);
+
   const canRun = cvText.trim().length >= 200 && stage === null;
 
   const onAnalyse = async () => {
-    if (!hasKey) {
-      setError(t('match.errors.no_key'));
-      return;
-    }
+
     if (cvText.trim().length < 200) {
       setError(t('match.errors.too_short'));
       return;
@@ -176,8 +173,7 @@ export default function Match() {
                 onChange={(e) => setCvText(e.target.value)}
                 placeholder={t('match.step1.placeholder')}
                 rows={18}
-                className="w-full bg-paper2/40 border border-rule p-5 font-mono text-[13.5px] text-ink2 leading-relaxed
-                           focus:outline-none focus:border-ink resize-y placeholder:text-muted/70"
+                className="textarea-editorial font-mono text-[13.5px] leading-relaxed p-5"
               />
               <div className="flex items-center justify-between mt-2">
                 <span className="font-mono text-[10.5px] tracking-wider uppercase text-muted">
@@ -199,8 +195,7 @@ export default function Match() {
                   onChange={(e) => setInterests(e.target.value)}
                   rows={4}
                   placeholder="cancer immunology, neuroinflammation, single-cell methods…"
-                  className="w-full bg-transparent border border-rule p-3 text-[14px] text-ink2
-                             focus:outline-none focus:border-ink resize-y"
+                  className="textarea-editorial text-[14px]"
                 />
               </label>
 
@@ -210,14 +205,6 @@ export default function Match() {
                 </div>
               )}
 
-              {!hasKey && (
-                <div className="mt-4 border border-ochre/40 bg-ochre/5 p-3 text-xs text-ink2 leading-relaxed">
-                  <div className="font-mono text-[10px] tracking-wider uppercase text-ochre mb-1">
-                    ⚠ Setup
-                  </div>
-                  {t('match.errors.no_key')}
-                </div>
-              )}
 
               <button
                 onClick={onAnalyse}
@@ -412,3 +399,4 @@ function ArrowIcon() {
     </svg>
   );
 }
+

@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from 'react';
+﻿import { useMemo, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../lib/i18n.jsx';
 import { pisWithContext } from '../data/pis.js';
@@ -11,6 +11,11 @@ export default function Labs() {
   const { t } = useI18n();
   const navigate = useNavigate();
   const pis = pisWithContext;
+
+  // Mark Labs as seen for the onboarding guide
+  useEffect(() => {
+    try { localStorage.setItem('phd-match-labs-seen', '1'); } catch { /* ignore */ }
+  }, []);
 
   // ─── Filters ────────────────────────────────────
   const [search, setSearch] = useState('');
@@ -88,6 +93,17 @@ export default function Labs() {
     navigate('/outreach');
   };
 
+  const onReadPaper = (pi) => {
+    // Store PI context for the Paper Digest tool
+    try {
+      sessionStorage.setItem('phd-match-digest-prefill', JSON.stringify({
+        piName: pi.name,
+        labFocus: pi.research_focus,
+      }));
+    } catch { /* ignore */ }
+    navigate('/digest');
+  };
+
   const onReset = () => {
     setSearch(''); setSelectedFields([]); setSelectedInstitutions([]);
     setSelectedCities([]); setAcceptingOnly(false);
@@ -97,6 +113,23 @@ export default function Labs() {
     setter(arr.includes(val) ? arr.filter((v) => v !== val) : [...arr, val]);
 
   return (
+    <>
+      {/* Video Hero */}
+      <section className="relative w-full h-[50vh] max-h-[450px] overflow-hidden">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="/ghibli-house-animated.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-paper" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-white tracking-tight leading-tight drop-shadow-lg">
+            {t('labs.hero_title')}
+          </h1>
+          <p className="mt-3 text-base md:text-lg text-white/85 max-w-xl leading-relaxed drop-shadow">
+            {t('labs.hero_subtitle')}
+          </p>
+        </div>
+      </section>
+
     <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-12 lg:pt-20">
       {/* HERO ────────────────────────────────────────────── */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 lg:mb-20 animate-fade-up">
@@ -246,6 +279,7 @@ export default function Labs() {
                     onSave={onSave}
                     isSaved={savedPiIds.includes(pi.id)}
                     onDraftOutreach={onDraftOutreach}
+                    onReadPaper={onReadPaper}
                   />
                 </div>
               ))}
@@ -254,6 +288,7 @@ export default function Labs() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
@@ -269,3 +304,4 @@ function FilterGroup({ label, children }) {
     </div>
   );
 }
+

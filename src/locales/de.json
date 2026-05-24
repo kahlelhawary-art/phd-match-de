@@ -1,4 +1,8 @@
 {
+  "hero": {
+    "title": "Dein Weg zur Promotion",
+    "subtitle": "Finde passende Betreuer, bereite dich auf Interviews vor und starte deine akademische Karriere in Deutschland."
+  },
   "brand": {
     "name": "PhD Match DE",
     "tagline": "Promotion in den Lebenswissenschaften — kuratiert.",
@@ -6,6 +10,10 @@
   },
   "nav": {
     "discover": "Entdecken",
+    "dashboard": "Übersicht",
+    "deadlines": "Fristen",
+    "documents": "Dokumente",
+    "digest": "Paper-Analyse",
     "compass": "Kompass",
     "library": "Bibliothek",
     "labs": "Labs",
@@ -13,7 +21,9 @@
     "tracker": "Bewerbungen",
     "letter": "Anschreiben",
     "outreach": "Direktkontakt",
-    "profile": "Profil"
+    "profile": "Profil",
+    "interview": "Interview-Prep",
+    "openings": "Live-Stellen"
   },
   "home": {
     "hero_eyebrow": "Kuratierte Promotionsstellen",
@@ -21,6 +31,154 @@
     "hero_lead": "Die wichtigsten Forschungs­zentren für Krebs-, Immun- und Neuro­wissenschaften an einem Ort. KI-gestützte Passung deines Lebenslaufs mit konkreten Arbeits­gruppen — und vorbereitete Direkt­anschreiben für Professorinnen und Professoren.",
     "cta_explore": "Stellen entdecken",
     "cta_match": "Mein CV abgleichen"
+  },
+  "dashboard": {
+    "hero_eyebrow": "Deine Übersicht",
+    "hero_title": "Alles auf einen Blick — deine Promotionssuche in Zahlen.",
+    "hero_lead": "Status, anstehende Fristen, Outreach-Erfolg und dein Interview-Fortschritt — gebündelt an einem Ort.",
+    "empty_title": "Noch nichts zu zeigen",
+    "empty_body": "Sobald du Programme speicherst, einen CV-Match startest oder ein Übungsgespräch abschließt, erscheinen hier deine Kennzahlen.",
+    "empty_cta": "Erste Schritte",
+    "stats": {
+      "total": "Bewerbungen gesamt",
+      "active": "Aktiv",
+      "decisions": "Entscheidungen",
+      "next_deadline": "Nächste Frist",
+      "no_deadline": "Keine offen",
+      "outreach_sent": "Anfragen gesendet",
+      "outreach_replied": "Antworten",
+      "interviews": "Übungsgespräche",
+      "avg_score": "Ø-Punktzahl",
+      "best_score": "Bestwert"
+    },
+    "pipeline_title": "Pipeline-Verteilung",
+    "deadlines_title": "Anstehende Fristen",
+    "deadlines_empty": "Keine anstehenden Fristen. Füge im Tracker Fristen hinzu.",
+    "activity_title": "Letzte Aktivität",
+    "activity_empty": "Noch keine Aktivität.",
+    "reply_rate": "Antwortquote",
+    "days_left": "{{n}} Tage",
+    "today": "Heute",
+    "overdue": "Überfällig",
+    "quick_title": "Schnellzugriff",
+    "quick": {
+      "match": "CV abgleichen",
+      "labs": "Labs ansehen",
+      "outreach": "Anfrage schreiben",
+      "interview": "Gespräch üben"
+    }
+  },
+  "deadlines": {
+    "hero_eyebrow": "Fristen-Zentrale",
+    "hero_title": "Keine Frist mehr verpassen — alle Termine an einem Ort.",
+    "hero_lead": "Alle deine Bewerbungsfristen, nach Dringlichkeit sortiert. Exportiere sie in deinen Kalender und behalte den Überblick.",
+    "empty_title": "Noch keine Fristen",
+    "empty_body": "Füge im Tracker oder bei einem Programm eine Frist hinzu — sie erscheint dann hier, sortiert nach Dringlichkeit.",
+    "empty_cta": "Zum Tracker",
+    "add_deadline": "Frist hinzufügen",
+    "export_all": "Alle in Kalender exportieren",
+    "export_one": "In Kalender",
+    "stats": {
+      "total": "Fristen gesamt",
+      "this_week": "Diese Woche",
+      "this_month": "Diesen Monat",
+      "overdue": "Überfällig"
+    },
+    "groups": {
+      "overdue": "Überfällig",
+      "urgent": "Dringend — diese Woche",
+      "soon": "Bald — diesen Monat",
+      "later": "Später"
+    },
+    "card": {
+      "deadline": "Frist",
+      "days_left": "{{n}} Tage",
+      "today": "Heute",
+      "tomorrow": "Morgen",
+      "overdue_by": "vor {{n}} Tagen",
+      "status": "Status",
+      "open_tracker": "Im Tracker öffnen",
+      "set_deadline": "Frist setzen",
+      "no_deadline": "Keine Frist gesetzt",
+      "unit": "Tage"
+    },
+    "tip_title": "Frist-Strategie",
+    "tips": [
+      "Bewirb dich 2–3 Wochen vor der Frist — viele Stellen werden früher besetzt.",
+      "Exportiere Fristen in deinen Kalender und setze eine Erinnerung 7 Tage vorher.",
+      "Sammelausschreibungen (IMPRS, SFB) haben oft feste jährliche Fristen — plane voraus."
+    ]
+  },
+  "documents": {
+    "hero_eyebrow": "Bewerbungs-Kit",
+    "hero_title": "Deine komplette Bewerbungsmappe — in einem Zug erstellt.",
+    "hero_lead": "Anschreiben, Forschungsexposé und akademischer Lebenslauf — aufeinander abgestimmt und auf ein Zielprogramm zugeschnitten. Alles aus deinem Profil generiert.",
+    "no_profile_title": "Zuerst dein Profil ausfüllen",
+    "no_profile_body": "Die Dokumente werden aus deinem Lebenslauf erstellt. Fülle dein Profil aus oder füge deinen CV-Text ein.",
+    "no_profile_cta": "Zum Profil",
+    "select_programme": "Zielprogramm wählen (optional)",
+    "select_placeholder": "Kein Programm — allgemeines Dokument",
+    "language_label": "Sprache des Dokuments",
+    "notes_label": "Zusätzliche Notizen (optional)",
+    "notes_placeholder": "z. B. Lieblingspublikation der Gruppe, gemeinsame Methode, besonderer Bezug…",
+    "kit_title": "Wähle, was du erstellen möchtest",
+    "types": {
+      "letter": { "title": "Anschreiben", "desc": "Formelles Bewerbungsschreiben für ein Programm oder eine:n Professor:in." },
+      "research": { "title": "Forschungsexposé", "desc": "Dein wissenschaftliches Interesse, deine Erfahrung und Zukunftsperspektive." },
+      "cv": { "title": "Akademischer Lebenslauf", "desc": "Strukturierter, tabellarischer CV im deutschen Wissenschaftsformat." }
+    },
+    "generate": "Erstellen",
+    "generate_all": "Komplette Mappe erstellen",
+    "generating": "Wird erstellt…",
+    "regenerate": "Neu erstellen",
+    "copy": "Kopieren",
+    "copied": "Kopiert ✓",
+    "download": "Als Text herunterladen",
+    "error": "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
+    "letter_hint": "Das Anschreiben wird auf der Seite «Anschreiben» mit mehr Optionen erstellt.",
+    "go_to_letter": "Zum Anschreiben-Generator",
+    "result_title": "Ergebnis"
+  },
+  "digest": {
+    "hero_eyebrow": "Paper-Analyse",
+    "hero_title": "Verstehe die Forschung — bevor du schreibst.",
+    "hero_lead": "Füge das Abstract oder einen Auszug aus einer Publikation der Arbeitsgruppe ein. Die KI fasst es verständlich zusammen und zeigt dir ehrliche Anknüpfungspunkte zu deinem Hintergrund — direkt nutzbar für deine Anfrage.",
+    "paper_label": "Abstract oder Auszug der Publikation",
+    "paper_placeholder": "Füge hier das Abstract oder einen Textauszug ein…",
+    "pi_label": "Name der/des PI (optional)",
+    "focus_label": "Forschungsschwerpunkt des Labors (optional)",
+    "language_label": "Sprache der Analyse",
+    "analyze": "Analysieren",
+    "analyzing": "Analysiere…",
+    "reanalyze": "Erneut analysieren",
+    "error": "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
+    "result": {
+      "summary": "Zusammenfassung",
+      "findings": "Zentrale Erkenntnisse",
+      "methods": "Methoden",
+      "connections": "Anknüpfungspunkte zu dir",
+      "hook": "Einstieg für deine E-Mail"
+    },
+    "use_in_outreach": "Im Direktkontakt verwenden",
+    "copy_hook": "Einstieg kopieren",
+    "copied": "Kopiert ✓",
+    "no_profile_note": "Tipp: Fülle dein Profil aus, damit die Anknüpfungspunkte auf deinen echten Hintergrund zugeschnitten werden."
+  },
+  "onboarding": {
+    "title": "Willkommen — so startest du",
+    "subtitle": "Fünf Schritte von der Anmeldung bis zur ersten Anfrage. Jeder Schritt hakt sich automatisch ab.",
+    "dismiss": "Ausblenden",
+    "restore": "Erste Schritte anzeigen",
+    "done_title": "Du bist startklar.",
+    "done_body": "Alle Schritte erledigt. Viel Erfolg bei deiner Promotionssuche!",
+    "progress": "{{done}} von {{total}} erledigt",
+    "steps": {
+      "profile": { "title": "Profil ausfüllen", "body": "Lebenslauf, Methoden und Sprachen einmal speichern — der Rest baut darauf auf.", "cta": "Zum Profil" },
+      "match": { "title": "CV abgleichen", "body": "Lass die KI deine Stärken mit allen Programmen abgleichen.", "cta": "Zum CV-Match" },
+      "labs": { "title": "Arbeitsgruppen ansehen", "body": "Finde konkrete Professor:innen, an die du wirklich schreibst.", "cta": "Zu den Labs" },
+      "save": { "title": "Erste Stelle speichern", "body": "Speichere ein Programm oder Lab im Tracker, um es zu verfolgen.", "cta": "Stellen entdecken" },
+      "outreach": { "title": "Anfrage entwerfen", "body": "Erstelle deine erste initiative E-Mail an eine Arbeitsgruppe.", "cta": "Zum Direktkontakt" }
+    }
   },
   "discover": {
     "title": "Entdecken",
@@ -70,7 +228,7 @@
     "subtitle": "Lebenslauf einfügen und KI-gestützt mit Arbeits­gruppen abgleichen.",
     "hero_eyebrow": "KI-gestützter Abgleich",
     "hero_title": "Deinen CV mit den passenden Promotions­programmen abgleichen.",
-    "hero_lead": "Füge deinen Lebenslauf ein — Claude analysiert deine Methoden, dein Master-Thema und deine Interessen und ranked alle Programme nach Passung. Mit Begründung pro Programm, Stärken und Lücken — und konkreten Hinweisen, was du in der Bewerbung betonen solltest.",
+    "hero_lead": "Füge deinen Lebenslauf ein — KI analysiert deine Methoden, dein Master-Thema und deine Interessen und ranked alle Programme nach Passung. Mit Begründung pro Programm, Stärken und Lücken — und konkreten Hinweisen, was du in der Bewerbung betonen solltest.",
     "step1": {
       "label": "Schritt 01",
       "title": "Lebenslauf einfügen",
@@ -78,7 +236,7 @@
       "placeholder": "Beispiel:\n\nGian H.\nMaster in Humanbiologie · Universität Greifswald · 2025\nMaster-Thesis: Rolle der Mikroglia bei…\nMethoden: Western Blot, qPCR, Durchfluss­zytometrie, Immun­histochemie, scRNA-seq Auswertung in R\nSprachen: Arabisch (Muttersprache), Deutsch (B2), Englisch (C1)\nPraktika: …\nPublikationen / Poster: …\n\nForschungs­interessen: Tumor-Immunologie, Neuroinflammation",
       "fields_label": "Forschungs­interessen (optional, hilft beim Ranking)",
       "analyze": "Analyse starten",
-      "analyzing": "Claude analysiert…",
+      "analyzing": "KI analysiert…",
       "min_chars": "Mindestens 200 Zeichen für aussagekräftige Analyse"
     },
     "step2": {
@@ -115,9 +273,9 @@
       "showing": "Zeige {{visible}} von {{total}} Programmen"
     },
     "errors": {
-      "no_key": "Claude API-Key fehlt. Trage VITE_ANTHROPIC_KEY in .env ein.",
+      "no_key": "KI API-Key fehlt. Trage VITE_OPENAI_KEY in .env ein.",
       "too_short": "CV zu kurz — bitte mindestens 200 Zeichen.",
-      "api_error": "Claude-Fehler:",
+      "api_error": "KI-Fehler:",
       "parse_error": "Antwort konnte nicht verstanden werden. Versuche es nochmal."
     }
   },
@@ -191,7 +349,7 @@
     "subtitle": "Maßgeschneidertes Bewerbungs­schreiben generieren.",
     "hero_eyebrow": "Anschreiben-Generator",
     "hero_title": "Ein Anschreiben, das wirklich nach dir klingt — für jedes Programm.",
-    "hero_lead": "Wähle ein Programm aus deinem Tracker, stelle Ton und Sprache ein — Claude verfasst ein deutsches Anschreiben, das deine Methoden und dein Master-Thema mit den Forschungs­schwerpunkten der Arbeits­gruppe verbindet.",
+    "hero_lead": "Wähle ein Programm aus deinem Tracker, stelle Ton und Sprache ein — KI verfasst ein deutsches Anschreiben, das deine Methoden und dein Master-Thema mit den Forschungs­schwerpunkten der Arbeits­gruppe verbindet.",
     "step1": {
       "label": "Schritt 01",
       "title": "Programm wählen",
@@ -224,7 +382,7 @@
       "extra_notes_placeholder": "z. B. Lieblings-Paper der Arbeitsgruppe, bestimmte Methode, gemeinsamer Hintergrund …",
       "no_profile_yet": "Noch kein Profil vorhanden. Lass zuerst einen CV-Match laufen oder füge unten deinen CV ein.",
       "generate": "Anschreiben generieren",
-      "generating": "Claude verfasst…"
+      "generating": "KI verfasst…"
     },
     "step3": {
       "label": "Schritt 03",
@@ -244,10 +402,10 @@
       "generated_at": "Erstellt"
     },
     "errors": {
-      "no_key": "Claude API-Key fehlt. Trage VITE_ANTHROPIC_KEY in .env ein.",
+      "no_key": "KI API-Key fehlt. Trage VITE_OPENAI_KEY in .env ein.",
       "no_programme": "Bitte zuerst ein Programm auswählen.",
       "no_profile": "Bitte ein Profil aus CV-Match laden oder CV unten einfügen.",
-      "api_error": "Claude-Fehler:"
+      "api_error": "KI-Fehler:"
     }
   },
   "outreach": {
@@ -299,7 +457,7 @@
       "variants": "Anzahl Varianten",
       "variants_hint": "Drei Varianten erleichtern den Vergleich.",
       "generate": "E-Mail entwerfen",
-      "generating": "Claude verfasst…"
+      "generating": "KI verfasst…"
     },
     "step3": {
       "label": "Schritt 03",
@@ -333,18 +491,45 @@
       ]
     },
     "errors": {
-      "no_key": "Claude API-Key fehlt. Trage VITE_ANTHROPIC_KEY in .env ein.",
+      "no_key": "KI API-Key fehlt. Trage VITE_OPENAI_KEY in .env ein.",
       "no_programme": "Bitte zuerst ein Programm auswählen.",
       "no_profile": "Bitte Profil laden oder CV einfügen.",
       "no_paper": "Bitte das Paper kurz benennen (Strategie: Konkretes Paper).",
-      "api_error": "Claude-Fehler:"
+      "api_error": "KI-Fehler:"
     }
+  },
+  "openings": {
+    "hero_eyebrow": "Live-Stellenbörsen",
+    "hero_title": "Aktuelle Promotionsstellen — direkt aus den großen Portalen.",
+    "hero_lead": "Statt veralteter Links findest du hier vorgefilterte, immer aktuelle Suchen in den wichtigsten akademischen Stellenbörsen. Wähle dein Forschungsfeld — jede Schaltfläche öffnet die heutigen Ergebnisse im jeweiligen Portal.",
+    "section_title": "Stellenbörsen",
+    "field_label": "Forschungsfeld wählen",
+    "fields": {
+      "cancer": "Krebs",
+      "immunology": "Immunologie",
+      "neuroscience": "Neurowissenschaft",
+      "molecular_biology": "Molekularbiologie",
+      "genetics": "Genetik",
+      "structural_biology": "Strukturbiologie"
+    },
+    "search_field": "Suche: {{field}}-Stellen",
+    "browse_all": "Alle PhD-Stellen ansehen",
+    "tips_title": "So findest du schneller eine Stelle",
+    "tips": [
+      "Richte Job-Alerts ein — bei Nature Careers, academics und EURAXESS bekommst du neue Stellen am Tag der Veröffentlichung.",
+      "Bewirb dich früh: viele Stellen werden vor Ablauf der Frist besetzt.",
+      "TV-L E13 (65–75 %) ist die übliche Bezahlung für eine Promotion in den Lebenswissenschaften.",
+      "Speichere passende Programme im Tracker und nutze den Direktkontakt für initiative Anfragen.",
+      "Achte auf Sammelausschreibungen von Graduiertenschulen (IMPRS, CRC/SFB) — oft mehrere Stellen auf einmal."
+    ],
+    "disclaimer": "Stellen werden von externen Portalen bereitgestellt. PhD Match DE prüft keine einzelnen Ausschreibungen — verifiziere Frist und Details immer auf der Originalseite."
   },
   "labs": {
     "title": "Labs & Arbeitsgruppen",
     "subtitle": "Konkrete Professor:innen — die Menschen, an die du wirklich schreibst.",
     "hero_eyebrow": "Arbeitsgruppen-Verzeichnis",
     "hero_title": "Die Personen hinter den Programmen — kuratiert nach Mensch, nicht nur nach Institution.",
+    "hero_subtitle": "Finde passende Arbeitsgruppen und Professor:innen für deine Forschung.",
     "hero_lead": "Programme einzureichen ist eine Sache — aber in Deutschland landet jede gute Promotion bei einer konkreten Person. Hier findest du 45 namentlich aufgeführte Arbeitsgruppen­leiter:innen mit aktueller Forschung, Lab-URL und Direkt-Kontakt.",
     "filters": {
       "institution": "Institution",
@@ -365,7 +550,8 @@
       "accepting": "Nimmt Doktorand:innen auf",
       "not_accepting": "Aktuell keine offenen Stellen",
       "notes": "Notiz",
-      "draft_outreach": "Anfrage entwerfen"
+      "draft_outreach": "Anfrage entwerfen",
+      "read_paper": "Paper analysieren"
     },
     "empty": "Keine passenden Labs — Filter anpassen."
   },
@@ -384,7 +570,7 @@
     "identity": {
       "title": "Persönliche Identität",
       "full_name": "Vollständiger Name",
-      "full_name_placeholder": "z. B. Gian Hawary",
+      "full_name_placeholder": "z. B. Gian",
       "email": "E-Mail",
       "email_placeholder": "deine@email.de",
       "phone": "Telefon",
@@ -468,6 +654,7 @@
     "subtitle": "Kuratierte Literatur, Lehrbücher, Kurse, Förderungen und Datenbanken.",
     "hero_eyebrow": "Wissensquellen",
     "hero_title": "Die wichtigsten Lese-, Lern- und Förderquellen — vorausgewählt.",
+    "hero_subtitle": "Kuratierte Literatur, Lehrbücher, Kurse und Förderungen für deine Promotion.",
     "hero_lead": "Eine durchdachte Sammlung von Schlüssel-Papern, Lehrbüchern, Online-Kursen, Stipendien, Konferenzen und Daten­banken. Jeder Eintrag ist real, verifiziert und für Promotion in Krebs-, Immun- und Neurowissen­schaften ausgewählt.",
     "tabs": {
       "papers": "Schlüssel-Paper",
@@ -728,6 +915,110 @@
       "no_key": "Hinweis: Ein Anthropic API-Key in der .env ist nötig, damit der Assistent antwortet."
     }
   },
+  "interview": {
+    "title": "Interview-Vorbereitung",
+    "subtitle": "Promotionsgespräche simulieren und Deutschland-spezifische Tipps lernen.",
+    "hero_eyebrow": "Vorbereitung auf das Promotionsgespräch",
+    "hero_title": "Übe dein Promotionsgespräch — bevor es ernst wird.",
+    "hero_lead": "Führe ein simuliertes Gespräch zugeschnitten auf dein Forschungsfeld. Die KI stellt dir 5–7 progressive Fragen einzeln, und gibt dir anschließend eine detaillierte Auswertung mit Punktzahl, Stärken und konkreten Tipps zur deutschen akademischen Kultur.",
+    "tabs": {
+      "simulator": "Interview-Simulator",
+      "tips": "Tipps-Leitfaden",
+      "history": "Verlauf"
+    },
+    "simulator": {
+      "title": "Simuliertes Promotionsgespräch",
+      "field_label": "Forschungsfeld",
+      "field_placeholder": "Feld eingeben oder auswählen…",
+      "field_hint": "Wähle aus der Liste oder tippe ein eigenes Feld.",
+      "start": "Gespräch starten",
+      "restart": "Neues Gespräch",
+      "new_questions": "Andere Fragen probieren",
+      "your_answer": "Deine Antwort…",
+      "send": "Senden",
+      "thinking": "Denkt nach…",
+      "question_of": "Frage {{n}} von {{total}}",
+      "evaluation_title": "Gesprächsauswertung",
+      "score_label": "Gesamtpunktzahl",
+      "strengths_label": "Stärken",
+      "improve_label": "Verbesserungspotenzial",
+      "tips_label": "Persönliche Tipps",
+      "retry": "Nochmal versuchen",
+      "intro_message": "Willkommen zu deinem simulierten Promotionsgespräch. Ich stelle dir {{total}} Fragen zu deinem Hintergrund, deiner Forschungserfahrung und Motivation — eine nach der anderen. Nimm dir Zeit für jede Antwort. Lass uns beginnen.",
+      "fields": {
+        "cancer": "Krebsforschung",
+        "immunology": "Immunologie",
+        "neuroscience": "Neurowissenschaften",
+        "structural_biology": "Strukturbiologie",
+        "genetics": "Genetik",
+        "molecular_biology": "Molekularbiologie",
+        "bioinformatics": "Bioinformatik",
+        "biochemistry": "Biochemie",
+        "cell_biology": "Zellbiologie",
+        "pharmacology": "Pharmakologie"
+      },
+      "error": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
+      "save": "Auswertung speichern",
+      "saved": "Gespeichert ✓",
+      "history_title": "Frühere Gespräche",
+      "history_empty": "Noch keine gespeicherten Gespräche. Schließe ein Übungsgespräch ab, um deinen Fortschritt zu verfolgen.",
+      "history_field": "Feld",
+      "history_view": "Auswertung ansehen",
+      "history_remove": "Entfernen",
+      "history_clear": "Alle löschen",
+      "history_clear_confirm": "Wirklich alle gespeicherten Gespräche löschen?",
+      "trend_title": "Punktzahl-Verlauf",
+      "your_progress": "Dein Fortschritt"
+    },
+    "tips": {
+      "title": "Tipps für das Promotionsgespräch in Deutschland",
+      "intro": "Das akademische Gespräch in Deutschland hat seine eigene Kultur. Diese Tipps basieren auf realen Erfahrungen bei DKFZ, EMBL, Charité und großen Graduiertenkollegs.",
+      "sections": {
+        "before": {
+          "title": "Vor dem Gespräch",
+          "items": [
+            "Lies die letzten 3–5 Publikationen des PIs gründlich — du wirst wahrscheinlich danach gefragt.",
+            "Bereite einen 5-Minuten-Vortrag über deine Masterarbeit oder dein wichtigstes Projekt vor.",
+            "Kenne deine Methoden in- und auswendig: sei bereit, das Prinzip zu erklären, nicht nur 'ich habe es benutzt'.",
+            "Formuliere eine konkrete Forschungsfrage, der du in diesem Labor nachgehen würdest.",
+            "Informiere dich über die Programmstruktur: Anforderungen des Thesis-Komitees, Seminarpflichten, Finanzierung.",
+            "Übe, den Namen und Titel des Professors korrekt zu sagen. In Deutschland: 'Herr/Frau Professor Doktor [Name]' beim Erstkontakt.",
+            "Bereite Fragen für den Professor vor — nicht zum Gehalt, sondern zur Laborkultur, Betreuungsstil und offenen Fragen in seiner Forschung."
+          ]
+        },
+        "during": {
+          "title": "Während des Gesprächs",
+          "items": [
+            "Spreche den Professor als 'Professor [Name]' oder 'Prof. Dr. [Name]' an, bis du zur Vornamenanrede eingeladen wirst — Formalität ist wichtig in Deutschland.",
+            "Sprich langsam und deutlich. Wenn du dir bei etwas unsicher bist, ist es besser zu sagen: 'Das weiß ich noch nicht, aber so würde ich es herausfinden'.",
+            "Zeige echte intellektuelle Neugier — stelle Rückfragen zu ihrer Forschung.",
+            "Bei der Präsentation deiner Thesis: Fokussiere auf die wissenschaftliche Frage, nicht auf die Techniken. Was hast du gelernt? Was würdest du anders machen?",
+            "Übertreibe deine Fähigkeiten nicht. Die deutsche Akademia schätzt präzise, ehrliche Selbsteinschätzung.",
+            "Wenn du gefragt wirst 'Warum Deutschland?' oder 'Warum dieses Programm?' — sei spezifisch. Nenne das Institut, die Arbeit der Gruppe, ein Paper. Generische Antworten sind ein Warnsignal.",
+            "Bei strukturierten Programmen (DKFZ HIGS, EMBL, IMPRS): Erwarte ein formelles Gremium mit 3–5 Professoren. Halte Antworten präzise und strukturiert."
+          ]
+        },
+        "after": {
+          "title": "Nach dem Gespräch",
+          "items": [
+            "Sende innerhalb von 24 Stunden eine kurze Dankesmail — in Deutschland nicht Standard, wird aber positiv in Erinnerung behalten.",
+            "Bei strukturierten Programmen: Entscheidungen dauern in der Regel 1–3 Wochen. Eine Nachfrage-Email nach 2 Wochen ist angemessen.",
+            "Beim direkten PI-Kontakt: Nach 1–2 Wochen nachfragen, wenn keine Antwort. PIs sind beschäftigt — eine höfliche Nachfrage wird erwartet.",
+            "Bei Absage: Frage nach kurzem Feedback, wenn du einen direkten Kontakt hast. Viele deutsche PIs geben ehrliches, nützliches Feedback.",
+            "Führe ein Protokoll der gestellten Fragen — das hilft beim nächsten Gespräch."
+          ]
+        }
+      },
+      "culture_note_title": "Deutsche akademische Kultur — Kernpunkte",
+      "culture_notes": [
+        "Titel sind wichtig: verwende immer 'Prof. Dr.' bis du anders gebeten wirst.",
+        "Pünktlichkeit ist ein Signal für Professionalität — komme 5 Minuten früher, nicht 15.",
+        "Forschungsexposés werden auch bei strukturierten Programmen erwartet. Habe einen Entwurf bereit.",
+        "Direkte Aussagen über deine Schwächen werden respektiert — 'X habe ich noch nicht gemacht, aber ich lerne es' ist besser als vage Antworten.",
+        "Deutsche PIs schätzen Selbstständigkeit: zeige, dass du über Probleme nachdenken kannst, nicht nur Protokolle ausführen."
+      ]
+    }
+  },
   "common": {
     "language": "Sprache",
     "loading": "Lädt…",
@@ -736,3 +1027,4 @@
     "by": "von"
   }
 }
+

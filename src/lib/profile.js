@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Profile store — manages the candidate's saved profile.
  *
  * Storage strategy:
@@ -246,3 +246,4 @@ export function getSyncMeta() {
 export function readProfileSync() {
   return load();
 }
+

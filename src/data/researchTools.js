@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Curated research tools for life-sciences PhDs.
  * Each tool has a key matching `compass.research.tools.<key>` in the locale files.
  */
@@ -30,3 +30,4 @@ export const researchTools = [
   { key: 'gtex', category: 'data', name: 'GTEx Portal', url: 'https://gtexportal.org', free: true },
   { key: 'tcga', category: 'data', name: 'TCGA / GDC', url: 'https://portal.gdc.cancer.gov', free: true },
 ];
+

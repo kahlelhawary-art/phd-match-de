@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { researchTools } from '../data/researchTools.js';
 import ResearchAssistant from '../components/ResearchAssistant.jsx';
@@ -17,6 +17,29 @@ export default function Compass() {
   const [active, setActive] = useState('basics');
 
   return (
+    <>
+      {/* Video Hero */}
+      <section className="relative w-full h-[50vh] max-h-[450px] overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/girl-sunflowers.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-paper" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-white tracking-tight leading-tight drop-shadow-lg">
+            {t('compass.hero_title')}
+          </h1>
+          <p className="mt-3 text-base md:text-lg text-white/85 max-w-xl leading-relaxed drop-shadow">
+            {t('compass.hero_subtitle')}
+          </p>
+        </div>
+      </section>
+
     <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-12 lg:pt-20">
       {/* HERO ─────────────────────────────────────────────── */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 lg:mb-20 animate-fade-up">
@@ -70,6 +93,7 @@ export default function Compass() {
         {active === 'assistant' && <ResearchAssistant />}
       </div>
     </div>
+    </>
   );
 }
 
@@ -578,3 +602,4 @@ function TimelineSection() {
     </div>
   );
 }
+

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect, useRef, useCallback } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { useProfile, useAuth, signIn, signUp, signOut, pushToCloud, pullFromCloud, getSyncMeta } from '../lib/profile.js';
 
@@ -247,7 +247,7 @@ function AcademicSection({ profile, updateField }) {
               onChange={(e) => updateField('publications', e.target.value.split('\n').filter(Boolean))}
               rows={5}
               placeholder={t('profile.academic.publications_placeholder')}
-              className="w-full bg-transparent border border-rule p-3 font-mono text-[13px] text-ink2 focus:outline-none focus:border-ink resize-y"
+              className="textarea-editorial font-mono text-[13px]"
             />
           </Field>
         </div>
@@ -260,6 +260,120 @@ function AcademicSection({ profile, updateField }) {
 // CV
 // ═══════════════════════════════════════════════════════════
 
+function PdfDropzone({ onExtracted }) {
+  const [dragging, setDragging] = useState(false);
+  const [status, setStatus] = useState(null); // null | 'loading' | 'done' | 'error'
+  const [filename, setFilename] = useState(null);
+  const [progress, setProgress] = useState(0);
+  const inputRef = useRef(null);
+
+  const extractText = useCallback(async (file) => {
+    if (!file || file.type !== 'application/pdf') {
+      setStatus('error');
+      setFilename('Not a PDF file');
+      return;
+    }
+    setFilename(file.name);
+    setStatus('loading');
+    setProgress(0);
+
+    try {
+      const pdfjsLib = await import('pdfjs-dist');
+      const { getDocument, GlobalWorkerOptions, version: pdfjsVersion } = pdfjsLib;
+      // Use CDN worker matching the installed version to avoid bundler complications
+      GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjsVersion}/build/pdf.worker.min.mjs`;
+
+      const arrayBuffer = await file.arrayBuffer();
+      const pdf = await getDocument({ data: arrayBuffer }).promise;
+      const total = pdf.numPages;
+      const parts = [];
+
+      for (let i = 1; i <= total; i++) {
+        const page = await pdf.getPage(i);
+        const content = await page.getTextContent();
+        const pageText = content.items.map((item) => item.str).join(' ');
+        parts.push(pageText);
+        setProgress(Math.round((i / total) * 100));
+      }
+
+      const extracted = parts.join('\n\n').replace(/\s{3,}/g, '\n').trim();
+      onExtracted(extracted);
+      setStatus('done');
+    } catch (err) {
+      console.error('PDF extraction error:', err);
+      setStatus('error');
+    }
+  }, [onExtracted]);
+
+  const handleDrop = useCallback((e) => {
+    e.preventDefault();
+    setDragging(false);
+    const file = e.dataTransfer?.files?.[0];
+    if (file) extractText(file);
+  }, [extractText]);
+
+  const handleChange = useCallback((e) => {
+    const file = e.target.files?.[0];
+    if (file) extractText(file);
+  }, [extractText]);
+
+  return (
+    <div className="mb-6">
+      <div
+        onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
+        onDragLeave={() => setDragging(false)}
+        onDrop={handleDrop}
+        onClick={() => inputRef.current?.click()}
+        className={[
+          'border-2 border-dashed p-6 text-center cursor-pointer transition-colors',
+          dragging ? 'border-ink bg-paper2/60' : 'border-rule hover:border-ink/60 bg-paper2/20',
+        ].join(' ')}
+      >
+        <input
+          ref={inputRef}
+          type="file"
+          accept=".pdf,application/pdf"
+          className="hidden"
+          onChange={handleChange}
+        />
+        <div className="font-mono text-[11px] tracking-wider uppercase text-muted mb-1">
+          ↑ Drop PDF or click to upload
+        </div>
+        <div className="font-display-italic text-sm text-ink2">
+          CV will be extracted automatically
+        </div>
+
+        {status === 'loading' && (
+          <div className="mt-3">
+            <div className="font-mono text-xs text-navy mb-1">
+              Extracting… {progress}%
+            </div>
+            <div className="h-1 bg-rule rounded overflow-hidden">
+              <div
+                className="h-full bg-navy transition-all duration-300"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+          </div>
+        )}
+        {status === 'done' && (
+          <div className="mt-2 font-mono text-[11px] text-sage">
+            ✓ Extracted from {filename}
+          </div>
+        )}
+        {status === 'error' && (
+          <div className="mt-2 font-mono text-[11px] text-danger">
+            ✕ {filename ?? 'Extraction failed'}
+          </div>
+        )}
+        {filename && status === null && (
+          <div className="mt-2 font-mono text-[11px] text-muted">{filename}</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function CvSection({ profile, update, updateField }) {
   const { t } = useI18n();
   return (
@@ -269,13 +383,16 @@ function CvSection({ profile, update, updateField }) {
         <h2 className="font-display text-display-md text-ink">{t('profile.cv.title')}</h2>
       </div>
 
+      {/* PDF upload */}
+      <PdfDropzone onExtracted={(text) => updateField('cv_text', text)} />
+
       {/* Full CV text */}
       <Field label={t('profile.cv.raw_text')} hint={t('profile.cv.raw_text_help')}>
         <textarea
           value={profile.cv_text}
           onChange={(e) => updateField('cv_text', e.target.value)}
           rows={14}
-          className="w-full bg-paper2/30 border border-rule p-4 font-mono text-[13.5px] leading-relaxed text-ink2 focus:outline-none focus:border-ink resize-y"
+          className="textarea-editorial font-mono text-[13.5px] leading-relaxed p-4"
         />
       </Field>
 
@@ -405,12 +522,7 @@ function AccountSection({ reset }) {
           <h2 className="font-display text-display-md text-ink">{t('profile.account.title')}</h2>
         </div>
 
-        {!supaOn ? (
-          <div className="border border-ochre/40 bg-ochre/5 p-5 max-w-2xl">
-            <div className="font-mono text-[10.5px] tracking-wider uppercase text-ochre mb-2">⚠ Local-only mode</div>
-            <p className="text-sm text-ink2 leading-relaxed">{t('profile.account.no_supabase')}</p>
-          </div>
-        ) : !ready ? (
+        {!supaOn ? null : !ready ? (
           <p className="font-display-italic text-muted">{t('common.loading')}</p>
         ) : user ? (
           <SignedInPanel user={user} />
@@ -637,3 +749,4 @@ function formatDate(iso) {
     });
   } catch { return iso; }
 }
+

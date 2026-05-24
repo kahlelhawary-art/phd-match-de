@@ -1,10 +1,11 @@
-import { useMemo, useState, useEffect } from 'react';
+﻿import { useMemo, useState, useEffect } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { programmesWithInstitutions } from '../data/seed.js';
 import { supabase, hasSupabase } from '../lib/supabase.js';
 import { ensureInTracker, removeFromTrackerByProgramme, useTracker } from '../lib/tracker.js';
 import ProgrammeCard from '../components/ProgrammeCard.jsx';
 import FilterBar from '../components/FilterBar.jsx';
+import OnboardingGuide from '../components/OnboardingGuide.jsx';
 
 export default function Discover() {
   const { t } = useI18n();
@@ -96,6 +97,9 @@ export default function Discover() {
         </div>
       </section>
 
+      {/* ONBOARDING GUIDE ─────────────────────────────────── */}
+      <OnboardingGuide />
+
       {/* SECTION MARKER ───────────────────────────────────── */}
       <div className="section-marker">
         <span className="font-mono text-xs tracking-wider text-muted">I.</span>
@@ -155,3 +159,4 @@ export default function Discover() {
     </div>
   );
 }
+
