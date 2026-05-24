@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tracker store — manages PhD applications across the Kanban pipeline.
  * Persisted in localStorage. Designed for clean migration to Supabase later
  * (each application has a stable id and timestamps).
@@ -161,3 +161,4 @@ export function removeFromTrackerByProgramme(programmeId, piId = null) {
   const apps = load();
   persist(apps.filter((a) => !(a.programmeId === programmeId && (a.piId ?? null) === piId)));
 }
+

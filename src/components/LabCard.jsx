@@ -1,9 +1,9 @@
-import { useI18n } from '../lib/i18n.jsx';
+﻿import { useI18n } from '../lib/i18n.jsx';
 
 /**
  * Editorial-style card for a single PI / research group.
  */
-export default function LabCard({ pi, onSave, isSaved, onDraftOutreach }) {
+export default function LabCard({ pi, onSave, isSaved, onDraftOutreach, onReadPaper }) {
   const { t, lang, isRtl } = useI18n();
   const inst = pi.institution;
 
@@ -135,6 +135,15 @@ export default function LabCard({ pi, onSave, isSaved, onDraftOutreach }) {
               ✎ {t('labs.card.draft_outreach')}
             </button>
           )}
+
+          {onReadPaper && (
+            <button
+              onClick={() => onReadPaper(pi)}
+              className="text-sm text-navy hover:text-sienna ms-3"
+            >
+              ◐ {t('labs.card.read_paper')}
+            </button>
+          )}
         </div>
 
         <div className="flex items-baseline gap-3">
@@ -190,3 +199,4 @@ function ArrowIcon({ rtl }) {
     </svg>
   );
 }
+

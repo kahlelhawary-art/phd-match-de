@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Anschreiben (cover letter) generator.
  *
  * Given a profile (from CV-Match) and a target programme, drafts a tailored
@@ -164,3 +164,4 @@ function parseJson(text) {
     throw error;
   }
 }
+

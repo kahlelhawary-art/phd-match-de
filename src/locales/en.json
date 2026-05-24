@@ -1,4 +1,8 @@
 {
+  "hero": {
+    "title": "Your Path to a PhD",
+    "subtitle": "Find the right supervisor, prepare for interviews, and launch your academic career in Germany."
+  },
   "brand": {
     "name": "PhD Match DE",
     "tagline": "Doctoral research in German life sciences — curated.",
@@ -6,6 +10,10 @@
   },
   "nav": {
     "discover": "Discover",
+    "dashboard": "Dashboard",
+    "deadlines": "Deadlines",
+    "documents": "Documents",
+    "digest": "Paper Digest",
     "compass": "Compass",
     "library": "Library",
     "labs": "Labs",
@@ -13,7 +21,9 @@
     "tracker": "Applications",
     "letter": "Cover Letter",
     "outreach": "Outreach",
-    "profile": "Profile"
+    "profile": "Profile",
+    "interview": "Interview Prep",
+    "openings": "Live Openings"
   },
   "home": {
     "hero_eyebrow": "Curated PhD positions",
@@ -21,6 +31,154 @@
     "hero_lead": "The leading research centres for cancer, immunology and neuroscience in one place. AI-assisted matching of your CV to specific labs — and ready-to-send outreach emails to principal investigators.",
     "cta_explore": "Discover positions",
     "cta_match": "Match my CV"
+  },
+  "dashboard": {
+    "hero_eyebrow": "Your overview",
+    "hero_title": "Everything at a glance — your PhD search in numbers.",
+    "hero_lead": "Status, upcoming deadlines, outreach success, and your interview progress — gathered in one place.",
+    "empty_title": "Nothing to show yet",
+    "empty_body": "Once you save programmes, run a CV-Match, or finish a mock interview, your metrics appear here.",
+    "empty_cta": "Get started",
+    "stats": {
+      "total": "Total applications",
+      "active": "Active",
+      "decisions": "Decisions",
+      "next_deadline": "Next deadline",
+      "no_deadline": "None open",
+      "outreach_sent": "Outreach sent",
+      "outreach_replied": "Replies",
+      "interviews": "Mock interviews",
+      "avg_score": "Avg score",
+      "best_score": "Best"
+    },
+    "pipeline_title": "Pipeline breakdown",
+    "deadlines_title": "Upcoming deadlines",
+    "deadlines_empty": "No upcoming deadlines. Add deadlines in the Tracker.",
+    "activity_title": "Recent activity",
+    "activity_empty": "No activity yet.",
+    "reply_rate": "Reply rate",
+    "days_left": "{{n}} days",
+    "today": "Today",
+    "overdue": "Overdue",
+    "quick_title": "Quick actions",
+    "quick": {
+      "match": "Match CV",
+      "labs": "Browse labs",
+      "outreach": "Write outreach",
+      "interview": "Practice interview"
+    }
+  },
+  "deadlines": {
+    "hero_eyebrow": "Deadline hub",
+    "hero_title": "Never miss a deadline — every date in one place.",
+    "hero_lead": "All your application deadlines, sorted by urgency. Export them to your calendar and stay on top of everything.",
+    "empty_title": "No deadlines yet",
+    "empty_body": "Add a deadline in the Tracker or on a programme — it will appear here, sorted by urgency.",
+    "empty_cta": "Go to Tracker",
+    "add_deadline": "Add deadline",
+    "export_all": "Export all to calendar",
+    "export_one": "To calendar",
+    "stats": {
+      "total": "Total deadlines",
+      "this_week": "This week",
+      "this_month": "This month",
+      "overdue": "Overdue"
+    },
+    "groups": {
+      "overdue": "Overdue",
+      "urgent": "Urgent — this week",
+      "soon": "Soon — this month",
+      "later": "Later"
+    },
+    "card": {
+      "deadline": "Deadline",
+      "days_left": "{{n}} days",
+      "today": "Today",
+      "tomorrow": "Tomorrow",
+      "overdue_by": "{{n}} days ago",
+      "status": "Status",
+      "open_tracker": "Open in Tracker",
+      "set_deadline": "Set deadline",
+      "no_deadline": "No deadline set",
+      "unit": "days"
+    },
+    "tip_title": "Deadline strategy",
+    "tips": [
+      "Apply 2–3 weeks before the deadline — many positions fill early.",
+      "Export deadlines to your calendar and set a reminder 7 days before.",
+      "Graduate-school calls (IMPRS, SFB) often have fixed annual deadlines — plan ahead."
+    ]
+  },
+  "documents": {
+    "hero_eyebrow": "Application kit",
+    "hero_title": "Your complete application pack — generated in one go.",
+    "hero_lead": "Cover letter, research statement, and academic CV — consistent with each other and tailored to a target programme. All generated from your profile.",
+    "no_profile_title": "Fill your profile first",
+    "no_profile_body": "Documents are built from your CV. Fill your profile or paste your CV text.",
+    "no_profile_cta": "Go to Profile",
+    "select_programme": "Target programme (optional)",
+    "select_placeholder": "No programme — general document",
+    "language_label": "Document language",
+    "notes_label": "Extra notes (optional)",
+    "notes_placeholder": "e.g. the group's favourite publication, a shared method, a special connection…",
+    "kit_title": "Choose what to generate",
+    "types": {
+      "letter": { "title": "Cover letter", "desc": "Formal application letter for a programme or professor." },
+      "research": { "title": "Research statement", "desc": "Your scientific interest, experience, and future direction." },
+      "cv": { "title": "Academic CV", "desc": "Structured, tabular CV in the German academic format." }
+    },
+    "generate": "Generate",
+    "generate_all": "Generate full kit",
+    "generating": "Generating…",
+    "regenerate": "Regenerate",
+    "copy": "Copy",
+    "copied": "Copied ✓",
+    "download": "Download as text",
+    "error": "Something went wrong. Please try again.",
+    "letter_hint": "The cover letter is generated on the «Cover Letter» page with more options.",
+    "go_to_letter": "Go to letter generator",
+    "result_title": "Result"
+  },
+  "digest": {
+    "hero_eyebrow": "Paper digest",
+    "hero_title": "Understand the research — before you write.",
+    "hero_lead": "Paste an abstract or excerpt from one of the group's papers. The AI summarises it in plain language and shows you honest connection points to your background — ready to use in your outreach.",
+    "paper_label": "Paper abstract or excerpt",
+    "paper_placeholder": "Paste the abstract or a text excerpt here…",
+    "pi_label": "PI name (optional)",
+    "focus_label": "Lab research focus (optional)",
+    "language_label": "Analysis language",
+    "analyze": "Analyse",
+    "analyzing": "Analysing…",
+    "reanalyze": "Analyse again",
+    "error": "Something went wrong. Please try again.",
+    "result": {
+      "summary": "Summary",
+      "findings": "Key findings",
+      "methods": "Methods",
+      "connections": "Connection points to you",
+      "hook": "Opening for your email"
+    },
+    "use_in_outreach": "Use in Outreach",
+    "copy_hook": "Copy opening",
+    "copied": "Copied ✓",
+    "no_profile_note": "Tip: fill your profile so the connection points are tailored to your real background."
+  },
+  "onboarding": {
+    "title": "Welcome — here's how to start",
+    "subtitle": "Five steps from setup to your first enquiry. Each step checks itself off automatically.",
+    "dismiss": "Hide",
+    "restore": "Show getting started",
+    "done_title": "You're all set.",
+    "done_body": "Every step done. Good luck with your PhD search!",
+    "progress": "{{done}} of {{total}} done",
+    "steps": {
+      "profile": { "title": "Fill your profile", "body": "Save your CV, methods, and languages once — everything else builds on it.", "cta": "Go to Profile" },
+      "match": { "title": "Match your CV", "body": "Let the AI rank all programmes against your strengths.", "cta": "Go to CV-Match" },
+      "labs": { "title": "Browse the labs", "body": "Find the specific professors you'll actually write to.", "cta": "Go to Labs" },
+      "save": { "title": "Save your first position", "body": "Save a programme or lab to your Tracker to follow it.", "cta": "Discover positions" },
+      "outreach": { "title": "Draft an enquiry", "body": "Compose your first initiative email to a research group.", "cta": "Go to Outreach" }
+    }
   },
   "discover": {
     "title": "Discover",
@@ -70,7 +228,7 @@
     "subtitle": "Paste your CV and let AI rank labs by fit.",
     "hero_eyebrow": "AI-assisted matching",
     "hero_title": "Match your CV against every PhD programme.",
-    "hero_lead": "Paste your CV — Claude analyses your methods, master's topic, and interests, then ranks every programme by fit. Each match comes with reasoning, strengths and gaps, and concrete advice on what to emphasise in your application.",
+    "hero_lead": "Paste your CV — KI analyses your methods, master's topic, and interests, then ranks every programme by fit. Each match comes with reasoning, strengths and gaps, and concrete advice on what to emphasise in your application.",
     "step1": {
       "label": "Step 01",
       "title": "Paste CV",
@@ -78,7 +236,7 @@
       "placeholder": "Example:\n\nGian H.\nMSc Humanbiologie · University of Greifswald · 2025\nMaster thesis: Role of microglia in…\nMethods: Western blot, qPCR, flow cytometry, immunohistochemistry, scRNA-seq analysis in R\nLanguages: Arabic (native), German (B2), English (C1)\nInternships: …\nPublications / posters: …\n\nResearch interests: tumour immunology, neuroinflammation",
       "fields_label": "Research interests (optional, helps ranking)",
       "analyze": "Run analysis",
-      "analyzing": "Claude is analysing…",
+      "analyzing": "KI is analysing…",
       "min_chars": "At least 200 characters needed for meaningful analysis"
     },
     "step2": {
@@ -115,9 +273,9 @@
       "showing": "Showing {{visible}} of {{total}} programmes"
     },
     "errors": {
-      "no_key": "Claude API key missing. Add VITE_ANTHROPIC_KEY to .env.",
+      "no_key": "KI API key missing. Add VITE_OPENAI_KEY to .env.",
       "too_short": "CV too short — please paste at least 200 characters.",
-      "api_error": "Claude error:",
+      "api_error": "KI error:",
       "parse_error": "Couldn't parse response. Try again."
     }
   },
@@ -191,7 +349,7 @@
     "subtitle": "Generate a tailored Anschreiben.",
     "hero_eyebrow": "Cover letter generator",
     "hero_title": "A cover letter that actually sounds like you — for every programme.",
-    "hero_lead": "Pick a programme from your tracker, set the tone and language — Claude drafts a German Anschreiben (or English cover letter) that connects your methods and master's topic to the lab's research focus.",
+    "hero_lead": "Pick a programme from your tracker, set the tone and language — KI drafts a German Anschreiben (or English cover letter) that connects your methods and master's topic to the lab's research focus.",
     "step1": {
       "label": "Step 01",
       "title": "Pick a programme",
@@ -224,7 +382,7 @@
       "extra_notes_placeholder": "e.g. favourite paper by the group, specific method, shared background…",
       "no_profile_yet": "No profile yet. Run a CV-Match first, or paste your CV below.",
       "generate": "Generate letter",
-      "generating": "Claude is drafting…"
+      "generating": "KI is drafting…"
     },
     "step3": {
       "label": "Step 03",
@@ -244,10 +402,10 @@
       "generated_at": "Created"
     },
     "errors": {
-      "no_key": "Claude API key missing. Add VITE_ANTHROPIC_KEY to .env.",
+      "no_key": "KI API key missing. Add VITE_OPENAI_KEY to .env.",
       "no_programme": "Pick a programme first.",
       "no_profile": "Load a profile from CV-Match or paste a CV below.",
-      "api_error": "Claude error:"
+      "api_error": "KI error:"
     }
   },
   "outreach": {
@@ -299,7 +457,7 @@
       "variants": "Number of variants",
       "variants_hint": "Three variants make comparison easier.",
       "generate": "Draft email",
-      "generating": "Claude is drafting…"
+      "generating": "KI is drafting…"
     },
     "step3": {
       "label": "Step 03",
@@ -333,18 +491,45 @@
       ]
     },
     "errors": {
-      "no_key": "Claude API key missing. Add VITE_ANTHROPIC_KEY to .env.",
+      "no_key": "KI API key missing. Add VITE_OPENAI_KEY to .env.",
       "no_programme": "Pick a programme first.",
       "no_profile": "Load a profile or paste a CV.",
       "no_paper": "Name the paper briefly (strategy: Specific paper).",
-      "api_error": "Claude error:"
+      "api_error": "KI error:"
     }
+  },
+  "openings": {
+    "hero_eyebrow": "Live job boards",
+    "hero_title": "Current PhD openings — straight from the major portals.",
+    "hero_lead": "Instead of stale links, here are pre-filtered, always-current searches across the main academic job boards. Pick your field — each button opens today's results on that portal.",
+    "section_title": "Job boards",
+    "field_label": "Choose research field",
+    "fields": {
+      "cancer": "Cancer",
+      "immunology": "Immunology",
+      "neuroscience": "Neuroscience",
+      "molecular_biology": "Molecular biology",
+      "genetics": "Genetics",
+      "structural_biology": "Structural biology"
+    },
+    "search_field": "Search: {{field}} positions",
+    "browse_all": "Browse all PhD positions",
+    "tips_title": "How to find a position faster",
+    "tips": [
+      "Set up job alerts — Nature Careers, academics, and EURAXESS notify you the day a position is posted.",
+      "Apply early: many positions are filled before the stated deadline.",
+      "TV-L E13 (65–75%) is the standard pay scale for a life-sciences PhD.",
+      "Save matching programmes to your Tracker and use Outreach for initiative enquiries.",
+      "Watch for graduate-school calls (IMPRS, CRC/SFB) — often several positions at once."
+    ],
+    "disclaimer": "Listings are provided by external portals. PhD Match DE does not verify individual postings — always confirm deadline and details on the original page."
   },
   "labs": {
     "title": "Labs & PIs",
     "subtitle": "Specific professors — the people you'll actually write to.",
     "hero_eyebrow": "Labs directory",
     "hero_title": "The people behind the programmes — curated by person, not just institution.",
+    "hero_subtitle": "Find the right research groups and professors for your work.",
     "hero_lead": "Submitting to a programme is one thing — but in Germany, every successful PhD ends up at a specific person's bench. Here are 45 named research-group leaders with their current focus, lab URL, and direct contact path.",
     "filters": {
       "institution": "Institution",
@@ -365,7 +550,8 @@
       "accepting": "Accepting doctoral students",
       "not_accepting": "No openings currently",
       "notes": "Note",
-      "draft_outreach": "Draft outreach"
+      "draft_outreach": "Draft outreach",
+      "read_paper": "Analyse paper"
     },
     "empty": "No matching labs — adjust filters."
   },
@@ -384,7 +570,7 @@
     "identity": {
       "title": "Personal identity",
       "full_name": "Full name",
-      "full_name_placeholder": "e.g. Gian Hawary",
+      "full_name_placeholder": "e.g. Gian",
       "email": "Email",
       "email_placeholder": "you@email.com",
       "phone": "Phone",
@@ -468,6 +654,7 @@
     "subtitle": "Curated literature, textbooks, courses, funding, and databases.",
     "hero_eyebrow": "Knowledge sources",
     "hero_title": "The most important things to read, learn, and apply to — pre-selected.",
+    "hero_subtitle": "Curated literature, textbooks, courses, and funding for your PhD.",
     "hero_lead": "A carefully chosen collection of landmark papers, textbooks, online courses, scholarships, conferences, and databases. Every entry is real, verified, and curated for PhDs in cancer, immunology, and neuroscience.",
     "tabs": {
       "papers": "Key papers",
@@ -703,6 +890,110 @@
       "no_key": "Note: An Anthropic API key in .env is required for the assistant to respond."
     }
   },
+  "interview": {
+    "title": "Interview Prep",
+    "subtitle": "Simulate PhD interviews and learn Germany-specific tips.",
+    "hero_eyebrow": "PhD Interview preparation",
+    "hero_title": "Practice your PhD interview — before the real one.",
+    "hero_lead": "Conduct a mock interview tailored to your research field. The AI asks 5–7 progressive questions one at a time, then gives you a detailed evaluation with score, strengths, and concrete tips for German academic culture.",
+    "tabs": {
+      "simulator": "Interview Simulator",
+      "tips": "Tips Guide",
+      "history": "History"
+    },
+    "simulator": {
+      "title": "Mock PhD Interview",
+      "field_label": "Research field",
+      "field_placeholder": "Type or select a field…",
+      "field_hint": "Select from the dropdown or type your own field.",
+      "start": "Start interview",
+      "restart": "New interview",
+      "new_questions": "Try different questions",
+      "your_answer": "Your answer…",
+      "send": "Send",
+      "thinking": "Thinking…",
+      "question_of": "Question {{n}} of {{total}}",
+      "evaluation_title": "Interview Evaluation",
+      "score_label": "Overall score",
+      "strengths_label": "Strengths",
+      "improve_label": "Areas to improve",
+      "tips_label": "Personalised tips",
+      "retry": "Retry",
+      "intro_message": "Welcome to your mock PhD interview. I will ask you {{total}} questions about your background, research experience, and motivation — one at a time. Take your time with each answer. Let's begin.",
+      "fields": {
+        "cancer": "Cancer research",
+        "immunology": "Immunology",
+        "neuroscience": "Neuroscience",
+        "structural_biology": "Structural biology",
+        "genetics": "Genetics",
+        "molecular_biology": "Molecular biology",
+        "bioinformatics": "Bioinformatics",
+        "biochemistry": "Biochemistry",
+        "cell_biology": "Cell biology",
+        "pharmacology": "Pharmacology"
+      },
+      "error": "Something went wrong. Please try again.",
+      "save": "Save evaluation",
+      "saved": "Saved ✓",
+      "history_title": "Past interviews",
+      "history_empty": "No saved interviews yet. Complete a mock interview to track your progress.",
+      "history_field": "Field",
+      "history_view": "View evaluation",
+      "history_remove": "Remove",
+      "history_clear": "Clear all",
+      "history_clear_confirm": "Really delete all saved interviews?",
+      "trend_title": "Score over time",
+      "your_progress": "Your progress"
+    },
+    "tips": {
+      "title": "PhD Interview Tips — Germany",
+      "intro": "The German academic interview has its own culture. These tips are drawn from real experiences at DKFZ, EMBL, Charité, and major graduate schools.",
+      "sections": {
+        "before": {
+          "title": "Before the Interview",
+          "items": [
+            "Research the PI's last 3–5 publications thoroughly — you will likely be asked about them.",
+            "Prepare a 5-minute talk on your master's thesis or most significant project.",
+            "Know your methods inside out: be ready to explain the principle, not just 'I used it'.",
+            "Prepare a concrete research question you would pursue in this lab.",
+            "Study the programme structure: thesis committee requirements, seminar obligations, funding.",
+            "Practice saying the professor's name and title correctly. In Germany: 'Herr/Frau Professor Doktor [Name]' at first contact.",
+            "Prepare questions for the professor — not about salary, but about lab culture, supervision style, and open questions in their research."
+          ]
+        },
+        "during": {
+          "title": "During the Interview",
+          "items": [
+            "Address the professor as 'Professor [Name]' or 'Prof. Dr. [Name]' unless invited to use first names — formality matters in Germany.",
+            "Speak slowly and clearly. If you are unsure of something, it's better to say 'I don't know yet, but here is how I would approach finding out'.",
+            "Show genuine intellectual curiosity — ask follow-up questions about their research.",
+            "If presenting your thesis: focus on the scientific question, not the techniques. What did you learn? What would you do differently?",
+            "Don't exaggerate your skills. German academic culture values precise, honest self-assessment.",
+            "If asked 'Why Germany?' or 'Why this programme?' — be specific. Name the institute, the group's work, a paper. Generic answers are a red flag.",
+            "For structured programmes (DKFZ HIGS, EMBL, IMPRS): expect a formal panel with 3–5 professors. Keep answers concise and structured."
+          ]
+        },
+        "after": {
+          "title": "After the Interview",
+          "items": [
+            "Send a short thank-you email within 24 hours — this is not standard in Germany but is remembered positively.",
+            "If you interviewed at a structured programme: decisions usually take 1–3 weeks. A follow-up email after 2 weeks is appropriate.",
+            "For direct PI contact: follow up in 1–2 weeks if no response. PIs are busy — one polite follow-up is expected.",
+            "If rejected: ask for brief feedback if you have a direct contact. Many German PIs will give honest, useful feedback.",
+            "Keep a log of what questions you were asked — this helps for the next interview."
+          ]
+        }
+      },
+      "culture_note_title": "German academic culture — key points",
+      "culture_notes": [
+        "Titles matter: always use 'Prof. Dr.' until told otherwise.",
+        "Punctuality is a signal of professionalism — arrive 5 minutes early, not 15.",
+        "Research proposals (Exposé) are expected even for structured programmes. Have a draft ready.",
+        "Being direct about your weaknesses is respected — saying 'I haven't done X yet, but I am learning' is better than vague answers.",
+        "German PIs value independence: show that you can think about problems, not just execute protocols."
+      ]
+    }
+  },
   "common": {
     "language": "Language",
     "loading": "Loading…",
@@ -711,3 +1002,4 @@
     "by": "by"
   }
 }
+

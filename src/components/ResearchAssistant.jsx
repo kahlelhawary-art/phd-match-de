@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+﻿import { useState, useRef, useEffect } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { callClaude } from '../lib/claude.js';
 
@@ -39,7 +39,7 @@ export default function ResearchAssistant() {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }, [thread]);
 
-  const hasKey = Boolean(import.meta.env.VITE_ANTHROPIC_KEY);
+
 
   const send = async (text) => {
     const question = (text ?? input).trim();
@@ -51,16 +51,7 @@ export default function ResearchAssistant() {
     setInput('');
     setError(null);
 
-    if (!hasKey) {
-      setThread((prev) => [
-        ...prev,
-        {
-          role: 'assistant',
-          content: t('compass.assistant.no_key'),
-        },
-      ]);
-      return;
-    }
+
 
     setLoading(true);
     try {
@@ -161,14 +152,7 @@ export default function ResearchAssistant() {
           ))}
         </div>
 
-        {!hasKey && (
-          <div className="mt-8 border border-ochre/40 bg-ochre/5 p-4 text-xs text-ink2 leading-relaxed">
-            <div className="font-mono text-[10px] tracking-wider uppercase text-ochre mb-1">
-              ⚠ Setup
-            </div>
-            {t('compass.assistant.no_key')}
-          </div>
-        )}
+
       </aside>
     </div>
   );
@@ -203,3 +187,4 @@ function ArrowIcon() {
     </svg>
   );
 }
+

@@ -1,9 +1,10 @@
-import { useEffect, useState, useMemo } from 'react';
+﻿import { useEffect, useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useI18n } from '../lib/i18n.jsx';
 import { useTracker, COLUMNS } from '../lib/tracker.js';
 import { programmesWithInstitutions } from '../data/seed.js';
 import { supabase, hasSupabase } from '../lib/supabase.js';
+import { buildIcs, downloadIcs } from '../lib/ics.js';
 import TrackerCard from '../components/TrackerCard.jsx';
 import AddProgrammeModal from '../components/AddProgrammeModal.jsx';
 
@@ -61,6 +62,28 @@ export default function Tracker() {
   // Add modal
   const [showAdd, setShowAdd] = useState(false);
 
+  // Calendar sync all deadlines
+  const handleSyncAll = () => {
+    const events = apps
+      .filter((a) => a.nextActionDate)
+      .map((a) => {
+        const prog = programmeMap[a.programmeId];
+        const title = prog
+          ? `${prog.short_name ?? prog.name}${a.piId ? '' : ''} — Deadline`
+          : 'PhD Deadline';
+        return {
+          summary: title,
+          dateStr: a.nextActionDate,
+          description: a.nextAction ?? '',
+          url: prog?.website ?? '',
+        };
+      });
+
+    if (events.length === 0) return;
+    const ics = buildIcs(events);
+    downloadIcs(ics, 'phd-deadlines.ics');
+  };
+
   // Empty state
   if (apps.length === 0) {
     return (
@@ -102,12 +125,23 @@ export default function Tracker() {
             Pipeline
           </h2>
         </div>
-        <button
-          onClick={() => setShowAdd(true)}
-          className="btn-primary text-sm shrink-0"
-        >
-          + {t('tracker.add.button')}
-        </button>
+        <div className="flex items-center gap-2 shrink-0">
+          {apps.some((a) => a.nextActionDate) && (
+            <button
+              onClick={handleSyncAll}
+              title="Download all deadlines as .ics"
+              className="btn-ghost text-sm"
+            >
+              ⊕ Sync All
+            </button>
+          )}
+          <button
+            onClick={() => setShowAdd(true)}
+            className="btn-primary text-sm"
+          >
+            + {t('tracker.add.button')}
+          </button>
+        </div>
       </div>
 
       {/* KANBAN BOARD ────────────────────────────────────── */}
@@ -264,3 +298,4 @@ function formatDate(iso) {
     return iso;
   }
 }
+

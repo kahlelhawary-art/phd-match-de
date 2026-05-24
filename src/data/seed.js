@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Same data as supabase/seed.sql, mirrored as JS for instant dev
  * without Supabase. App falls back to this when env vars are missing.
  */
@@ -16,6 +16,12 @@ export const institutions = [
   { id: 'i10', short_name: 'Uni BI', name: 'Universität Bielefeld', city: 'Bielefeld', type: 'university' },
   { id: 'i11', short_name: 'Charité', name: 'Charité — Universitätsmedizin Berlin', city: 'Berlin', type: 'university_hospital' },
   { id: 'i12', short_name: 'EMBL', name: 'European Molecular Biology Laboratory', city: 'Heidelberg', type: 'other' },
+  // New institutions added 2026-05
+  { id: 'i13', short_name: 'TUM', name: 'Technische Universität München', city: 'München', type: 'university' },
+  { id: 'i14', short_name: 'MPI Biochem', name: 'MPI für Biochemie', city: 'Martinsried', type: 'max_planck' },
+  { id: 'i15', short_name: 'Helmholtz München', name: 'Helmholtz Zentrum München', city: 'Neuherberg', type: 'helmholtz' },
+  { id: 'i16', short_name: 'MDC Berlin', name: 'Max Delbrück Center for Molecular Medicine', city: 'Berlin', type: 'helmholtz' },
+  { id: 'i17', short_name: 'DKFZ2', name: 'DKFZ — Computational Oncology Division', city: 'Heidelberg', type: 'helmholtz' },
 ];
 
 export const programmes = [
@@ -257,6 +263,75 @@ export const programmes = [
     description_ar: 'أحد أعرق برامج الدكتوراه الدولية في العالم. تنافسي جداً وبيئة دولية بحتة.',
     open_for_applications: true,
   },
+  // New programmes added 2026-05
+  {
+    id: 'p15',
+    institution_id: 'i13',
+    name: 'TUM Graduate School — Life Sciences & Medicine',
+    short_name: 'TUM GS Life Sci',
+    fields: ['cancer', 'immunology', 'molecular_biology', 'neuroscience'],
+    language: 'english',
+    funding_info: 'TV-L E13 65% oder Stipendium',
+    is_funded: true,
+    is_rolling: true,
+    next_intake: 'Laufend über AG-Webseiten',
+    website: 'https://www.gs.tum.de',
+    description_de: 'Großes strukturiertes Promotions­programm der TU München mit Schwerpunkten in Medizin, Biologie und Bioinformatik.',
+    description_en: 'Large structured doctoral programme at TU München covering medicine, biology, and bioinformatics.',
+    description_ar: 'برنامج دكتوراه منظم كبير في جامعة ميونخ التقنية يغطي الطب والبيولوجيا والمعلوماتية البيولوجية.',
+    open_for_applications: true,
+  },
+  {
+    id: 'p16',
+    institution_id: 'i14',
+    name: 'IMPRS for Biochemistry — MPI Martinsried',
+    short_name: 'IMPRS Biochem',
+    fields: ['molecular_biology', 'structural_biology', 'cancer'],
+    language: 'english',
+    funding_info: 'Vollstipendium · Max-Planck-Förderung',
+    is_funded: true,
+    is_rolling: false,
+    next_intake: 'Jährliche Aus­schreibung (typ. November)',
+    website: 'https://www.biochem.mpg.de/imprs',
+    description_de: 'Internationales Promotions­programm am MPI für Biochemie mit Schwerpunkt auf Strukturbiologie und molekulare Maschinen.',
+    description_en: 'International doctoral programme at MPI of Biochemistry focusing on structural biology and molecular machines.',
+    description_ar: 'برنامج دكتوراه دولي في معهد ماكس بلانك للكيمياء الحيوية يركز على البيولوجيا الهيكلية والآلات الجزيئية.',
+    open_for_applications: true,
+  },
+  {
+    id: 'p17',
+    institution_id: 'i15',
+    name: 'Helmholtz Munich PhD Programme — Diabetes & Cancer',
+    short_name: 'Helmholtz Munich PhD',
+    fields: ['cancer', 'molecular_biology', 'genetics'],
+    language: 'english',
+    funding_info: 'TV-L E13 65%',
+    is_funded: true,
+    is_rolling: true,
+    next_intake: 'Laufend',
+    website: 'https://www.helmholtz-munich.de/careers/phd',
+    description_de: 'Promotions­programme am Helmholtz Zentrum München mit Fokus auf Diabetes, Krebs und Umweltgesundheit.',
+    description_en: 'Doctoral programmes at Helmholtz Munich focusing on diabetes, cancer, and environmental health research.',
+    description_ar: 'برامج دكتوراه في مركز هيلمهولتز ميونخ تركز على مرض السكري والسرطان والصحة البيئية.',
+    open_for_applications: true,
+  },
+  {
+    id: 'p18',
+    institution_id: 'i16',
+    name: 'MDC-HU Berlin School of Integrative Biology',
+    short_name: 'MDC Berlin PhD',
+    fields: ['cancer', 'neuroscience', 'molecular_biology', 'genetics'],
+    language: 'english',
+    funding_info: 'TV-L E13 65% oder Stipendium',
+    is_funded: true,
+    is_rolling: false,
+    next_intake: 'Jährliche Aus­schreibung',
+    website: 'https://www.mdc-berlin.de/phd',
+    description_de: 'Promotions­programme am Max Delbrück Center mit Schwerpunkt auf Genomik, Krebs und Neurobiologie.',
+    description_en: 'Doctoral programme at the Max Delbrück Center focusing on genomics, cancer, and neurobiology.',
+    description_ar: 'برنامج دكتوراه في مركز ماكس ديلبروك يركز على الجينوميات والسرطان وعلم الأعصاب.',
+    open_for_applications: true,
+  },
 ];
 
 // Joined view used by the Discover page
@@ -264,3 +339,4 @@ export const programmesWithInstitutions = programmes.map((p) => ({
   ...p,
   institution: institutions.find((i) => i.id === p.institution_id),
 }));
+

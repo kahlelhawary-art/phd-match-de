@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+﻿import { useState, useMemo } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { COLUMNS } from '../lib/tracker.js';
 
@@ -60,7 +60,7 @@ export default function AddProgrammeModal({ programmes, existingProgrammeIds, on
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t('tracker.add.search')}
             autoFocus
-            className="w-full bg-transparent border-b border-rule py-2 font-display text-lg focus:outline-none focus:border-ink placeholder:text-muted/60"
+            className="input-editorial font-display text-lg"
           />
         </div>
 
@@ -153,3 +153,4 @@ export default function AddProgrammeModal({ programmes, existingProgrammeIds, on
     </div>
   );
 }
+

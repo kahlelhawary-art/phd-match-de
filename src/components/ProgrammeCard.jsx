@@ -1,4 +1,4 @@
-import { useI18n } from '../lib/i18n.jsx';
+﻿import { useI18n } from '../lib/i18n.jsx';
 
 /**
  * Editorial-style card for a PhD programme.
@@ -136,3 +136,4 @@ function ArrowIcon({ rtl }) {
     </svg>
   );
 }
+

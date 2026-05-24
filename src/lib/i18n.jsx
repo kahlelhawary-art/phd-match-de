@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+﻿import { createContext, useContext, useEffect, useState } from 'react';
 import de from '../locales/de.json';
 import en from '../locales/en.json';
 import ar from '../locales/ar.json';
@@ -54,3 +54,4 @@ export const useI18n = () => {
   if (!ctx) throw new Error('useI18n must be used inside <I18nProvider>');
   return ctx;
 };
+
